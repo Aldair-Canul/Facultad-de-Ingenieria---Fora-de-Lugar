@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://b3pt3a2rm73mp"]
+
+[ext_resource type="Texture2D" uid="uid://d0k6moy12sj8d" path="res://images/Mesero/calle.png" id="1_8voex"]
+[ext_resource type="Script" uid="uid://coce0lditxn8c" path="res://Scenes/Mini_Juego_Mesero/nodo_calle.gd" id="1_pjbue"]
+[ext_resource type="Script" uid="uid://jdirihuimo0q" path="res://Scenes/Mini_Juego_Mesero/canvas_layer.gd" id="2_bmf87"]
+[ext_resource type="PackedScene" uid="uid://bdk38tfn6t0o3" path="res://Scenes/Mini_Juego_Mesero/mesero.tscn" id="2_ye407"]
+[ext_resource type="Texture2D" uid="uid://bkhvgpo62gj3k" path="res://Corazones/Corazon1.png" id="3_1dq1o"]
+[ext_resource type="Texture2D" uid="uid://d4f0l5kgy7nap" path="res://Puestos/puesto2 - copia.png" id="3_4fcho"]
+[ext_resource type="Texture2D" uid="uid://bgrrcriw43w4o" path="res://Mesas/Mesa1.png" id="3_a33dj"]
+[ext_resource type="Texture2D" uid="uid://c8fauj3d1shjm" path="res://Puestos/puesto3 - copia.png" id="4_1k82d"]
+[ext_resource type="Texture2D" uid="uid://cfmntpclm3y6y" path="res://Corazones/Corazon2.png" id="4_4k317"]
+[ext_resource type="Texture2D" uid="uid://c4rcw363cg348" path="res://Mesas/Mesa2.png" id="4_o6bcr"]
+[ext_resource type="Script" uid="uid://xycofc6uaoi7" path="res://Scenes/Mini_Juego_Mesero/mesa.gd" id="4_xgxix"]
+[ext_resource type="Texture2D" uid="uid://4rtqxfxg5e2" path="res://Mesas/Mesa3.png" id="5_6nrxl"]
+[ext_resource type="Texture2D" uid="uid://d1ovqg4ypyopl" path="res://Corazones/Corazon3.png" id="5_150kq"]
+[ext_resource type="Texture2D" uid="uid://co5w3s6y3se27" path="res://Puestos/puesto 1 - copia.png" id="5_bmf87"]
+[ext_resource type="Texture2D" uid="uid://wqpc1t64urc3" path="res://Mesas/Mesa4.png" id="6_pjbue"]
+[ext_resource type="Texture2D" uid="uid://n35idjl12vhv" path="res://Mesas/Mesa5.png" id="7_xgxix"]
+[ext_resource type="PackedScene" uid="uid://d0hoee574lp6b" path="res://Scenes/Mini_Juego_Mesero/perrito.tscn" id="10_1k82d"]
+[ext_resource type="AudioStream" uid="uid://caeapws8tysbu" path="res://sounds/level1_music.mp3" id="10_td1ul"]
+[ext_resource type="AudioStream" uid="uid://djuatm4hlg6ce" path="res://sounds/campana.mp3" id="11_uehlc"]
+[ext_resource type="AudioStream" uid="uid://dsmdn21xbgm80" path="res://sounds/cash2.mp3" id="12_07y5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6bcr"]
+size = Vector2(72.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paxka"]
+size = Vector2(90.75, 40.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgxix"]
+size = Vector2(93.5, 52.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjrf5"]
+size = Vector2(93, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3el1p"]
+size = Vector2(90, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upph7"]
+size = Vector2(85, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ma3n6"]
+size = Vector2(96, 47)
+
+[node name="NodoCalle" type="Node2D" unique_id=871072840]
+y_sort_enabled = true
+script = ExtResource("1_pjbue")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1160584530]
+process_mode = 3
+layer = -1
+script = ExtResource("2_bmf87")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=475218642]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(785, 471)
+texture = ExtResource("1_8voex")
+
+[node name="PuestoCentro" type="Sprite2D" parent="CanvasLayer" unique_id=1476642255]
+position = Vector2(598, 184)
+scale = Vector2(0.34986413, 0.37805715)
+texture = ExtResource("3_4fcho")
+
+[node name="PuestoDerecho" type="Sprite2D" parent="CanvasLayer" unique_id=541678845]
+position = Vector2(845, 183)
+scale = Vector2(0.35618278, 0.37365603)
+texture = ExtResource("4_1k82d")
+
+[node name="Puesto1Copia" type="Sprite2D" parent="CanvasLayer" unique_id=1248991005]
+position = Vector2(315, 187)
+scale = Vector2(0.356268, 0.365285)
+texture = ExtResource("5_bmf87")
+
+[node name="Perrito" parent="CanvasLayer" unique_id=251459562 instance=ExtResource("10_1k82d")]
+position = Vector2(913, 259)
+
+[node name="Perrito2" parent="CanvasLayer" unique_id=1944912720 instance=ExtResource("10_1k82d")]
+position = Vector2(919, 403)
+
+[node name="Perrito3" parent="CanvasLayer" unique_id=745206537 instance=ExtResource("10_1k82d")]
+position = Vector2(919, 560)
+
+[node name="Corazones" type="HBoxContainer" parent="CanvasLayer" unique_id=1680310809]
+offset_left = 5.0
+offset_top = -82.0
+offset_right = 688.0
+offset_bottom = 143.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Corazon1" type="TextureRect" parent="CanvasLayer/Corazones" unique_id=521013231]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+texture = ExtResource("3_1dq1o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corazon2" type="TextureRect" parent="CanvasLayer/Corazones" unique_id=1731410014]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+texture = ExtResource("4_4k317")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corazon3" type="TextureRect" parent="CanvasLayer/Corazones" unique_id=901466979]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+texture = ExtResource("5_150kq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
+y_sort_enabled = true
+position = Vector2(52, 228)
+
+[node name="Mesa 1" type="StaticBody2D" parent="." unique_id=76096865]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 1" unique_id=84250976]
+position = Vector2(116, 289)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("3_a33dj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 1" unique_id=1644958294]
+position = Vector2(116, 291)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 1" unique_id=149960705]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 1/ZonaEntrega" unique_id=359905172]
+position = Vector2(117.625, 291.875)
+shape = SubResource("RectangleShape2D_paxka")
+
+[node name="TextoNumero" type="Label" parent="Mesa 1" unique_id=219756721]
+offset_left = 121.0
+offset_top = 248.0
+offset_right = 161.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Mesa 2" type="StaticBody2D" parent="." unique_id=494124520]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+numero_de_esta_mesa = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 2" unique_id=2117195772]
+position = Vector2(505, 308)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("4_o6bcr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 2" unique_id=79989885]
+position = Vector2(501, 320)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 2" unique_id=2093617037]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 2/ZonaEntrega" unique_id=942537281]
+position = Vector2(502, 319)
+shape = SubResource("RectangleShape2D_xgxix")
+
+[node name="TextoNumero" type="Label" parent="Mesa 2" unique_id=1189346781]
+offset_left = 485.0
+offset_top = 242.0
+offset_right = 525.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Mesa 3" type="StaticBody2D" parent="." unique_id=122079651]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+numero_de_esta_mesa = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 3" unique_id=464344413]
+position = Vector2(838, 314)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("5_6nrxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 3" unique_id=571922019]
+position = Vector2(838, 329)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 3" unique_id=1927138806]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 3/ZonaEntrega" unique_id=1588074681]
+position = Vector2(835, 327)
+shape = SubResource("RectangleShape2D_xjrf5")
+
+[node name="TextoNumero" type="Label" parent="Mesa 3" unique_id=434226064]
+offset_left = 828.0
+offset_top = 250.0
+offset_right = 868.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Mesa 4" type="StaticBody2D" parent="." unique_id=860238996]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+numero_de_esta_mesa = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 4" unique_id=2005005874]
+position = Vector2(845, 477.99997)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("6_pjbue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 4" unique_id=1198833420]
+position = Vector2(850, 493)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 4" unique_id=1594034402]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 4/ZonaEntrega" unique_id=2035665664]
+position = Vector2(841, 498)
+shape = SubResource("RectangleShape2D_3el1p")
+
+[node name="TextoNumero" type="Label" parent="Mesa 4" unique_id=1195407916]
+offset_left = 808.0
+offset_top = 427.0
+offset_right = 848.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Mesa 5" type="StaticBody2D" parent="." unique_id=1936078840]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+numero_de_esta_mesa = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 5" unique_id=620263477]
+position = Vector2(515, 463.99997)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("7_xgxix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 5" unique_id=921084161]
+position = Vector2(514, 478)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 5" unique_id=1986165499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 5/ZonaEntrega" unique_id=1746272110]
+position = Vector2(516, 479)
+shape = SubResource("RectangleShape2D_upph7")
+
+[node name="TextoNumero" type="Label" parent="Mesa 5" unique_id=1572888501]
+offset_left = 491.0
+offset_top = 401.0
+offset_right = 531.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Mesa 6" type="StaticBody2D" parent="." unique_id=1382849685]
+y_sort_enabled = true
+script = ExtResource("4_xgxix")
+numero_de_esta_mesa = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa 6" unique_id=1621358226]
+position = Vector2(119.00003, 462.99997)
+scale = Vector2(0.5833333, 0.61564624)
+texture = ExtResource("6_pjbue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 6" unique_id=1808756015]
+position = Vector2(116, 474)
+shape = SubResource("RectangleShape2D_o6bcr")
+
+[node name="ZonaEntrega" type="Area2D" parent="Mesa 6" unique_id=1472242664]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 6/ZonaEntrega" unique_id=1108229807]
+position = Vector2(118, 476)
+shape = SubResource("RectangleShape2D_ma3n6")
+
+[node name="TextoNumero" type="Label" parent="Mesa 6" unique_id=128823816]
+offset_left = 76.0
+offset_top = 409.0
+offset_right = 116.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Timer" type="Timer" parent="." unique_id=438847992]
+wait_time = 6.0
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=882840896]
+stream = ExtResource("10_td1ul")
+autoplay = true
+
+[node name="SonidoCampana" type="AudioStreamPlayer2D" parent="." unique_id=1586804409]
+stream = ExtResource("11_uehlc")
+
+[node name="SonidoDinero" type="AudioStreamPlayer2D" parent="." unique_id=1903929642]
+stream = ExtResource("12_07y5a")

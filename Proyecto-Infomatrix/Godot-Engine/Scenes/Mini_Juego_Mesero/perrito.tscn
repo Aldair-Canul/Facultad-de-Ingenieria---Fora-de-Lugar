@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d0hoee574lp6b"]
+
+[ext_resource type="Script" uid="uid://1rblqkbj41ol" path="res://Scenes/Mini_Juego_Mesero/perrito.gd" id="1_brlgm"]
+[ext_resource type="Texture2D" uid="uid://btayfbib4l7gw" path="res://Perrito/Perro1 - copia.png" id="2_24csi"]
+[ext_resource type="Texture2D" uid="uid://bjo16v0capdvn" path="res://Perrito/Perro2 - copia.png" id="3_idm50"]
+[ext_resource type="Texture2D" uid="uid://bw5uqli44cupa" path="res://Perrito/Perro3 - copia.png" id="4_0dih4"]
+[ext_resource type="Texture2D" uid="uid://stbfre8k022g" path="res://Perrito/Perro1I - copia.png" id="5_kmv78"]
+[ext_resource type="Texture2D" uid="uid://bpdxs5w122gb2" path="res://Perrito/Perro2I - copia.png" id="6_wm225"]
+[ext_resource type="Texture2D" uid="uid://c6xunlnuk00no" path="res://Perrito/Perro3I - copia.png" id="7_iul5h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4538"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_24csi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_idm50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0dih4")
+}],
+"loop": true,
+"name": &"derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kmv78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wm225")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iul5h")
+}],
+"loop": true,
+"name": &"izquierda",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uop7h"]
+size = Vector2(60, 30)
+
+[node name="Perrito" type="Area2D" unique_id=251459562]
+script = ExtResource("1_brlgm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1952699293]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_n4538")
+animation = &"izquierda"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001871174]
+position = Vector2(3, 5)
+shape = SubResource("RectangleShape2D_uop7h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

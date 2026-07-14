@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://bdk38tfn6t0o3"]
+
+[ext_resource type="Script" uid="uid://cqhmnywah7v1" path="res://Scenes/Mini_Juego_Mesero/mesero.gd" id="1_8cs32"]
+[ext_resource type="Texture2D" uid="uid://dg57lucn3sqln" path="res://MeseroSprites/Drc1.png" id="1_txikj"]
+[ext_resource type="Texture2D" uid="uid://dmpy8us8furxp" path="res://MeseroSprites/caminando hacia delante clear.png" id="2_1vcip"]
+[ext_resource type="Texture2D" uid="uid://ct824rsqviwpb" path="res://MeseroSprites/Drc2.png" id="2_8cs32"]
+[ext_resource type="Texture2D" uid="uid://c1wbrtr5rj453" path="res://MeseroSprites/camina haci atras clear.png" id="3_26bxt"]
+[ext_resource type="Texture2D" uid="uid://5n18x64uvdo2" path="res://MeseroSprites/Drc3.png" id="3_l6fyh"]
+[ext_resource type="Texture2D" uid="uid://b12u4nfcdrtdb" path="res://MeseroSprites/Drc4.png" id="4_pcpgv"]
+[ext_resource type="Texture2D" uid="uid://bcoxji45ifbud" path="res://MeseroSprites/Izq1.png" id="5_sxo5p"]
+[ext_resource type="Texture2D" uid="uid://u7aalp3uciwb" path="res://MeseroSprites/Izq2.png" id="6_0i8wf"]
+[ext_resource type="Texture2D" uid="uid://b4i1qamx71mj8" path="res://MeseroSprites/Izq3.png" id="7_p0ebm"]
+[ext_resource type="Texture2D" uid="uid://dhfyahfom8ge4" path="res://MeseroSprites/Izq4.png" id="8_6jrg7"]
+[ext_resource type="Texture2D" uid="uid://c7fa1dlcfutjd" path="res://images/Mesero/ParadoD.png" id="9_4pint"]
+[ext_resource type="Texture2D" uid="uid://bmjqpmvd3jtq4" path="res://images/Mesero/ParadoI.png" id="10_lpxgm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fdr0"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(0, 0, 273, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwsgh"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(273, 0, 273, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adyf1"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(546, 0, 273, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wweek"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(819, 0, 273, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abb51"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(1092, 0, 273, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lkp0"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(0, 0, 275, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h2yj"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(275, 0, 275, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ttqa"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(550, 0, 275, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuk5p"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(825, 0, 275, 356)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34le8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fdr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwsgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adyf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wweek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abb51")
+}],
+"loop": true,
+"name": &"Abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lkp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h2yj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ttqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuk5p")
+}],
+"loop": true,
+"name": &"Arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_txikj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8cs32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l6fyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pcpgv")
+}],
+"loop": true,
+"name": &"Derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sxo5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0i8wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p0ebm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6jrg7")
+}],
+"loop": true,
+"name": &"Izquierda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4pint")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lpxgm")
+}],
+"loop": true,
+"name": &"Quieto",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cs32"]
+size = Vector2(71.666664, 116.66666)
+
+[node name="Mesero" type="CharacterBody2D" unique_id=614565725]
+scale = Vector2(0.3, 0.3)
+motion_mode = 1
+script = ExtResource("1_8cs32")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1117248730]
+position = Vector2(-23.333332, -76.666664)
+sprite_frames = SubResource("SpriteFrames_34le8")
+animation = &"Abajo"
+
+[node name="PlatoCargado" type="Sprite2D" parent="." unique_id=1503995587]
+z_index = 1
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580692053]
+position = Vector2(0, -8.333331)
+shape = SubResource("RectangleShape2D_8cs32")
+
+[node name="TextoPlatoCargado" type="Label" parent="." unique_id=542940780]
+offset_left = -20.0
+offset_top = -293.3333
+offset_right = 56.666664
+offset_bottom = -233.33331
+theme_override_font_sizes/font_size = 39

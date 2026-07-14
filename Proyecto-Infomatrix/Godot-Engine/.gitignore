@@ -1,0 +1,7 @@
+# Ignorar caché e importaciones locales de Godot 4
+.godot/
+
+# Ignorar exportaciones y archivos pesados
+*.exe
+*.pck
+*.zip

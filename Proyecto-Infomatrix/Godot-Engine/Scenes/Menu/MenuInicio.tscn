@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c3xlbl06486ox"]
+
+[ext_resource type="Texture2D" uid="uid://bshcew7gqotty" path="res://images/MenuInicio/fondo_menu.PNG" id="1_igfqi"]
+[ext_resource type="Script" uid="uid://bpv38qmuypbcc" path="res://Scenes/Menu/btn_iniciar.gd" id="2_fte28"]
+[ext_resource type="Script" uid="uid://c53578s2ykjph" path="res://Scenes/Menu/btn_info.gd" id="3_mh5jj"]
+[ext_resource type="Script" uid="uid://bfcqaw4iyl1y1" path="res://Scenes/Menu/btn_salir.gd" id="4_fte28"]
+[ext_resource type="AudioStream" uid="uid://rffvjmfd53va" path="res://sounds/menu_music.mp3" id="5_mh5jj"]
+
+[node name="Control" type="Control" unique_id=580286647]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=2121953230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_igfqi")
+expand_mode = 1
+
+[node name="BtnIniciar" type="Button" parent="." unique_id=1839748038]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 348.0
+offset_right = 521.0
+offset_bottom = 416.0
+text = "START"
+script = ExtResource("2_fte28")
+
+[node name="BtnInfo" type="Button" parent="." unique_id=351774535]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 429.0
+offset_right = 522.0
+offset_bottom = 492.0
+text = "Controls"
+script = ExtResource("3_mh5jj")
+
+[node name="BtnSalir" type="Button" parent="." unique_id=1676098805]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 507.0
+offset_right = 521.0
+offset_bottom = 579.0
+text = "Exit
+"
+script = ExtResource("4_fte28")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2033013963]
+stream = ExtResource("5_mh5jj")
+autoplay = true
+
+[connection signal="pressed" from="BtnIniciar" to="BtnIniciar" method="_on_boton_pressed"]
+[connection signal="pressed" from="BtnInfo" to="BtnInfo" method="_on_boton_pressed"]
+[connection signal="pressed" from="BtnSalir" to="BtnSalir" method="_on_boton_pressed"]

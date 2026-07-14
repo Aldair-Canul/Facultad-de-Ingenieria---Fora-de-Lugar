@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://metnjw4th7tj"]
+
+[ext_resource type="Texture2D" uid="uid://b1n3gwwihqbmh" path="res://images/MenuInicio/Info.png" id="1_1pq3o"]
+[ext_resource type="Script" uid="uid://b6wf0t5cec82f" path="res://Scenes/Menu/BtnBack.gd" id="2_6trfo"]
+
+[node name="Info" type="Control" unique_id=1383179485]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2145955866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1pq3o")
+
+[node name="BtnBack" type="Button" parent="." unique_id=1859778256]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 135.0
+offset_bottom = 41.0
+text = "Back"
+script = ExtResource("2_6trfo")
+
+[connection signal="pressed" from="BtnBack" to="BtnBack" method="_on_boton_pressed"]

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://btvu7tme7rlec"]
+
+[ext_resource type="Texture2D" uid="uid://yki8wk34off0" path="res://Carta_despido.png" id="1_y26ei"]
+[ext_resource type="Script" uid="uid://d0y4ohxak017e" path="res://game_over.gd" id="1_yxx3c"]
+
+[node name="GameOver" type="Control" unique_id=785799464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yxx3c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=440042900]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y26ei")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="." unique_id=1072296568]
+process_mode = 3
+layout_mode = 0
+offset_left = 390.0
+offset_top = 487.0
+offset_right = 555.0
+offset_bottom = 562.0
+text = "Vuelve a intentar!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
