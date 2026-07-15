@@ -294,3 +294,7 @@ stream = ExtResource("11_uehlc")
 
 [node name="SonidoDinero" type="AudioStreamPlayer2D" parent="." unique_id=1903929642]
 stream = ExtResource("12_07y5a")
+
+[node name="Sonidocampana" type="AudioStreamPlayer" parent="." unique_id=1292049966]
+unique_name_in_owner = true
+stream = ExtResource("11_uehlc")
