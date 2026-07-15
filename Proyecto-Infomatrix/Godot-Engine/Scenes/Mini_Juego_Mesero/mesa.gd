@@ -14,6 +14,15 @@ func _on_zona_entrega_body_entered(body):
 		# Comprobamos si el número de plato que carga coincide con ESTA mesa
 		if body.numero_plato_actual == numero_de_esta_mesa:
 			
+			# --- NUEVA LÓGICA DE AUDIO ---
+			# Buscamos el nodo de sonido único en la escena usando su nombre tal cual aparece en tu editor
+			var reproductor_audio = get_node_or_null("%Sonidocampana")
+			
+			# Si encuentra el nodo, reproduce la campanita 🎵
+			if reproductor_audio:
+				reproductor_audio.play()
+			# ------------------------------
+			
 			# 1. Dejamos las manos del mesero vacías de nuevo
 			body.numero_plato_actual = 0
 			
@@ -22,5 +31,3 @@ func _on_zona_entrega_body_entered(body):
 			
 			# 3. Imprimimos en la consola para confirmar que funcionó
 			print("¡Plato entregado con éxito en la Mesa ", numero_de_esta_mesa, "!")
-	
-			# Aquí más adelante sumaremos el dinero o el puntaje
