@@ -79,15 +79,6 @@ position = Vector2(315, 187)
 scale = Vector2(0.356268, 0.365285)
 texture = ExtResource("5_bmf87")
 
-[node name="Perrito" parent="CanvasLayer" unique_id=251459562 instance=ExtResource("10_1k82d")]
-position = Vector2(913, 259)
-
-[node name="Perrito2" parent="CanvasLayer" unique_id=1944912720 instance=ExtResource("10_1k82d")]
-position = Vector2(919, 403)
-
-[node name="Perrito3" parent="CanvasLayer" unique_id=745206537 instance=ExtResource("10_1k82d")]
-position = Vector2(919, 560)
-
 [node name="Corazones" type="HBoxContainer" parent="CanvasLayer" unique_id=1680310809]
 offset_left = 5.0
 offset_top = -82.0
@@ -115,10 +106,6 @@ layout_mode = 2
 texture = ExtResource("5_150kq")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
-y_sort_enabled = true
-position = Vector2(52, 228)
 
 [node name="Mesa 1" type="StaticBody2D" parent="." unique_id=76096865]
 y_sort_enabled = true
@@ -298,3 +285,15 @@ stream = ExtResource("12_07y5a")
 [node name="Sonidocampana" type="AudioStreamPlayer" parent="." unique_id=1292049966]
 unique_name_in_owner = true
 stream = ExtResource("11_uehlc")
+
+[node name="Perrito1" parent="." unique_id=251459562 instance=ExtResource("10_1k82d")]
+position = Vector2(951, 284)
+
+[node name="Perrito2" parent="." unique_id=1944912720 instance=ExtResource("10_1k82d")]
+position = Vector2(935, 422)
+
+[node name="Perrito3" parent="." unique_id=745206537 instance=ExtResource("10_1k82d")]
+position = Vector2(944, 591)
+
+[node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
+position = Vector2(37, 258)

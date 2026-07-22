@@ -136,15 +136,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cs32"]
-size = Vector2(71.666664, 116.66666)
+size = Vector2(69.166664, 138.33333)
 
 [node name="Mesero" type="CharacterBody2D" unique_id=614565725]
+y_sort_enabled = true
 scale = Vector2(0.3, 0.3)
 motion_mode = 1
 script = ExtResource("1_8cs32")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1117248730]
-position = Vector2(-23.333332, -76.666664)
+position = Vector2(43.333332, -100)
 sprite_frames = SubResource("SpriteFrames_34le8")
 animation = &"Abajo"
 
@@ -153,7 +154,7 @@ z_index = 1
 scale = Vector2(0.3, 0.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580692053]
-position = Vector2(0, -8.333331)
+position = Vector2(-6.666667, -66.666664)
 shape = SubResource("RectangleShape2D_8cs32")
 
 [node name="TextoPlatoCargado" type="Label" parent="." unique_id=542940780]
