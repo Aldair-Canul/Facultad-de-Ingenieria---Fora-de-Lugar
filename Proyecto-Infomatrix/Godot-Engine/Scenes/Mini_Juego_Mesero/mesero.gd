@@ -12,7 +12,7 @@ func _ready():
 func _physics_process(_delta):
 	var direccion_x = 0
 	var direccion_y = 0
-	
+
 	# Usamos Input.is_physical_key_pressed, que lee el teclado directamente por hardware
 	if Input.is_physical_key_pressed(KEY_RIGHT) or Input.is_physical_key_pressed(KEY_D):
 		direccion_x = 1
@@ -86,12 +86,17 @@ func recibir_dano():
 	vidas -= 1
 	print("Me golpearon. Vidas restantes: ", vidas)
 	
-	# Dinámica de soltar la comida en la colisión
-	numero_plato_actual = 0
+	# =========================================================
+	# PERDER LA COMIDA (La tiró al piso y se arruinó)
+	# =========================================================
+	numero_plato_actual = 0 # El mesero vuelve a tener 0 platos
+	
 	if has_node("PlatoCargado"):
-		$PlatoCargado.visible = false
+		$PlatoCargado.texture = null # Borramos la foto de los tacos/hamburguesa
+		
 	if has_node("TextoPlatoCargado"):
-		$TextoPlatoCargado.visible = false
+		$TextoPlatoCargado.text = "" # Borramos el número de la mesa
+	# =========================================================
 	
 	# Le avisamos a los corazones que cambien
 	if has_node("/root/NodoCalle/CanvasLayer"):

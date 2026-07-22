@@ -21,17 +21,10 @@ func configurar_plato(numero_mesa, imagen_comida):
 func _on_body_entered(body):
 	# Verificamos si el que lo pisó es el Mesero
 	if body.name == "Mesero":
-		# Si el mesero tiene las manos vacías (0), recoge el plato
 		if body.numero_plato_actual == 0:
 			body.numero_plato_actual = numero_mesa_destino
-			
-			# Le pasamos la imagen del plato a las manos del mesero
 			body.get_node("PlatoCargado").texture = $Sprite2D.texture
-			
-			# ====================================================================
-			# NUEVO: Le pasamos el número a la etiqueta de la cabeza del mesero
-			# ====================================================================
+			body.get_node("PlatoCargado").visible = true # Por si acaso
 			body.get_node("TextoPlatoCargado").text = str(numero_mesa_destino)
-			
-			# El plato desaparece de la puerta
+			body.get_node("TextoPlatoCargado").visible = true
 			queue_free()

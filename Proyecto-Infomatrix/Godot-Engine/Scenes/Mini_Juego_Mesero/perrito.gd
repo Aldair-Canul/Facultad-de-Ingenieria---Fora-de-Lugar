@@ -6,12 +6,10 @@ extends Area2D
 
 var direccion = 1 # 1 es derecha, -1 es izquierda
 
-# --- NUEVA VARIABLE ---
 # Este cronómetro acumula los segundos para saber cuándo cambiar de ritmo
 var tiempo_para_acelerar = 0.0
 
 func _process(delta):
-	# --- NUEVO COMPORTAMIENTO IMPREDECIBLE ---
 	# Sumamos el tiempo que pasa en cada fotograma
 	tiempo_para_acelerar += delta
 	

@@ -43,15 +43,17 @@ animations = [{
 size = Vector2(60, 30)
 
 [node name="Perrito" type="Area2D" unique_id=251459562]
+y_sort_enabled = true
 script = ExtResource("1_brlgm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1952699293]
+position = Vector2(-7, -22)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_n4538")
 animation = &"izquierda"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001871174]
-position = Vector2(3, 5)
+position = Vector2(-6, -18)
 shape = SubResource("RectangleShape2D_uop7h")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
