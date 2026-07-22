@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1wbrtr5rj453"
-path="res://.godot/imported/camina haci atras clear.png-083f5a23f73f89ccf7a3dd958ee9ee16.ctex"
+uid="uid://c6nuy662wt7gu"
+path="res://.godot/imported/mesa cuarto.png-455fd2b78034f0aff954f1a7d6dd9247.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/camina haci atras clear.png"
-dest_files=["res://.godot/imported/camina haci atras clear.png-083f5a23f73f89ccf7a3dd958ee9ee16.ctex"]
+source_file="res://images/EscenaCuarto/mesa cuarto.png"
+dest_files=["res://.godot/imported/mesa cuarto.png-455fd2b78034f0aff954f1a7d6dd9247.ctex"]
 
 [params]
 

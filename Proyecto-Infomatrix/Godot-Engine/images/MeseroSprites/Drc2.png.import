@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b12u4nfcdrtdb"
-path="res://.godot/imported/Drc4.png-ea5e4a9ba46d7ed98cb8ab8e6dcf0cd0.ctex"
+uid="uid://ct824rsqviwpb"
+path="res://.godot/imported/Drc2.png-db763c8313868c1207ce0274176f5117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/Drc4.png"
-dest_files=["res://.godot/imported/Drc4.png-ea5e4a9ba46d7ed98cb8ab8e6dcf0cd0.ctex"]
+source_file="res://images/MeseroSprites/Drc2.png"
+dest_files=["res://.godot/imported/Drc2.png-db763c8313868c1207ce0274176f5117.ctex"]
 
 [params]
 

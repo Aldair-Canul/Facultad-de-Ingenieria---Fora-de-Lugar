@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://c53578s2ykjph" path="res://Scenes/Menu/btn_info.gd" id="3_mh5jj"]
 [ext_resource type="Script" uid="uid://bfcqaw4iyl1y1" path="res://Scenes/Menu/btn_salir.gd" id="4_fte28"]
 [ext_resource type="AudioStream" uid="uid://rffvjmfd53va" path="res://sounds/menu_music.mp3" id="5_mh5jj"]
+[ext_resource type="Script" uid="uid://5wab8crhc1xg" path="res://Scenes/Menu/btn_segundo_nivel.gd" id="6_1c3wx"]
 
 [node name="Control" type="Control" unique_id=580286647]
 layout_mode = 3
@@ -58,6 +59,16 @@ script = ExtResource("4_fte28")
 stream = ExtResource("5_mh5jj")
 autoplay = true
 
+[node name="BtnSegundoNivel" type="Button" parent="." unique_id=737707836]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 111.0
+offset_bottom = 46.0
+text = "Next Level"
+script = ExtResource("6_1c3wx")
+
 [connection signal="pressed" from="BtnIniciar" to="BtnIniciar" method="_on_boton_pressed"]
 [connection signal="pressed" from="BtnInfo" to="BtnInfo" method="_on_boton_pressed"]
 [connection signal="pressed" from="BtnSalir" to="BtnSalir" method="_on_boton_pressed"]
+[connection signal="pressed" from="BtnSegundoNivel" to="BtnSegundoNivel" method="_on_pressed"]

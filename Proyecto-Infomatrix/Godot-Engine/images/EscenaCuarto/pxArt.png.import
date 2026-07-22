@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhfyahfom8ge4"
-path="res://.godot/imported/Izq4.png-d6d6e20a0e7013e9ebe54d3e93b61c0a.ctex"
+uid="uid://c67786o1xoqhj"
+path="res://.godot/imported/pxArt.png-789d642637945c3cf6d12687b12ad17d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/Izq4.png"
-dest_files=["res://.godot/imported/Izq4.png-d6d6e20a0e7013e9ebe54d3e93b61c0a.ctex"]
+source_file="res://images/EscenaCuarto/pxArt.png"
+dest_files=["res://.godot/imported/pxArt.png-789d642637945c3cf6d12687b12ad17d.ctex"]
 
 [params]
 
