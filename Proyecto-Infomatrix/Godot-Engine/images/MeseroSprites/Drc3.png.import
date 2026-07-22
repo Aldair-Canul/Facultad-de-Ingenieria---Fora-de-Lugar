@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5n18x64uvdo2"
-path="res://.godot/imported/Drc3.png-1e03733acb0c8653ee026b25a86f2296.ctex"
+path="res://.godot/imported/Drc3.png-ca04eb38a771efa393d9bfba0f1e42db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/Drc3.png"
-dest_files=["res://.godot/imported/Drc3.png-1e03733acb0c8653ee026b25a86f2296.ctex"]
+source_file="res://images/MeseroSprites/Drc3.png"
+dest_files=["res://.godot/imported/Drc3.png-ca04eb38a771efa393d9bfba0f1e42db.ctex"]
 
 [params]
 

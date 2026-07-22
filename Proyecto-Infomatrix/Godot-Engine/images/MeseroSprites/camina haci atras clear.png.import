@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct824rsqviwpb"
-path="res://.godot/imported/Drc2.png-7482e77b2df9c5a3a2dc9cfabb4b4413.ctex"
+uid="uid://c1wbrtr5rj453"
+path="res://.godot/imported/camina haci atras clear.png-1a439270469cd4168260429333a72820.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/Drc2.png"
-dest_files=["res://.godot/imported/Drc2.png-7482e77b2df9c5a3a2dc9cfabb4b4413.ctex"]
+source_file="res://images/MeseroSprites/camina haci atras clear.png"
+dest_files=["res://.godot/imported/camina haci atras clear.png-1a439270469cd4168260429333a72820.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4i1qamx71mj8"
-path="res://.godot/imported/Izq3.png-6d56a7fe45c718e886b7385129739699.ctex"
+uid="uid://ja8jqvxju5hu"
+path="res://.godot/imported/cama.png-53e76d01e27241906338f70beaca9b06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/Izq3.png"
-dest_files=["res://.godot/imported/Izq3.png-6d56a7fe45c718e886b7385129739699.ctex"]
+source_file="res://images/EscenaCuarto/cama.png"
+dest_files=["res://.godot/imported/cama.png-53e76d01e27241906338f70beaca9b06.ctex"]
 
 [params]
 

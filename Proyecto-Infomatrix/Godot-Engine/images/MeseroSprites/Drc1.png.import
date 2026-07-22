@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmpy8us8furxp"
-path="res://.godot/imported/caminando hacia delante clear.png-80c7f2e993cb2490fa0b0fd0937f8df4.ctex"
+uid="uid://dg57lucn3sqln"
+path="res://.godot/imported/Drc1.png-048d3fa3cf4baf03a7099d44311659eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MeseroSprites/caminando hacia delante clear.png"
-dest_files=["res://.godot/imported/caminando hacia delante clear.png-80c7f2e993cb2490fa0b0fd0937f8df4.ctex"]
+source_file="res://images/MeseroSprites/Drc1.png"
+dest_files=["res://.godot/imported/Drc1.png-048d3fa3cf4baf03a7099d44311659eb.ctex"]
 
 [params]
 
