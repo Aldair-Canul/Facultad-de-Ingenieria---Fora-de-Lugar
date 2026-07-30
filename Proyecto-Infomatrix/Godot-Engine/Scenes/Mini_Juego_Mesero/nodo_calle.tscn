@@ -287,13 +287,22 @@ unique_name_in_owner = true
 stream = ExtResource("11_uehlc")
 
 [node name="Perrito1" parent="." unique_id=251459562 instance=ExtResource("10_1k82d")]
-position = Vector2(951, 284)
+position = Vector2(297, 260)
 
 [node name="Perrito2" parent="." unique_id=1944912720 instance=ExtResource("10_1k82d")]
-position = Vector2(935, 422)
+position = Vector2(966, 435)
 
 [node name="Perrito3" parent="." unique_id=745206537 instance=ExtResource("10_1k82d")]
-position = Vector2(944, 591)
+position = Vector2(952, 577)
+
+[node name="Perrito4" parent="." unique_id=301133068 instance=ExtResource("10_1k82d")]
+position = Vector2(359, 542)
+
+[node name="Perrito5" parent="." unique_id=1435780404 instance=ExtResource("10_1k82d")]
+position = Vector2(662, 267)
+
+[node name="Perrito6" parent="." unique_id=1977833672 instance=ExtResource("10_1k82d")]
+position = Vector2(968, 270)
 
 [node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
 position = Vector2(37, 258)
