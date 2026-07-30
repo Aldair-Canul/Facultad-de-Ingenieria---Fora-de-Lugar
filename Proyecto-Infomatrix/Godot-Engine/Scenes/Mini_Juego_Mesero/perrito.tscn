@@ -2,14 +2,96 @@
 
 [ext_resource type="Script" uid="uid://1rblqkbj41ol" path="res://Scenes/Mini_Juego_Mesero/perrito.gd" id="1_brlgm"]
 [ext_resource type="Texture2D" uid="uid://btayfbib4l7gw" path="res://Perrito/Perro1 - copia.png" id="2_24csi"]
+[ext_resource type="Texture2D" uid="uid://dk8005xhdiaox" path="res://Perrito/perrito adelante.png" id="2_idm50"]
+[ext_resource type="Texture2D" uid="uid://ck8rsohs4n0jy" path="res://Perrito/perrito atras.png" id="3_0dih4"]
 [ext_resource type="Texture2D" uid="uid://bjo16v0capdvn" path="res://Perrito/Perro2 - copia.png" id="3_idm50"]
 [ext_resource type="Texture2D" uid="uid://bw5uqli44cupa" path="res://Perrito/Perro3 - copia.png" id="4_0dih4"]
 [ext_resource type="Texture2D" uid="uid://stbfre8k022g" path="res://Perrito/Perro1I - copia.png" id="5_kmv78"]
 [ext_resource type="Texture2D" uid="uid://bpdxs5w122gb2" path="res://Perrito/Perro2I - copia.png" id="6_wm225"]
 [ext_resource type="Texture2D" uid="uid://c6xunlnuk00no" path="res://Perrito/Perro3I - copia.png" id="7_iul5h"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmv78"]
+atlas = ExtResource("2_idm50")
+region = Rect2(0, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm225"]
+atlas = ExtResource("2_idm50")
+region = Rect2(256, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iul5h"]
+atlas = ExtResource("2_idm50")
+region = Rect2(512, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4538"]
+atlas = ExtResource("2_idm50")
+region = Rect2(768, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uop7h"]
+atlas = ExtResource("2_idm50")
+region = Rect2(1024, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwe2u"]
+atlas = ExtResource("3_0dih4")
+region = Rect2(0, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laop0"]
+atlas = ExtResource("3_0dih4")
+region = Rect2(256, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w1qd"]
+atlas = ExtResource("3_0dih4")
+region = Rect2(512, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n12te"]
+atlas = ExtResource("3_0dih4")
+region = Rect2(768, 0, 256, 635)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bb82"]
+atlas = ExtResource("3_0dih4")
+region = Rect2(1024, 0, 256, 635)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_n4538"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmv78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm225")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iul5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4538")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uop7h")
+}],
+"loop": true,
+"name": &"abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwe2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laop0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w1qd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n12te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bb82")
+}],
+"loop": true,
+"name": &"arriba",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_24csi")
@@ -50,7 +132,7 @@ script = ExtResource("1_brlgm")
 position = Vector2(-7, -22)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_n4538")
-animation = &"izquierda"
+animation = &"abajo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001871174]
 position = Vector2(-6, -18)
