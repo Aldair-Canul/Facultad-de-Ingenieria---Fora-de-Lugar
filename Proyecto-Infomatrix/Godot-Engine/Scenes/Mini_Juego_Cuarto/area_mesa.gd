@@ -33,4 +33,8 @@ func check_snap():
 	if global_position.distance_to(target_position) < snap_distance:
 		global_position = target_position
 		locked = true
-		print("¡Mesa colocada en su lugar!")
+		
+		# --- AQUÍ AGREGAMOS EL SONIDO ---
+		$"../SonidoClick".play()
+		
+		print("¡Cama colocada en el centro!")

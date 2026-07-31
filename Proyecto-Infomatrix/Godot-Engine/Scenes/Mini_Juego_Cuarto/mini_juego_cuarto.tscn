@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cg7frm5bfe034"]
 
+[ext_resource type="Script" uid="uid://bn13nlnofhhoy" path="res://Scenes/Mini_Juego_Cuarto/mini_juego_cuarto.gd" id="1_5fjy6"]
 [ext_resource type="Texture2D" uid="uid://c67786o1xoqhj" path="res://images/EscenaCuarto/pxArt.png" id="1_gqp8h"]
 [ext_resource type="Script" uid="uid://c538iqk3ogbw8" path="res://area_cama.gd" id="2_caaqp"]
 [ext_resource type="Texture2D" uid="uid://ja8jqvxju5hu" path="res://images/EscenaCuarto/cama.png" id="3_jmsbh"]
@@ -7,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://c3wrnbglf54cr" path="res://images/EscenaCuarto/silla cuarto.png" id="5_qcftv"]
 [ext_resource type="Script" uid="uid://8b5iimfmetku" path="res://Scenes/Mini_Juego_Cuarto/area_mesa.gd" id="6_dqmg8"]
 [ext_resource type="Texture2D" uid="uid://c6nuy662wt7gu" path="res://images/EscenaCuarto/mesa cuarto.png" id="6_qcftv"]
+[ext_resource type="AudioStream" uid="uid://cdmiiausc0864" path="res://sounds/sound_correct_min_cuarto.mp3" id="8_2yade"]
+[ext_resource type="AudioStream" uid="uid://hp8t0saefqy7" path="res://sounds/MusicaFondo_Min_Cuarto.mp3" id="9_gcic5"]
+[ext_resource type="Script" uid="uid://cuw34f2e1x4of" path="res://Scenes/Mini_Juego_Cuarto/button.gd" id="10_oc5ku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcftv"]
 size = Vector2(128, 205)
@@ -18,48 +22,93 @@ size = Vector2(90, 127)
 size = Vector2(207, 119)
 
 [node name="Mini_Juego_Cuarto" type="Node2D" unique_id=1396101903]
+script = ExtResource("1_5fjy6")
 
 [node name="SpriteCuarto" type="Sprite2D" parent="." unique_id=556703628]
 position = Vector2(505.50003, 300)
 scale = Vector2(0.5861467, 0.6513661)
 texture = ExtResource("1_gqp8h")
 
+[node name="SiluetaCama" type="Sprite2D" parent="." unique_id=1299704413]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(521, 432)
+scale = Vector2(0.34051725, 0.3696561)
+texture = ExtResource("3_jmsbh")
+
+[node name="SiluetaSilla" type="Sprite2D" parent="." unique_id=1792896919]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(426, 443.00003)
+scale = Vector2(0.4321289, 0.46028548)
+texture = ExtResource("5_qcftv")
+
+[node name="SiluetaMesa" type="Sprite2D" parent="." unique_id=1370060461]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(702, 403.99997)
+scale = Vector2(0.5483399, 0.36941803)
+texture = ExtResource("6_qcftv")
+
 [node name="AreaCama" type="Area2D" parent="." unique_id=641709515]
 script = ExtResource("2_caaqp")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaCama" unique_id=2141186369]
-position = Vector2(694, 110.00001)
+position = Vector2(702.00006, 118)
 scale = Vector2(0.34698278, 0.39591077)
 texture = ExtResource("3_jmsbh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCama" unique_id=385665105]
-position = Vector2(673, 118)
+position = Vector2(673, 126)
 shape = SubResource("RectangleShape2D_qcftv")
 
 [node name="AreaSilla" type="Area2D" parent="." unique_id=1400328365]
 script = ExtResource("4_jmsbh")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaSilla" unique_id=983272574]
-position = Vector2(621, 197.00002)
+position = Vector2(601.00006, 207)
 scale = Vector2(0.41796875, 0.4795022)
 texture = ExtResource("5_qcftv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSilla" unique_id=1382673625]
-position = Vector2(497, 138)
+position = Vector2(483, 145)
 shape = SubResource("RectangleShape2D_dqmg8")
 
 [node name="AreaMesa" type="Area2D" parent="." unique_id=1751761952]
 script = ExtResource("6_dqmg8")
 
 [node name="SpriteMesa" type="Sprite2D" parent="AreaMesa" unique_id=11238858]
-position = Vector2(327, 147)
+position = Vector2(312, 140)
 scale = Vector2(0.55564827, 0.36603817)
 texture = ExtResource("6_qcftv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMesa" unique_id=1426207702]
-position = Vector2(317.5, 121)
+position = Vector2(299, 112)
 shape = SubResource("RectangleShape2D_2yade")
+
+[node name="SonidoClick" type="AudioStreamPlayer2D" parent="." unique_id=1948293660]
+stream = ExtResource("8_2yade")
+
+[node name="MusicaFondo" type="AudioStreamPlayer2D" parent="." unique_id=1826114985]
+stream = ExtResource("9_gcic5")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1999439069]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=718337534]
+offset_right = 80.0
+offset_bottom = 44.0
+text = "Menu"
+script = ExtResource("10_oc5ku")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1115666598]
+offset_left = 314.0
+offset_top = 3.0
+offset_right = 594.0
+offset_bottom = 43.0
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer" unique_id=699760889]
+layout_mode = 2
+text = "\"Arrastra los muebles a su lugar\"."
 
 [connection signal="input_event" from="AreaCama" to="AreaCama" method="_on_input_event"]
 [connection signal="input_event" from="AreaSilla" to="AreaSilla" method="_on_input_event"]
 [connection signal="input_event" from="AreaMesa" to="AreaMesa" method="_on_input_event"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
