@@ -34,7 +34,6 @@ func check_snap():
 		global_position = target_position
 		locked = true
 		
-		# --- AQUÍ AGREGAMOS EL SONIDO ---
 		$"../SonidoClick".play()
 		
 		print("¡Cama colocada en el centro!")
