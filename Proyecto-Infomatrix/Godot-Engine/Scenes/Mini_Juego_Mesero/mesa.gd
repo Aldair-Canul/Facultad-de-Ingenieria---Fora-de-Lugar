@@ -23,6 +23,10 @@ func _on_zona_entrega_body_entered(body):
 				reproductor_audio.play()
 			# ------------------------------
 			
+			# --- SUMAR PROPINA Y DINERO AL MESERO ---
+			if body.has_method("entregar_plato"):
+				body.entregar_plato()
+			
 			# 1. Dejamos las manos del mesero vacías de nuevo
 			body.numero_plato_actual = 0
 			

@@ -6,9 +6,20 @@ var vidas = 3
 var posicion_inicial: Vector2
 var esta_inmune = false
 
+# =========================================================
+# SISTEMA DE DINERO Y PROPINA
+# =========================================================
+var dinero_total: int = 0
+var label_dinero: Label
+
 func _ready():
 	# Guardamos la posición donde inicia el mesero al empezar el juego
 	posicion_inicial = position
+	
+	# Buscamos el LabelDinero en la escena principal
+	label_dinero = get_tree().current_scene.get_node_or_null("CanvasLayer/LabelDinero")
+	actualizar_interfaz_dinero()
+
 func _physics_process(_delta):
 	var direccion_x = 0
 	var direccion_y = 0
@@ -40,10 +51,6 @@ func _physics_process(_delta):
 	# =========================================================
 	if direccion_y > 0:
 		$AnimatedSprite2D.play("Abajo")
-		# -------------------------------------------------------------
-		# CORREGIDO: Reducimos a la mitad (0.5) porque el sprite base es muy grande.
-		# Si notas que queda muy chico o muy grande, calíbralo a 0.55 o 0.6
-		# -------------------------------------------------------------
 		$AnimatedSprite2D.scale = Vector2(0.9, 0.9)
 		
 		$PlatoCargado.position = Vector2(0, -38)
@@ -52,7 +59,6 @@ func _physics_process(_delta):
 		
 	elif direccion_y < 0:
 		$AnimatedSprite2D.play("Arriba")
-		# Reducimos también a la mitad cuando va hacia atrás
 		$AnimatedSprite2D.scale = Vector2(0.9, 0.9) 
 		
 		$PlatoCargado.position = Vector2(0, -50)
@@ -61,19 +67,19 @@ func _physics_process(_delta):
 		
 	elif direccion_x > 0:
 		$AnimatedSprite2D.play("Derecha")
-		$AnimatedSprite2D.scale = Vector2(1.0, 1.0) # Vuelve al tamaño original (100%)
+		$AnimatedSprite2D.scale = Vector2(1.0, 1.0)
 		$PlatoCargado.z_index = 1
 		$TextoPlatoCargado.z_index = 1
 		
 	elif direccion_x < 0:
 		$AnimatedSprite2D.play("Izquierda")
-		$AnimatedSprite2D.scale = Vector2(1.0, 1.0) # Vuelve al tamaño original (100%)
+		$AnimatedSprite2D.scale = Vector2(1.0, 1.0)
 		$PlatoCargado.z_index = 1
 		$TextoPlatoCargado.z_index = 1
 		
 	else:
 		$AnimatedSprite2D.play("Quieto")
-		$AnimatedSprite2D.scale = Vector2(1.0, 1.0) # Vuelve al tamaño original (100%)
+		$AnimatedSprite2D.scale = Vector2(1.0, 1.0)
 		$PlatoCargado.position = Vector2(0, -38)
 		$PlatoCargado.z_index = 1
 		$TextoPlatoCargado.z_index = 1
@@ -87,8 +93,10 @@ func recibir_dano():
 	print("Me golpearon. Vidas restantes: ", vidas)
 	
 	# =========================================================
-	# PERDER LA COMIDA (La tiró al piso y se arruinó)
+	# PERDER LA COMIDA (-$10 Pesos)
 	# =========================================================
+	perder_comida()
+	
 	numero_plato_actual = 0 # El mesero vuelve a tener 0 platos
 	
 	if has_node("PlatoCargado"):
@@ -110,14 +118,47 @@ func recibir_dano():
 	position = posicion_inicial
 	comenzar_inmunidad()
 
+# =========================================================
+# LÓGICA DE DINERO, PROPINAS Y PENALIZACIÓN
+# =========================================================
+
+# Llama a esta función cuando entregues un plato con éxito a la mesa
+func entregar_plato():
+	var propina = calcular_propina_realista()
+	dinero_total += propina
+	actualizar_interfaz_dinero()
+	print("¡Plato entregado! Propina: $", propina, " | Total: $", dinero_total)
+
+func perder_comida():
+	dinero_total -= 10
+	if dinero_total < 0:
+		dinero_total = 0 # Evitamos saldos negativos
+	actualizar_interfaz_dinero()
+	print("¡Comida tirada! Te descontaron: $10 | Total: $", dinero_total)
+
+func calcular_propina_realista() -> int:
+	var numero_azar = randf() * 100.0
+	if numero_azar < 50.0:
+		return 5       # 50% probabilidad
+	elif numero_azar < 92.0:
+		return 10      # 42% probabilidad
+	else:
+		return 30      # 8% probabilidad rara ($30 pesotes)
+
+func actualizar_interfaz_dinero():
+	if label_dinero:
+		label_dinero.text = "Dinero: $" + str(dinero_total)
+
+# =========================================================
+
 func comenzar_inmunidad():
 	esta_inmune = true
 	
-	# Un ciclo para que parpadee: 10 veces (0.15s invisible + 0.15s visible = 0.3s por ciclo x 10 = 3 segundos)
+	# Un ciclo para que parpadee
 	for i in range(10):
-		$AnimatedSprite2D.modulate.a = 0.2 # Se vuelve casi transparente
+		$AnimatedSprite2D.modulate.a = 0.2
 		await get_tree().create_timer(0.15).timeout
-		$AnimatedSprite2D.modulate.a = 1.0 # Vuelve a la normalidad
+		$AnimatedSprite2D.modulate.a = 1.0
 		await get_tree().create_timer(0.15).timeout
 		
 	esta_inmune = false

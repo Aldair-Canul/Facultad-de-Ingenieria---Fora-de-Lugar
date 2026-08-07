@@ -107,6 +107,13 @@ texture = ExtResource("5_150kq")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="LabelDinero" type="Label" parent="CanvasLayer" unique_id=639214298]
+offset_left = 839.0
+offset_top = 25.0
+offset_right = 970.0
+offset_bottom = 48.0
+text = "Foraneocoins: $0"
+
 [node name="Mesa 1" type="StaticBody2D" parent="." unique_id=76096865]
 y_sort_enabled = true
 script = ExtResource("4_xgxix")
