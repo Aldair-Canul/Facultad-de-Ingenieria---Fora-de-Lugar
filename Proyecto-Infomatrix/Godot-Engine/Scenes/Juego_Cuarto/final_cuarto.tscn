@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cv7qm28ec05t4"]
+
+[ext_resource type="Script" uid="uid://c33055gejqdss" path="res://Scenes/Juego_Cuarto/final_cuarto.gd" id="1_x8lo1"]
+[ext_resource type="VideoStream" uid="uid://664fdnqggmmv" path="res://images/Cinematica/final-del-cuarto.ogv" id="2_xbnfw"]
+
+[node name="final_cuarto" type="Control" unique_id=197666059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x8lo1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1230082683]
+layout_mode = 0
+offset_right = 997.0
+offset_bottom = 599.0
+stream = ExtResource("2_xbnfw")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

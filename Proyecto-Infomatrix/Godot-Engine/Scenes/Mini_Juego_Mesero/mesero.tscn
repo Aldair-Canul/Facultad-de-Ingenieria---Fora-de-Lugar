@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://c7fa1dlcfutjd" path="res://images/Mesero/ParadoD.png" id="9_4pint"]
 [ext_resource type="Texture2D" uid="uid://bmjqpmvd3jtq4" path="res://images/Mesero/ParadoI.png" id="10_lpxgm"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8fdr0"]
 atlas = ExtResource("2_1vcip")
 region = Rect2(0, 0, 273, 360)

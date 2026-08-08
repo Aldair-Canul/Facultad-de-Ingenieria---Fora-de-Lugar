@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://cvlyxjkysv3j1"]
+
+[ext_resource type="Texture2D" uid="uid://c67786o1xoqhj" path="res://images/EscenaCuarto/pxArt.png" id="1_w8xin"]
+[ext_resource type="Texture2D" uid="uid://wnd37prem31k" path="res://images/EscenaCuarto/bañlo.jpeg" id="2_0jjt8"]
+[ext_resource type="PackedScene" uid="uid://bo1vo2l7ohol4" path="res://Scenes/Juego_Cuarto/Jugador.tscn" id="3_0jjt8"]
+[ext_resource type="Texture2D" uid="uid://ja8jqvxju5hu" path="res://images/EscenaCuarto/cama.png" id="4_v3fmv"]
+[ext_resource type="Texture2D" uid="uid://gtgk5tn3pr5r" path="res://images/EscenaCuarto/contadoR (2).png" id="5_3kgot"]
+[ext_resource type="Script" uid="uid://bxuu3khg1sww0" path="res://Scenes/Juego_Cuarto/contadores.gd" id="5_llgod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llgod"]
+size = Vector2(120, 281)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jjt8"]
+size = Vector2(1782, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3fmv"]
+size = Vector2(21.25, 595)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kgot"]
+size = Vector2(69.5, 50.25)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0jjt8"]
+a = Vector2(258, 302)
+b = Vector2(-5, 393)
+
+[node name="EscenaCuarto" type="Node2D" unique_id=1157850145]
+
+[node name="fondoBaño" type="Sprite2D" parent="." unique_id=742598565]
+position = Vector2(1316.4061, 300.5)
+scale = Vector2(0.5898466, 0.5197313)
+texture = ExtResource("2_0jjt8")
+
+[node name="fondoCuarto" type="Sprite2D" parent="." unique_id=26934063]
+position = Vector2(478, 300.99997)
+scale = Vector2(0.55413276, 0.647541)
+texture = ExtResource("1_w8xin")
+
+[node name="cama" type="StaticBody2D" parent="." unique_id=429705350]
+
+[node name="Sprite2D" type="Sprite2D" parent="cama" unique_id=765283395]
+position = Vector2(260, 436)
+scale = Vector2(0.3879311, 0.5027881)
+texture = ExtResource("4_v3fmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cama" unique_id=1530630793]
+position = Vector2(247, 382.5)
+shape = SubResource("RectangleShape2D_llgod")
+
+[node name="Jugador" parent="." unique_id=1195478272 instance=ExtResource("3_0jjt8")]
+position = Vector2(386, 447)
+
+[node name="Paredes" type="StaticBody2D" parent="." unique_id=71970495]
+position = Vector2(6, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes" unique_id=482382071]
+position = Vector2(893, 443)
+shape = SubResource("RectangleShape2D_0jjt8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes" unique_id=1203481557]
+position = Vector2(861, 289)
+shape = SubResource("RectangleShape2D_0jjt8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paredes" unique_id=529881491]
+position = Vector2(8, 306)
+shape = SubResource("RectangleShape2D_v3fmv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes" unique_id=1462007154]
+position = Vector2(1685, 302)
+shape = SubResource("RectangleShape2D_v3fmv")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Paredes" unique_id=820782842]
+position = Vector2(1594, 121)
+shape = SubResource("RectangleShape2D_3kgot")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Paredes" unique_id=1875876164]
+position = Vector2(1526, 337)
+shape = SubResource("RectangleShape2D_3kgot")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Paredes" unique_id=554827097]
+shape = SubResource("SegmentShape2D_0jjt8")
+
+[node name="InterfazUI" type="CanvasLayer" parent="." unique_id=1109845812]
+
+[node name="Contadores" type="Control" parent="InterfazUI" unique_id=1508178015]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_llgod")
+
+[node name="CronometroSube" type="TextureRect" parent="InterfazUI/Contadores" unique_id=1591880818]
+layout_mode = 0
+offset_left = 57.999996
+offset_top = 4.9999995
+offset_right = 519.0
+offset_bottom = 546.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_3kgot")
+
+[node name="TextoSube" type="Label" parent="InterfazUI/Contadores/CronometroSube" unique_id=810681561]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -79.99997
+offset_right = 376.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 250
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CronometroBaja" type="TextureRect" parent="InterfazUI/Contadores" unique_id=964722692]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 6.9999924
+offset_right = 638.0
+offset_bottom = 548.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_3kgot")
+
+[node name="TextoBaja" type="Label" parent="InterfazUI/Contadores/CronometroBaja" unique_id=2146623724]
+layout_mode = 0
+offset_left = 84.999985
+offset_top = 80.00004
+offset_right = 269.99994
+offset_bottom = 422.00003
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 250
+text = "0"
+
+[node name="Reloj" type="Timer" parent="InterfazUI/Contadores" unique_id=717905943]
+autostart = true
+
+[connection signal="timeout" from="InterfazUI/Contadores/Reloj" to="InterfazUI/Contadores" method="_on_reloj_timeout"]
