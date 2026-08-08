@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv3pedp163v1x"]
+
+[ext_resource type="Script" uid="uid://cswlpmxt4inu" path="res://Scenes/Juego_Cuarto/intro_cuarto.gd" id="1_nlqb0"]
+[ext_resource type="VideoStream" uid="uid://cyo5argrc8h3v" path="res://images/Cinematica/Cuarto-vacío-_gwr_video_mvp.ogv" id="1_t42iw"]
+
+[node name="IntroCuarto" type="Control" unique_id=208746160]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nlqb0")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1389163391]
+layout_mode = 0
+offset_right = 997.0
+offset_bottom = 604.0
+stream = ExtResource("1_t42iw")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

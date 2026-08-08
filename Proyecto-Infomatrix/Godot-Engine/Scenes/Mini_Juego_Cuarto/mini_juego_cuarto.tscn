@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cdmiiausc0864" path="res://sounds/sound_correct_min_cuarto.mp3" id="8_2yade"]
 [ext_resource type="AudioStream" uid="uid://hp8t0saefqy7" path="res://sounds/MusicaFondo_Min_Cuarto.mp3" id="9_gcic5"]
 [ext_resource type="Script" uid="uid://cuw34f2e1x4of" path="res://Scenes/Mini_Juego_Cuarto/button.gd" id="10_oc5ku"]
+[ext_resource type="PackedScene" uid="uid://bdk38tfn6t0o3" path="res://Scenes/Mini_Juego_Mesero/mesero.tscn" id="12_xhrvy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcftv"]
 size = Vector2(128, 205)
@@ -107,6 +108,9 @@ offset_bottom = 43.0
 [node name="Label" type="Label" parent="CanvasLayer/PanelContainer" unique_id=699760889]
 layout_mode = 2
 text = "\"Arrastra los muebles a su lugar\"."
+
+[node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("12_xhrvy")]
+position = Vector2(223, 438)
 
 [connection signal="input_event" from="AreaCama" to="AreaCama" method="_on_input_event"]
 [connection signal="input_event" from="AreaSilla" to="AreaSilla" method="_on_input_event"]
