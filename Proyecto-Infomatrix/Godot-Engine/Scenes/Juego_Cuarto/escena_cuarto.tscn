@@ -31,8 +31,8 @@ scale = Vector2(0.5898466, 0.5197313)
 texture = ExtResource("2_0jjt8")
 
 [node name="fondoCuarto" type="Sprite2D" parent="." unique_id=26934063]
-position = Vector2(478, 300.99997)
-scale = Vector2(0.55413276, 0.647541)
+position = Vector2(478, 299.49997)
+scale = Vector2(0.55413276, 0.67431694)
 texture = ExtResource("1_w8xin")
 
 [node name="cama" type="StaticBody2D" parent="." unique_id=429705350]

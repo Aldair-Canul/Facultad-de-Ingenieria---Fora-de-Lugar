@@ -65,18 +65,18 @@ pivot_offset = Vector2(785, 471)
 texture = ExtResource("1_8voex")
 
 [node name="PuestoCentro" type="Sprite2D" parent="CanvasLayer" unique_id=1476642255]
-position = Vector2(598, 184)
-scale = Vector2(0.34986413, 0.37805715)
+position = Vector2(595.6875, 166.78125)
+scale = Vector2(0.362432, 0.4172894)
 texture = ExtResource("3_4fcho")
 
 [node name="PuestoDerecho" type="Sprite2D" parent="CanvasLayer" unique_id=541678845]
-position = Vector2(845, 183)
-scale = Vector2(0.35618278, 0.37365603)
+position = Vector2(842.625, 170.75002)
+scale = Vector2(0.35819897, 0.38575274)
 texture = ExtResource("4_1k82d")
 
 [node name="Puesto1Copia" type="Sprite2D" parent="CanvasLayer" unique_id=1248991005]
-position = Vector2(315, 187)
-scale = Vector2(0.356268, 0.365285)
+position = Vector2(309.40625, 171.25)
+scale = Vector2(0.35969022, 0.38471505)
 texture = ExtResource("5_bmf87")
 
 [node name="Corazones" type="HBoxContainer" parent="CanvasLayer" unique_id=1680310809]
