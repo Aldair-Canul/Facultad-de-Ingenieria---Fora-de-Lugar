@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bshcew7gqotty" path="res://images/MenuInicio/fondo_menu.PNG" id="1_igfqi"]
 [ext_resource type="Script" uid="uid://bpv38qmuypbcc" path="res://Scenes/Menu/btn_iniciar.gd" id="2_fte28"]
+[ext_resource type="Texture2D" uid="uid://uw1i4nnjl21c" path="res://Scenes/Menu/boton volver intentar.png" id="2_u1c4e"]
 [ext_resource type="Script" uid="uid://c53578s2ykjph" path="res://Scenes/Menu/btn_info.gd" id="3_mh5jj"]
 [ext_resource type="Script" uid="uid://bfcqaw4iyl1y1" path="res://Scenes/Menu/btn_salir.gd" id="4_fte28"]
 [ext_resource type="AudioStream" uid="uid://rffvjmfd53va" path="res://sounds/menu_music.mp3" id="5_mh5jj"]
@@ -29,11 +30,13 @@ expand_mode = 1
 
 [node name="BtnIniciar" type="Button" parent="." unique_id=1839748038]
 layout_mode = 0
-offset_left = 423.0
-offset_top = 348.0
-offset_right = 521.0
-offset_bottom = 416.0
+offset_left = 178.0
+offset_top = 139.0
+offset_right = 974.0
+offset_bottom = 486.0
 text = "START"
+icon = ExtResource("2_u1c4e")
+flat = true
 script = ExtResource("2_fte28")
 
 [node name="BtnInfo" type="Button" parent="." unique_id=351774535]
