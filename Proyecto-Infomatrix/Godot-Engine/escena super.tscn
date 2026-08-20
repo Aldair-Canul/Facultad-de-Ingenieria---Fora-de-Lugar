@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bppe1leafcost" path="res://texture_rect_2.gd" id="3_3ie3h"]
 [ext_resource type="Texture2D" uid="uid://clit5oxvnvv3f" path="res://Scenes/escena super/sprite caminando super.png" id="4_msoce"]
 [ext_resource type="Script" uid="uid://08xbulk11h1v" path="res://animated_sprite_2d.gd" id="5_kjjvr"]
+[ext_resource type="FontFile" uid="uid://p7njfuyh3pdw" path="res://Scenes/Juego_Cuarto/poco/poco/Poco.ttf" id="6_3ie3h"]
+[ext_resource type="Script" uid="uid://dyv46ghaa1q7p" path="res://label.gd" id="7_msoce"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkvba"]
 atlas = ExtResource("4_msoce")
@@ -72,21 +74,17 @@ animations = [{
 
 [node name="Node2D" type="Node2D" unique_id=945628659]
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=91262390]
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1678446680]
+[node name="cuadro texto" type="TextureRect" parent="." unique_id=1678446680]
 z_index = 2
-offset_left = 60.000004
-offset_top = 277.0
-offset_right = 1084.0
-offset_bottom = 602.0
-scale = Vector2(0.88000077, 1)
+offset_left = 83.00001
+offset_top = 295.0
+offset_right = 1107.0
+offset_bottom = 620.0
+scale = Vector2(0.8400008, 0.88)
 texture = ExtResource("2_mg5co")
 script = ExtResource("3_3ie3h")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1889104959]
+[node name="animacion super" type="AnimatedSprite2D" parent="." unique_id=1889104959]
 z_index = 1
 position = Vector2(486.93747, 379.625)
 scale = Vector2(2.0156252, 2.2038286)
@@ -95,8 +93,21 @@ animation = &"caminando super"
 autoplay = "caminando super"
 script = ExtResource("5_kjjvr")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402333714]
+[node name="back super" type="Sprite2D" parent="." unique_id=402333714]
 position = Vector2(499, 301)
 scale = Vector2(0.6497396, 0.584961)
 texture = ExtResource("1_hkgam")
 metadata/_edit_lock_ = true
+
+[node name="texto" type="Label" parent="." unique_id=1837098009]
+z_index = 2
+offset_left = 231.99998
+offset_top = 389.0
+offset_right = 719.62537
+offset_bottom = 446.0
+scale = Vector2(1.4800018, 1.6400001)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3ie3h")
+text = "“Leche, pan, huevos, arroz, jabón y papel higiénico.” 
+“Con $300 debería alcanzar para lo básico. Voy rápido y ya.”"
+script = ExtResource("7_msoce")

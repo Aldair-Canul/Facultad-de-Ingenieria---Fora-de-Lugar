@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://cvlyxjkysv3j1"]
 
-[ext_resource type="Texture2D" uid="uid://c67786o1xoqhj" path="res://images/EscenaCuarto/pxArt.png" id="1_w8xin"]
-[ext_resource type="Texture2D" uid="uid://wnd37prem31k" path="res://images/EscenaCuarto/bañlo.jpeg" id="2_0jjt8"]
 [ext_resource type="PackedScene" uid="uid://bo1vo2l7ohol4" path="res://Scenes/Juego_Cuarto/Jugador.tscn" id="3_0jjt8"]
 [ext_resource type="Texture2D" uid="uid://ja8jqvxju5hu" path="res://images/EscenaCuarto/cama.png" id="4_v3fmv"]
 [ext_resource type="Texture2D" uid="uid://gtgk5tn3pr5r" path="res://images/EscenaCuarto/contadoR (2).png" id="5_3kgot"]
+[ext_resource type="Texture2D" uid="uid://xi4cxd4jbq80" path="res://Scenes/Juego_Cuarto/back cuarto y baño.jpeg" id="5_jiupi"]
 [ext_resource type="Script" uid="uid://bxuu3khg1sww0" path="res://Scenes/Juego_Cuarto/contadores.gd" id="5_llgod"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llgod"]
@@ -24,16 +23,6 @@ a = Vector2(258, 302)
 b = Vector2(-5, 393)
 
 [node name="EscenaCuarto" type="Node2D" unique_id=1157850145]
-
-[node name="fondoBaño" type="Sprite2D" parent="." unique_id=742598565]
-position = Vector2(1316.4061, 300.5)
-scale = Vector2(0.5898466, 0.5197313)
-texture = ExtResource("2_0jjt8")
-
-[node name="fondoCuarto" type="Sprite2D" parent="." unique_id=26934063]
-position = Vector2(478, 299.49997)
-scale = Vector2(0.55413276, 0.67431694)
-texture = ExtResource("1_w8xin")
 
 [node name="cama" type="StaticBody2D" parent="." unique_id=429705350]
 
@@ -130,5 +119,11 @@ text = "0"
 
 [node name="Reloj" type="Timer" parent="InterfazUI/Contadores" unique_id=717905943]
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=150240414]
+z_index = -1
+position = Vector2(856.25, 304.75)
+scale = Vector2(1.0679399, 1.3505495)
+texture = ExtResource("5_jiupi")
 
 [connection signal="timeout" from="InterfazUI/Contadores/Reloj" to="InterfazUI/Contadores" method="_on_reloj_timeout"]
