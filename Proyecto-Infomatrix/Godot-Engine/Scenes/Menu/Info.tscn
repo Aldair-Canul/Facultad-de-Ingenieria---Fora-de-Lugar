@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1n3gwwihqbmh" path="res://images/MenuInicio/Info.png" id="1_1pq3o"]
 [ext_resource type="Script" uid="uid://b6wf0t5cec82f" path="res://Scenes/Menu/BtnBack.gd" id="2_6trfo"]
+[ext_resource type="Texture2D" uid="uid://tdwls1nyopcq" path="res://Scenes/Menu/regresar.png" id="2_sjrlv"]
 
 [node name="Info" type="Control" unique_id=1383179485]
 layout_mode = 3
@@ -22,11 +23,13 @@ texture = ExtResource("1_1pq3o")
 
 [node name="BtnBack" type="Button" parent="." unique_id=1859778256]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 1.0
-offset_right = 135.0
-offset_bottom = 41.0
-text = "Back"
+offset_left = -2.0
+offset_top = -28.0
+offset_right = 1542.0
+offset_bottom = 1004.0
+scale = Vector2(0.12638277, 0.13086082)
+icon = ExtResource("2_sjrlv")
+flat = true
 script = ExtResource("2_6trfo")
 
 [connection signal="pressed" from="BtnBack" to="BtnBack" method="_on_boton_pressed"]

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b0ccdbax2rks0"]
+
+[ext_resource type="Texture2D" uid="uid://uixoxpr1dl0t" path="res://Scenes/escena super/background pasillo super .png" id="1_hkgam"]
+[ext_resource type="Texture2D" uid="uid://uc0ts8n5urxd" path="res://Scenes/escena super/dialogo 1 .png" id="2_mg5co"]
+[ext_resource type="Script" uid="uid://bppe1leafcost" path="res://texture_rect_2.gd" id="3_3ie3h"]
+[ext_resource type="Texture2D" uid="uid://clit5oxvnvv3f" path="res://Scenes/escena super/sprite caminando super.png" id="4_msoce"]
+[ext_resource type="Script" uid="uid://08xbulk11h1v" path="res://animated_sprite_2d.gd" id="5_kjjvr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkvba"]
+atlas = ExtResource("4_msoce")
+region = Rect2(0, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0rjm"]
+atlas = ExtResource("4_msoce")
+region = Rect2(136, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlkse"]
+atlas = ExtResource("4_msoce")
+region = Rect2(272, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f5no"]
+atlas = ExtResource("4_msoce")
+region = Rect2(408, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac6y0"]
+atlas = ExtResource("4_msoce")
+region = Rect2(408, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oib4g"]
+atlas = ExtResource("4_msoce")
+region = Rect2(272, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jver"]
+atlas = ExtResource("4_msoce")
+region = Rect2(136, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxlys"]
+atlas = ExtResource("4_msoce")
+region = Rect2(0, 222, 136, 222)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqxmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkvba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0rjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlkse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f5no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac6y0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oib4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jver")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxlys")
+}],
+"loop": true,
+"name": &"caminando super",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=945628659]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=91262390]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1678446680]
+z_index = 2
+offset_left = 60.000004
+offset_top = 277.0
+offset_right = 1084.0
+offset_bottom = 602.0
+scale = Vector2(0.88000077, 1)
+texture = ExtResource("2_mg5co")
+script = ExtResource("3_3ie3h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1889104959]
+z_index = 1
+position = Vector2(486.93747, 379.625)
+scale = Vector2(2.0156252, 2.2038286)
+sprite_frames = SubResource("SpriteFrames_yqxmc")
+animation = &"caminando super"
+autoplay = "caminando super"
+script = ExtResource("5_kjjvr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402333714]
+position = Vector2(499, 301)
+scale = Vector2(0.6497396, 0.584961)
+texture = ExtResource("1_hkgam")
+metadata/_edit_lock_ = true

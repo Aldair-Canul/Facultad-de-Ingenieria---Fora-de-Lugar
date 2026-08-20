@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://c3xlbl06486ox"]
 
-[ext_resource type="Texture2D" uid="uid://bshcew7gqotty" path="res://images/MenuInicio/fondo_menu.PNG" id="1_igfqi"]
+[ext_resource type="Texture2D" uid="uid://cd3xrdybi1cln" path="res://Scenes/Menu/poster intro.png" id="1_bhb3g"]
+[ext_resource type="Texture2D" uid="uid://daetm82nraojq" path="res://Scenes/Menu/iniciar.png" id="2_44sq5"]
 [ext_resource type="Script" uid="uid://bpv38qmuypbcc" path="res://Scenes/Menu/btn_iniciar.gd" id="2_fte28"]
-[ext_resource type="Texture2D" uid="uid://uw1i4nnjl21c" path="res://Scenes/Menu/boton volver intentar.png" id="2_u1c4e"]
 [ext_resource type="Script" uid="uid://c53578s2ykjph" path="res://Scenes/Menu/btn_info.gd" id="3_mh5jj"]
+[ext_resource type="Texture2D" uid="uid://tt0obkpjijm8" path="res://Scenes/Menu/controles.png" id="4_67uyp"]
 [ext_resource type="Script" uid="uid://bfcqaw4iyl1y1" path="res://Scenes/Menu/btn_salir.gd" id="4_fte28"]
 [ext_resource type="AudioStream" uid="uid://rffvjmfd53va" path="res://sounds/menu_music.mp3" id="5_mh5jj"]
 [ext_resource type="Script" uid="uid://5wab8crhc1xg" path="res://Scenes/Menu/btn_segundo_nivel.gd" id="6_1c3wx"]
+[ext_resource type="Texture2D" uid="uid://cbom7nm80q0do" path="res://Scenes/Menu/salir.png" id="6_xjhv3"]
+[ext_resource type="Texture2D" uid="uid://w8spbsjra1ux" path="res://Scenes/Menu/sig nivel .png" id="9_mps3g"]
 
 [node name="Control" type="Control" unique_id=580286647]
 layout_mode = 3
@@ -25,37 +28,42 @@ offset_top = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_igfqi")
+texture = ExtResource("1_bhb3g")
 expand_mode = 1
 
 [node name="BtnIniciar" type="Button" parent="." unique_id=1839748038]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 139.0
-offset_right = 974.0
-offset_bottom = 486.0
-text = "START"
-icon = ExtResource("2_u1c4e")
+offset_left = 398.00003
+offset_top = 327.00003
+offset_right = 1194.0
+offset_bottom = 723.0
+scale = Vector2(0.19999759, 0.2000006)
+icon = ExtResource("2_44sq5")
 flat = true
 script = ExtResource("2_fte28")
 
 [node name="BtnInfo" type="Button" parent="." unique_id=351774535]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 429.0
-offset_right = 522.0
-offset_bottom = 492.0
-text = "Controls"
+offset_left = 374.00003
+offset_top = 403.0
+offset_right = 1088.0
+offset_bottom = 764.0
+scale = Vector2(0.27999878, 0.24000064)
+icon = ExtResource("4_67uyp")
+flat = true
 script = ExtResource("3_mh5jj")
 
 [node name="BtnSalir" type="Button" parent="." unique_id=1676098805]
 layout_mode = 0
-offset_left = 427.0
-offset_top = 507.0
-offset_right = 521.0
-offset_bottom = 579.0
-text = "Exit
+offset_left = 410.0
+offset_top = 491.0
+offset_right = 1099.0
+offset_bottom = 893.0
+scale = Vector2(0.19999996, 0.18480492)
+text = "
 "
+icon = ExtResource("6_xjhv3")
+flat = true
 script = ExtResource("4_fte28")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2033013963]
@@ -64,11 +72,13 @@ autoplay = true
 
 [node name="BtnSegundoNivel" type="Button" parent="." unique_id=737707836]
 layout_mode = 0
-offset_left = 7.0
-offset_top = -1.0
-offset_right = 111.0
-offset_bottom = 46.0
-text = "Next Level"
+offset_left = 37.0
+offset_top = 24.000004
+offset_right = 789.0
+offset_bottom = 410.0
+scale = Vector2(0.28000027, 0.23999937)
+icon = ExtResource("9_mps3g")
+flat = true
 script = ExtResource("6_1c3wx")
 
 [connection signal="pressed" from="BtnIniciar" to="BtnIniciar" method="_on_boton_pressed"]
