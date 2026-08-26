@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://xldmc1v85adf"]
+
+[ext_resource type="VideoStream" uid="uid://s2mnv10e7wbq" path="res://Scenes/escena super/se-quedo-sin-dinero.ogv" id="1_ppdks"]
+[ext_resource type="Script" uid="uid://dpme5bcq5t34e" path="res://Scenes/escena super/video_stream_player.gd" id="2_5rgxc"]
+
+[node name="Control" type="Control" unique_id=1639775091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1099889382]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_ppdks")
+script = ExtResource("2_5rgxc")

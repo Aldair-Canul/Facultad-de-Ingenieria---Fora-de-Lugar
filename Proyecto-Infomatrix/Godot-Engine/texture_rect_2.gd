@@ -11,7 +11,7 @@ func _ready() -> void:
 	await tween_in.finished
 
 	# Espera 30 segundos visible
-	await get_tree().create_timer(30.0).timeout
+	await get_tree().create_timer(7.0).timeout
 
 	# Fade out (desaparece suavemente en 1 segundo)
 	var tween_out = create_tween()
