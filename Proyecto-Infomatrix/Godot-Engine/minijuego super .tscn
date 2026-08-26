@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bcs8682x5n37h"]
+
+[ext_resource type="Texture2D" uid="uid://cd2estftlqmg0" path="res://Scenes/escena super/sup mini back.png" id="1_dunyb"]
+[ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="2_4nj6i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smk7c"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(0, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwamq"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(256, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkyt2"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(512, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sltyh"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(768, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyuq"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(1024, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qopw"]
+atlas = ExtResource("2_4nj6i")
+region = Rect2(1280, 0, 256, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c23f1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smk7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwamq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkyt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sltyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qopw")
+}],
+"loop": true,
+"name": &"caminando cestita",
+"speed": 7.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=393753239]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=402740725]
+offset_left = -10.0
+offset_top = -2.0
+offset_right = 1014.0
+offset_bottom = 624.0
+texture = ExtResource("1_dunyb")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect" unique_id=437665801]
+position = Vector2(55, 247.00002)
+scale = Vector2(0.32910153, 0.2783203)
+sprite_frames = SubResource("SpriteFrames_c23f1")
+animation = &"caminando cestita"
+autoplay = "caminando cestita"
+frame_progress = 0.2934779
