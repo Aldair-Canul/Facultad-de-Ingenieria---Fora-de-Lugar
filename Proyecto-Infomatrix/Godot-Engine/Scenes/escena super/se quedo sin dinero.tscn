@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://xldmc1v85adf"]
+[gd_scene format=3 uid="uid://cr2epxyi34h28"]
 
 [ext_resource type="VideoStream" uid="uid://s2mnv10e7wbq" path="res://Scenes/escena super/se-quedo-sin-dinero.ogv" id="1_ppdks"]
 [ext_resource type="Script" uid="uid://dpme5bcq5t34e" path="res://Scenes/escena super/video_stream_player.gd" id="2_5rgxc"]
