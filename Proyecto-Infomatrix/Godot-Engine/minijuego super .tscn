@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcs8682x5n37h"]
 
-[ext_resource type="Texture2D" uid="uid://cd2estftlqmg0" path="res://Scenes/escena super/sup mini back.png" id="1_dunyb"]
+[ext_resource type="Texture2D" uid="uid://bjmsouw5ags3r" path="res://Scenes/escena super/super pasillos.png" id="1_4nj6i"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="2_4nj6i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smk7c"]
@@ -60,7 +60,7 @@ offset_left = -10.0
 offset_top = -2.0
 offset_right = 1014.0
 offset_bottom = 624.0
-texture = ExtResource("1_dunyb")
+texture = ExtResource("1_4nj6i")
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect" unique_id=437665801]
