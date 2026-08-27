@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cuwuhi3a8nq3o" path="res://Scenes/Cuarto/Player.tscn" id="3_beiiy"]
 [ext_resource type="Texture2D" uid="uid://eqtors4l8nid" path="res://images/EscenaCuarto2.0/mochila.png" id="4_0sgwo"]
 [ext_resource type="Script" uid="uid://kcpnijq7fjtt" path="res://Scenes/Cuarto/hud.gd" id="4_beiiy"]
+[ext_resource type="Texture2D" uid="uid://c6nuy662wt7gu" path="res://images/EscenaCuarto/mesa cuarto.png" id="5_qoh52"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0y3n"]
 size = Vector2(57, 203)
@@ -15,6 +16,19 @@ size = Vector2(50.5, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sgwo"]
 size = Vector2(57, 65.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qoh52"]
+size = Vector2(2025, 65)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0sgwo"]
+a = Vector2(314, -47)
+b = Vector2(-142, 207)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sgwo"]
+radius = 97.082436
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrtlo"]
+size = Vector2(44, 39.5)
 
 [node name="Main" type="Node2D" unique_id=1831511838]
 script = ExtResource("1_lxmde")
@@ -59,6 +73,41 @@ visible = false
 position = Vector2(296, 402)
 scale = Vector2(0.4225352, 0.44047618)
 texture = ExtResource("4_0sgwo")
+
+[node name="Paredes" type="StaticBody2D" parent="World" unique_id=1535234652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Paredes" unique_id=1924267475]
+position = Vector2(1009, 230)
+shape = SubResource("RectangleShape2D_qoh52")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Paredes" unique_id=1108131229]
+position = Vector2(1010, 570)
+shape = SubResource("RectangleShape2D_qoh52")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Paredes" unique_id=1202068593]
+position = Vector2(30, 294)
+shape = SubResource("SegmentShape2D_0sgwo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World/Paredes" unique_id=1797008054]
+position = Vector2(1866, 457)
+shape = SubResource("CircleShape2D_0sgwo")
+
+[node name="ObjetoCuaderno" type="Area2D" parent="World" unique_id=1600639057]
+
+[node name="Sprite2D" type="Sprite2D" parent="World/ObjetoCuaderno" unique_id=846708241]
+position = Vector2(1660, 435)
+scale = Vector2(0.116699286, 0.1284773)
+texture = ExtResource("5_qoh52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ObjetoCuaderno" unique_id=1311410937]
+position = Vector2(1656, 430)
+shape = SubResource("RectangleShape2D_vrtlo")
+
+[node name="MesaAcomodada" type="Sprite2D" parent="World" unique_id=1041791341]
+visible = false
+position = Vector2(618, 405.00006)
+scale = Vector2(0.4182129, 0.5664348)
+texture = ExtResource("5_qoh52")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=223802378]
 
@@ -187,10 +236,10 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 635.0
-offset_top = -205.0
-offset_right = 635.0
-offset_bottom = -205.0
+offset_left = -3.0
+offset_top = 5.0
+offset_right = -3.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -207,6 +256,7 @@ autostart = true
 [connection signal="body_entered" from="World/DoorZone_Room" to="." method="_on_door_zone_room_body_entered"]
 [connection signal="body_entered" from="World/DoorZone_Bath" to="." method="_on_door_zone_bath_body_entered"]
 [connection signal="body_entered" from="World/ObjetoMochila" to="." method="_on_objeto_mochila_body_entered"]
+[connection signal="body_entered" from="World/ObjetoCuaderno" to="." method="_on_objeto_cuaderno_body_entered"]
 [connection signal="pressed" from="UI/HUD/ButtonInventario" to="UI/HUD" method="_on_button_inventario_pressed"]
 [connection signal="pressed" from="UI/HUD/PanelInventario/BtnUsarMochila" to="." method="_on_btn_usar_mochila_pressed"]
 [connection signal="pressed" from="UI/HUD/PanelGameOver/BtnReintentar" to="." method="_on_btn_reintentar_pressed"]
