@@ -87,11 +87,11 @@ a = Vector2(997, 599)
 b = Vector2(1, 597)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tkyt2"]
-a = Vector2(1000, 596)
-b = Vector2(998, 155)
+a = Vector2(974, 597)
+b = Vector2(975, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8o7l"]
-size = Vector2(973, 63)
+size = Vector2(1020, 63)
 
 [node name="Node2D" type="Node2D" unique_id=393753239]
 y_sort_enabled = true
@@ -161,5 +161,5 @@ shape = SubResource("SegmentShape2D_fwamq")
 shape = SubResource("SegmentShape2D_tkyt2")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=866937210]
-position = Vector2(506.5, 560.5)
+position = Vector2(501, 560.5)
 shape = SubResource("RectangleShape2D_a8o7l")
