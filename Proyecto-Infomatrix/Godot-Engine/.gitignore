@@ -1,5 +1,6 @@
 # Ignorar caché e importaciones locales de Godot 4
 .godot/
+*.import
 
 # Ignorar exportaciones y archivos pesados
 *.exe
