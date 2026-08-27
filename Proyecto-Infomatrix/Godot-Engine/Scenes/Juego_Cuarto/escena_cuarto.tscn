@@ -23,6 +23,7 @@ a = Vector2(258, 302)
 b = Vector2(-5, 393)
 
 [node name="EscenaCuarto" type="Node2D" unique_id=1157850145]
+position = Vector2(3, 0)
 
 [node name="cama" type="StaticBody2D" parent="." unique_id=429705350]
 
