@@ -212,10 +212,10 @@ script = ExtResource("1_lb5he")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1794182539]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4jrg1")
-animation = &"caminar_lado"
+animation = &"caminar_abajo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1983391251]
-position = Vector2(12, -40)
+position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_lb5he")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=267957842]
