@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bjmsouw5ags3r" path="res://Scenes/escena super/super pasillos.png" id="1_smk7c"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="2_4nj6i"]
-[ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="3_smk7c"]
+[ext_resource type="Texture2D" uid="uid://f745537or5f4" path="res://Scenes/escena super/assets objetos compras super/aceite_economico_vegetal.png" id="3_smk7c"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smk7c"]
 atlas = ExtResource("2_4nj6i")
