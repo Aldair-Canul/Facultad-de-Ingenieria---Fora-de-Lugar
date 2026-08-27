@@ -3,12 +3,25 @@ extends Node2D
 @onready var player = $Player
 @onready var anim_transicion = $Transition/AnimationPlayer
 
-
-var pos_en_bano = Vector2(1400, 400) #vector de posicion
+var pos_en_bano = Vector2(1400, 400)
 var pos_en_cuarto = Vector2(250, 400)
+
+# Variables para saber qué objetos tenemos
 var tiene_mochila = false
+var tiene_cuaderno = false
 
 var segundos_totales = 30
+
+func _ready():
+	$UI/HUD/PanelVictoria.visible = false
+	$UI/HUD/PanelGameOver.visible = false
+	$UI/HUD/PanelInventario.visible = false
+	
+	# Aseguramos que la mesa acomodada empiece invisible
+	if has_node("World/MesaAcomodada"):
+		$World/MesaAcomodada.visible = false
+		
+	$UI/HUD/ObjetivosLabel.text = "Objetivo: Encontrar Mochila y Mesa"
 
 func teletransportar(destino: Vector2):
 	player.set_physics_process(false)
@@ -26,53 +39,63 @@ func teletransportar(destino: Vector2):
 	player.set_physics_process(true)
 
 func _on_door_zone_room_body_entered(body):
-	print("¡Algo tocó la puerta del cuarto! Fue: ", body.name)
 	if body.name == "Player":
-		print("Teletransportando al baño...")
 		teletransportar(pos_en_bano)
 		
 func _on_door_zone_bath_body_entered(body):
-	print("¡Algo tocó la puerta del baño! Fue: ", body.name)
 	if body.name == "Player":
-		print("Teletransportando al cuarto...")
 		teletransportar(pos_en_cuarto)
 
+# --- RECOGER MOCHILA ---
 func _on_objeto_mochila_body_entered(body):
-	print("¡Algo tocó la mochila! Fue: ", body.name)
 	if body.name == "Player":
 		tiene_mochila = true
-		
-		# 1. Eliminamos la mochila del mapa
 		$World/ObjetoMochila.queue_free()
+		actualizar_inventario_y_objetivos()
+
+# --- RECOGER CUADERNO ---
+func _on_objeto_cuaderno_body_entered(body):
+	if body.name == "Player":
+		tiene_cuaderno = true
+		$World/ObjetoCuaderno.queue_free()
+		actualizar_inventario_y_objetivos()
+
+# Actualiza el inventario y el texto de objetivo según lo que tengas juntado
+func actualizar_inventario_y_objetivos():
+	var lista_objetos = ""
+	if tiene_mochila:
+		lista_objetos += "- Mochila\n"
+	if tiene_cuaderno:
+		lista_objetos += "- Cuaderno\n"
 		
-		# 2. Actualizamos el texto del objetivo
-		$UI/HUD/ObjetivosLabel.text = "Objetivo: Acomodar mochila"
-		
-		# 3. Mostramos el objeto y el botón en el inventario
-		$UI/HUD/PanelInventario/TextoObjetos.text = "- Mochila" 
-		$UI/HUD/PanelInventario/BtnUsarMochila.visible = true 
+	$UI/HUD/PanelInventario/TextoObjetos.text = lista_objetos
+	
+	# Verificamos si ya juntamos todo
+	if tiene_mochila and tiene_cuaderno:
+		$UI/HUD/ObjetivosLabel.text = "Objetivo: Acomodar cosas"
+		$UI/HUD/PanelInventario/BtnUsarMochila.visible = true
+	else:
+		$UI/HUD/ObjetivosLabel.text = "Objetivo: Faltan objetos por encontrar"
 
 func _on_btn_usar_mochila_pressed():
-	if tiene_mochila == true:
+	if tiene_mochila and tiene_cuaderno:
 		tiene_mochila = false
+		tiene_cuaderno = false
 		
-		# 1. Hacemos visible la mochila en el cuarto
+		# Hacemos visible la mesa acomodada
+		$World/MesaAcomodada.visible = true
 		$World/MochilaAcomodada.visible = true
 		
-		# 2. Actualizamos el inventario y objetivos
 		$UI/HUD/PanelInventario/BtnUsarMochila.visible = false
 		$UI/HUD/PanelInventario/TextoObjetos.text = "Inventario vacío"
 		$UI/HUD/ObjetivosLabel.text = "Objetivo: ¡Completado!"
 		
-		# 3. Cerramos el panel y detenemos el reloj
 		$UI/HUD/PanelInventario.visible = false
 		$TimerReloj.stop()
 		
-		# 4. MOSTRAMOS LA VICTORIA Y DETENEMOS AL JUGADOR
 		$UI/HUD/PanelVictoria.visible = true
 		player.set_physics_process(false)
 
-# Función que se ejecuta cada segundo gracias al TimerReloj
 func _on_timer_reloj_timeout():
 	if segundos_totales > 0:
 		segundos_totales -= 1
@@ -83,15 +106,14 @@ func _on_timer_reloj_timeout():
 		$TimerReloj.stop()
 		$UI/HUD/RelojLabel.text = "00:00"
 		$UI/HUD/ObjetivosLabel.text = "¡Tiempo agotado!"
-		
-		# Mostramos la pantalla de Game Over y detenemos al jugador
 		$UI/HUD/PanelGameOver.visible = true
 		player.set_physics_process(false)
- 
 
-func _on_btn_reintentar_pressed() -> void:
+func _on_btn_reintentar_pressed():
 	get_tree().reload_current_scene()
 
+func _on_btn_volver_a_jugar_pressed():
+	get_tree().reload_current_scene()
 
 func _on_final_cuarto_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Juego_Cuarto/final_cuarto.tscn")
