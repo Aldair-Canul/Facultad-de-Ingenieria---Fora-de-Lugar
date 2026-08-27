@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cd2estftlqmg0" path="res://Scenes/escena super/sup mini back.png" id="1_dunyb"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="2_4nj6i"]
+[ext_resource type="Script" uid="uid://dolrmsj2qjlf7" path="res://mesero_super.gd" id="2_smk7c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smk7c"]
 atlas = ExtResource("2_4nj6i")
@@ -53,7 +54,47 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwamq"]
+size = Vector2(19, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smk7c"]
+size = Vector2(1023, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkyt2"]
+size = Vector2(388, 68.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sltyh"]
+size = Vector2(381.5, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyuq"]
+size = Vector2(384, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qopw"]
+size = Vector2(383, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c23f1"]
+size = Vector2(390, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4bey"]
+size = Vector2(395, 70)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_smk7c"]
+a = Vector2(-91, 456)
+b = Vector2(-90, -7)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fwamq"]
+a = Vector2(997, 599)
+b = Vector2(1, 597)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tkyt2"]
+a = Vector2(1000, 596)
+b = Vector2(998, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8o7l"]
+size = Vector2(973, 63)
+
 [node name="Node2D" type="Node2D" unique_id=393753239]
+y_sort_enabled = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=402740725]
 offset_left = -10.0
@@ -63,10 +104,62 @@ offset_bottom = 624.0
 texture = ExtResource("1_dunyb")
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect" unique_id=437665801]
-position = Vector2(55, 247.00002)
+[node name="mesero_super" type="CharacterBody2D" parent="." unique_id=856671136]
+y_sort_enabled = true
+script = ExtResource("2_smk7c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mesero_super" unique_id=437665801]
+position = Vector2(45, 245.00002)
 scale = Vector2(0.32910153, 0.2783203)
 sprite_frames = SubResource("SpriteFrames_c23f1")
 animation = &"caminando cestita"
 autoplay = "caminando cestita"
 frame_progress = 0.2934779
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesero_super" unique_id=1289369345]
+position = Vector2(45, 278)
+shape = SubResource("RectangleShape2D_fwamq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=72995858]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2049639410]
+position = Vector2(501.5, 91.5)
+shape = SubResource("RectangleShape2D_smk7c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1519421775]
+position = Vector2(278, 226.75)
+shape = SubResource("RectangleShape2D_tkyt2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=714192925]
+position = Vector2(729.25, 226)
+shape = SubResource("RectangleShape2D_sltyh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1715669551]
+position = Vector2(274, 339.5)
+shape = SubResource("RectangleShape2D_tuyuq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1428327051]
+position = Vector2(728.5, 340)
+shape = SubResource("RectangleShape2D_0qopw")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=798233889]
+position = Vector2(269, 459.5)
+shape = SubResource("RectangleShape2D_c23f1")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1682008418]
+position = Vector2(736.5, 458)
+shape = SubResource("RectangleShape2D_g4bey")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=178695612]
+position = Vector2(91, 157)
+shape = SubResource("SegmentShape2D_smk7c")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=358669851]
+shape = SubResource("SegmentShape2D_fwamq")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=2019999772]
+shape = SubResource("SegmentShape2D_tkyt2")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=866937210]
+position = Vector2(506.5, 560.5)
+shape = SubResource("RectangleShape2D_a8o7l")
