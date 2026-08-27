@@ -2,11 +2,11 @@ extends Area2D
 
 @export var velocidad = 150.0
 
-# --- LÍMITES AJUSTADOS AL EMPEDRADO ---
+
 @export var limite_izquierdo = 20.0
 @export var limite_derecho = 980.0
-@export var limite_superior = 250.0  # Justo abajo de las casetas
-@export var limite_inferior = 600.0  # Abajo cerca del borde
+@export var limite_superior = 250.0  
+@export var limite_inferior = 600.0  
 
 var direccion = Vector2.ZERO
 
@@ -19,21 +19,21 @@ func _ready():
 	elegir_direccion_aleatoria()
 
 func _process(delta):
-	# 1. Variar velocidad de vez en cuando
+	# aceleracion variable 
 	tiempo_para_acelerar += delta
 	if tiempo_para_acelerar > 1.5:
 		velocidad = randf_range(120, 300)
 		tiempo_para_acelerar = 0.0
 
-	# 2. Forzar cambio de dirección periódico para alternar entre horizontal y vertical
+
 	tiempo_para_cambiar_rumbo += delta
 	if tiempo_para_cambiar_rumbo >= tiempo_siguiente_cambio:
 		elegir_direccion_aleatoria()
 
-	# 3. Mover al perrito
+	
 	position += direccion * velocidad * delta
 
-	# 4. Validar bordes de la calle
+	#  Validar bordes de la calle
 	comprobar_limites()
 
 func elegir_direccion_aleatoria():

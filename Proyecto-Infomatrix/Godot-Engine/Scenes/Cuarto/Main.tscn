@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://cc7tq65ilam6i"]
+
+[ext_resource type="Texture2D" uid="uid://n38xxglte7ok" path="res://images/EscenaCuarto2.0/Room.JPG" id="1_eo6so"]
+[ext_resource type="Script" uid="uid://g6okyjcxf280" path="res://Scenes/Cuarto/main.gd" id="1_lxmde"]
+[ext_resource type="Texture2D" uid="uid://cxk3qxuh7rpwi" path="res://images/EscenaCuarto2.0/Bathroom.JPG" id="2_lxmde"]
+[ext_resource type="PackedScene" uid="uid://cuwuhi3a8nq3o" path="res://Scenes/Cuarto/Player.tscn" id="3_beiiy"]
+[ext_resource type="Texture2D" uid="uid://eqtors4l8nid" path="res://images/EscenaCuarto2.0/mochila.png" id="4_0sgwo"]
+[ext_resource type="Script" uid="uid://kcpnijq7fjtt" path="res://Scenes/Cuarto/hud.gd" id="4_beiiy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0y3n"]
+size = Vector2(57, 203)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_566py"]
+size = Vector2(50.5, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sgwo"]
+size = Vector2(57, 65.5)
+
+[node name="Main" type="Node2D" unique_id=1831511838]
+script = ExtResource("1_lxmde")
+
+[node name="World" type="Node2D" parent="." unique_id=36722432]
+
+[node name="Room" type="Sprite2D" parent="World" unique_id=580881328]
+position = Vector2(498.99997, 298)
+scale = Vector2(1.2400498, 1.3098902)
+texture = ExtResource("1_eo6so")
+
+[node name="Bathroom" type="Sprite2D" parent="World" unique_id=1426248104]
+position = Vector2(1502, 303)
+scale = Vector2(1.275189, 1.307967)
+texture = ExtResource("2_lxmde")
+
+[node name="DoorZone_Room" type="Area2D" parent="World" unique_id=415018135]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/DoorZone_Room" unique_id=708436002]
+position = Vector2(886.5, 386)
+shape = SubResource("RectangleShape2D_k0y3n")
+
+[node name="DoorZone_Bath" type="Area2D" parent="World" unique_id=1757479031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/DoorZone_Bath" unique_id=727285659]
+position = Vector2(1037.75, 382)
+shape = SubResource("RectangleShape2D_566py")
+
+[node name="ObjetoMochila" type="Area2D" parent="World" unique_id=1780248239]
+
+[node name="Sprite2D" type="Sprite2D" parent="World/ObjetoMochila" unique_id=16648437]
+position = Vector2(1791, 372.99997)
+scale = Vector2(0.43661973, 0.47619048)
+texture = ExtResource("4_0sgwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ObjetoMochila" unique_id=1973488473]
+position = Vector2(1789, 376)
+shape = SubResource("RectangleShape2D_0sgwo")
+
+[node name="MochilaAcomodada" type="Sprite2D" parent="World" unique_id=1862678704]
+visible = false
+position = Vector2(296, 402)
+scale = Vector2(0.4225352, 0.44047618)
+texture = ExtResource("4_0sgwo")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=223802378]
+
+[node name="HUD" type="Control" parent="UI" unique_id=2017310680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_beiiy")
+
+[node name="RelojLabel" type="Label" parent="UI/HUD" unique_id=106430702]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -7.0
+offset_right = 130.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 0.49803922, 0.49803922, 1)
+theme_override_font_sizes/font_size = 45
+text = "00:30"
+
+[node name="ObjetivosLabel" type="Label" parent="UI/HUD" unique_id=1958568578]
+layout_mode = 0
+offset_left = 170.0
+offset_right = 465.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 32
+text = "Objetivo: Encontrar Mochila
+"
+
+[node name="ButtonInventario" type="Button" parent="UI/HUD" unique_id=1807225044]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 527.0
+offset_right = 137.0
+offset_bottom = 582.0
+text = "Inventario
+"
+
+[node name="PanelInventario" type="Panel" parent="UI/HUD" unique_id=899467353]
+visible = false
+layout_mode = 0
+offset_left = 270.0
+offset_top = 196.0
+offset_right = 674.0
+offset_bottom = 472.0
+
+[node name="TextoObjetos" type="Label" parent="UI/HUD/PanelInventario" unique_id=1401604382]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.082
+anchor_bottom = 0.049000002
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 104.871994
+offset_bottom = 16.475998
+text = "Inventario vacio"
+
+[node name="BtnUsarMochila" type="Button" parent="UI/HUD/PanelInventario" unique_id=1668002066]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 246.0
+offset_right = 117.0
+offset_bottom = 277.0
+text = "Usar Mochila "
+
+[node name="PanelGameOver" type="ColorRect" parent="UI/HUD" unique_id=803891459]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 1004.0
+offset_bottom = 600.0
+color = Color(0, 0, 0, 0.6745098)
+
+[node name="Label" type="Label" parent="UI/HUD/PanelGameOver" unique_id=1176400579]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 143.0
+offset_right = 722.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 45
+text = "¡Se acabó el tiempo!
+"
+
+[node name="BtnReintentar" type="Button" parent="UI/HUD/PanelGameOver" unique_id=380019156]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 365.0
+offset_right = 585.0
+offset_bottom = 433.0
+text = "Reintentar"
+
+[node name="PanelVictoria" type="ColorRect" parent="UI/HUD" unique_id=684889215]
+visible = false
+layout_mode = 0
+offset_right = 1006.0
+offset_bottom = 594.0
+color = Color(0, 0, 0, 0.7176471)
+
+[node name="Label" type="Label" parent="UI/HUD/PanelVictoria" unique_id=1286483559]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 112.0
+offset_right = 673.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 45
+text = "¡Nivel Completado!"
+
+[node name="FinalCuarto" type="Button" parent="UI/HUD/PanelVictoria" unique_id=1983385318]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 386.0
+offset_right = 552.0
+offset_bottom = 483.0
+text = "Cinematica
+"
+
+[node name="Transition" type="CanvasLayer" parent="." unique_id=1488779418]
+
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=893657760]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 635.0
+offset_top = -205.0
+offset_right = 635.0
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition" unique_id=285040235]
+
+[node name="Player" parent="." unique_id=175323051 instance=ExtResource("3_beiiy")]
+position = Vector2(1301, 443)
+
+[node name="TimerReloj" type="Timer" parent="." unique_id=1686324448]
+autostart = true
+
+[connection signal="body_entered" from="World/DoorZone_Room" to="." method="_on_door_zone_room_body_entered"]
+[connection signal="body_entered" from="World/DoorZone_Bath" to="." method="_on_door_zone_bath_body_entered"]
+[connection signal="body_entered" from="World/ObjetoMochila" to="." method="_on_objeto_mochila_body_entered"]
+[connection signal="pressed" from="UI/HUD/ButtonInventario" to="UI/HUD" method="_on_button_inventario_pressed"]
+[connection signal="pressed" from="UI/HUD/PanelInventario/BtnUsarMochila" to="." method="_on_btn_usar_mochila_pressed"]
+[connection signal="pressed" from="UI/HUD/PanelGameOver/BtnReintentar" to="." method="_on_btn_reintentar_pressed"]
+[connection signal="pressed" from="UI/HUD/PanelVictoria/FinalCuarto" to="." method="_on_final_cuarto_pressed"]
+[connection signal="timeout" from="TimerReloj" to="." method="_on_timer_reloj_timeout"]
