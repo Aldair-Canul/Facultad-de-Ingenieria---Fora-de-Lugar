@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yki8wk34off0" path="res://Carta_despido.png" id="1_y26ei"]
 [ext_resource type="Script" uid="uid://d0y4ohxak017e" path="res://game_over.gd" id="1_yxx3c"]
+[ext_resource type="Texture2D" uid="uid://uw1i4nnjl21c" path="res://Scenes/Menu/boton volver intentar.png" id="3_pmgi6"]
 
 [node name="GameOver" type="Control" unique_id=785799464]
 layout_mode = 3
@@ -26,10 +27,12 @@ stretch_mode = 6
 [node name="Button" type="Button" parent="." unique_id=1072296568]
 process_mode = 3
 layout_mode = 0
-offset_left = 390.0
-offset_top = 487.0
-offset_right = 555.0
-offset_bottom = 562.0
-text = "Vuelve a intentar!"
+offset_left = 347.0
+offset_top = 445.0
+offset_right = 1091.0
+offset_bottom = 792.0
+scale = Vector2(0.35999876, 0.31999886)
+icon = ExtResource("3_pmgi6")
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
