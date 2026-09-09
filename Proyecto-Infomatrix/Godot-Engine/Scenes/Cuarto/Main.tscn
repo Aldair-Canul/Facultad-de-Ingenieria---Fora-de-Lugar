@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://eqtors4l8nid" path="res://images/EscenaCuarto2.0/mochila.png" id="4_0sgwo"]
 [ext_resource type="Script" uid="uid://kcpnijq7fjtt" path="res://Scenes/Cuarto/hud.gd" id="4_beiiy"]
 [ext_resource type="Texture2D" uid="uid://c6nuy662wt7gu" path="res://images/EscenaCuarto/mesa cuarto.png" id="5_qoh52"]
+[ext_resource type="Texture2D" uid="uid://ja8jqvxju5hu" path="res://images/EscenaCuarto/cama.png" id="6_jbl2r"]
+[ext_resource type="AudioStream" uid="uid://hp8t0saefqy7" path="res://sounds/MusicaFondo_Min_Cuarto.mp3" id="8_62adg"]
+[ext_resource type="AudioStream" uid="uid://tp4rqeg4pua" path="res://sounds/game_over_cuarto.mp3" id="9_jbl2r"]
+[ext_resource type="AudioStream" uid="uid://mhg4ydmcxosr" path="res://sounds/next_level_cuarto.mp3" id="10_ndrjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0y3n"]
 size = Vector2(57, 203)
@@ -29,6 +33,9 @@ radius = 97.082436
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrtlo"]
 size = Vector2(44, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndrjv"]
+size = Vector2(24.5, 49.75)
 
 [node name="Main" type="Node2D" unique_id=1831511838]
 script = ExtResource("1_lxmde")
@@ -77,11 +84,11 @@ texture = ExtResource("4_0sgwo")
 [node name="Paredes" type="StaticBody2D" parent="World" unique_id=1535234652]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Paredes" unique_id=1924267475]
-position = Vector2(1009, 230)
+position = Vector2(1020, 322)
 shape = SubResource("RectangleShape2D_qoh52")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Paredes" unique_id=1108131229]
-position = Vector2(1010, 570)
+position = Vector2(1009, 546)
 shape = SubResource("RectangleShape2D_qoh52")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Paredes" unique_id=1202068593]
@@ -105,9 +112,26 @@ shape = SubResource("RectangleShape2D_vrtlo")
 
 [node name="MesaAcomodada" type="Sprite2D" parent="World" unique_id=1041791341]
 visible = false
-position = Vector2(618, 405.00006)
-scale = Vector2(0.4182129, 0.5664348)
+position = Vector2(722.49994, 395.78128)
+scale = Vector2(0.4501953, 0.53943986)
 texture = ExtResource("5_qoh52")
+
+[node name="ObjetoCama" type="Area2D" parent="World" unique_id=779075551]
+
+[node name="Sprite2D" type="Sprite2D" parent="World/ObjetoCama" unique_id=167034800]
+position = Vector2(1210, 388)
+scale = Vector2(0.06896586, 0.10130112)
+texture = ExtResource("6_jbl2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ObjetoCama" unique_id=526936122]
+position = Vector2(1205.75, 384.125)
+shape = SubResource("RectangleShape2D_ndrjv")
+
+[node name="CamaAcomodada" type="Sprite2D" parent="World" unique_id=1635551427]
+visible = false
+position = Vector2(518, 418)
+scale = Vector2(0.40948275, 0.39405206)
+texture = ExtResource("6_jbl2r")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=223802378]
 
@@ -236,10 +260,10 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_top = 5.0
-offset_right = -3.0
-offset_bottom = 5.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -248,15 +272,27 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition" unique_id=285040235]
 
 [node name="Player" parent="." unique_id=175323051 instance=ExtResource("3_beiiy")]
-position = Vector2(1301, 443)
+position = Vector2(293, 395)
+y_suelo = 457.0
+y_tope = 352.0
 
 [node name="TimerReloj" type="Timer" parent="." unique_id=1686324448]
 autostart = true
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=909322673]
+stream = ExtResource("8_62adg")
+
+[node name="MusicaDerrota" type="AudioStreamPlayer" parent="." unique_id=625070231]
+stream = ExtResource("9_jbl2r")
+
+[node name="MusicaVictoria" type="AudioStreamPlayer" parent="." unique_id=1667461020]
+stream = ExtResource("10_ndrjv")
 
 [connection signal="body_entered" from="World/DoorZone_Room" to="." method="_on_door_zone_room_body_entered"]
 [connection signal="body_entered" from="World/DoorZone_Bath" to="." method="_on_door_zone_bath_body_entered"]
 [connection signal="body_entered" from="World/ObjetoMochila" to="." method="_on_objeto_mochila_body_entered"]
 [connection signal="body_entered" from="World/ObjetoCuaderno" to="." method="_on_objeto_cuaderno_body_entered"]
+[connection signal="body_entered" from="World/ObjetoCama" to="." method="_on_objeto_cama_body_entered"]
 [connection signal="pressed" from="UI/HUD/ButtonInventario" to="UI/HUD" method="_on_button_inventario_pressed"]
 [connection signal="pressed" from="UI/HUD/PanelInventario/BtnUsarMochila" to="." method="_on_btn_usar_mochila_pressed"]
 [connection signal="pressed" from="UI/HUD/PanelGameOver/BtnReintentar" to="." method="_on_btn_reintentar_pressed"]
