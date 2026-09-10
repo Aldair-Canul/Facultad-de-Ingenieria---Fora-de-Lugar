@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://dtu6l5lo82ue5"]
+
+[ext_resource type="Script" uid="uid://dsvqwa77j7itc" path="res://Scenes/Escena_mercado/meserosuper.gd" id="1_pyhw8"]
+[ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="2_fge7y"]
+[ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="3_rde8f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k74v"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(0, 512, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoq0s"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(307, 512, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh15q"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(614, 512, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0twh6"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(921, 512, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li8qt"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(1228, 512, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1j45"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(0, 0, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ky2l"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(307, 0, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qulcj"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(614, 0, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ob4a"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(921, 0, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckcwj"]
+atlas = ExtResource("2_fge7y")
+region = Rect2(1228, 0, 307, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf0xq"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(0, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17sfx"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(256, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3d7m"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(512, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp1i1"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(768, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3fe2"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(1024, 0, 256, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk1lh"]
+atlas = ExtResource("3_rde8f")
+region = Rect2(1280, 0, 256, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0u4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k74v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoq0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh15q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0twh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li8qt")
+}],
+"loop": true,
+"name": &"abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1j45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ky2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qulcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ob4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckcwj")
+}],
+"loop": true,
+"name": &"arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf0xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17sfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3d7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp1i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3fe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk1lh")
+}],
+"loop": true,
+"name": &"izquierda",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxoli"]
+size = Vector2(19.025911, 22.934666)
+
+[node name="MeseroCompras" type="Node2D" unique_id=540056579]
+
+[node name="Meserosuper" type="CharacterBody2D" parent="." unique_id=1878352200]
+script = ExtResource("1_pyhw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meserosuper" unique_id=1491350723]
+position = Vector2(22, -92)
+rotation = 0.011212353
+scale = Vector2(0.53725046, 0.5082426)
+sprite_frames = SubResource("SpriteFrames_x0u4e")
+animation = &"abajo"
+frame_progress = 0.0060891043
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meserosuper" unique_id=1317394853]
+position = Vector2(15.386708, -25.469551)
+rotation = -0.045843
+shape = SubResource("RectangleShape2D_qxoli")
