@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vrbva5p46xnf"]
+
+[ext_resource type="Texture2D" uid="uid://cl41yefg0j2ip" path="res://images/Mercado_img/super pasillos.png" id="1_refd4"]
+
+[node name="Supermercado" type="Node2D" unique_id=638400115]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1830165138]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1057275959]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_right = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_refd4")
