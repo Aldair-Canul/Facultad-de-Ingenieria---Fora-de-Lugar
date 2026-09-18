@@ -38,6 +38,7 @@ size = Vector2(44, 39.5)
 size = Vector2(24.5, 49.75)
 
 [node name="Main" type="Node2D" unique_id=1831511838]
+position = Vector2(0, -2)
 script = ExtResource("1_lxmde")
 
 [node name="World" type="Node2D" parent="." unique_id=36722432]
