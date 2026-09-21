@@ -11,8 +11,11 @@ func _physics_process(_delta: float) -> void:
 
 func actualizar_animacion(direction: Vector2) -> void:
 	if direction == Vector2.ZERO:
-		sprite.stop()
+		sprite.play("reposo")
+		sprite.scale = Vector2(0.3, 0.3) # Ajusta este valor según el tamaño que necesites
 		return
+
+	sprite.scale = Vector2(0.2,0.2) # Restablece la escala original
 
 	if direction.x != 0:
 		sprite.play("izquierda")

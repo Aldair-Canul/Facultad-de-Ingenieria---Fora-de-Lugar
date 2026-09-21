@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="3_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="4_16kdo"]
 [ext_resource type="AudioStream" uid="uid://dcjb1m2i3bsqs" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
+[ext_resource type="Texture2D" uid="uid://bltn1ftfptvbj" path="res://Scenes/Escena_mercado/mesero_idle nuevo.png" id="5_16kdo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3aqs"]
 a = Vector2(94, 150)
@@ -167,6 +168,26 @@ region = Rect2(1024, 0, 256, 1024)
 atlas = ExtResource("4_16kdo")
 region = Rect2(1280, 0, 256, 1024)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk6p8"]
+atlas = ExtResource("5_16kdo")
+region = Rect2(0, 0, 204, 390)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so2nd"]
+atlas = ExtResource("5_16kdo")
+region = Rect2(204, 0, 204, 390)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt4l3"]
+atlas = ExtResource("5_16kdo")
+region = Rect2(408, 0, 204, 390)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvbql"]
+atlas = ExtResource("5_16kdo")
+region = Rect2(612, 0, 204, 390)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_515oy"]
+atlas = ExtResource("5_16kdo")
+region = Rect2(816, 0, 204, 390)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_x0u4e"]
 animations = [{
 "frames": [{
@@ -187,7 +208,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"abajo",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -207,7 +228,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"arriba",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -230,7 +251,27 @@ animations = [{
 }],
 "loop": true,
 "name": &"izquierda",
-"speed": 5.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk6p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_so2nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt4l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvbql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_515oy")
+}],
+"loop": true,
+"name": &"reposo",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xk6p8"]
@@ -357,11 +398,12 @@ position = Vector2(492, 544)
 script = ExtResource("2_4hj0r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/MeseroCompras/Meserosuper" unique_id=1491350723]
-position = Vector2(21, -37.000008)
+position = Vector2(19, -30.000008)
 rotation = 0.011212353
 scale = Vector2(0.23887308, 0.21580866)
 sprite_frames = SubResource("SpriteFrames_x0u4e")
 animation = &"abajo"
+frame_progress = 0.25245234
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras/Meserosuper" unique_id=1317394853]
 position = Vector2(19, -11)
