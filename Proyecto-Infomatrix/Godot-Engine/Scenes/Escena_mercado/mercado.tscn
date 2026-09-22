@@ -6,6 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="4_16kdo"]
 [ext_resource type="AudioStream" uid="uid://dcjb1m2i3bsqs" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://bltn1ftfptvbj" path="res://Scenes/Escena_mercado/mesero_idle nuevo.png" id="5_16kdo"]
+[ext_resource type="Texture2D" uid="uid://dr76ysbyccteh" path="res://Scenes/Escena_mercado/estantes separados/estante izq 1.png" id="6_xk6p8"]
+[ext_resource type="Texture2D" uid="uid://cw2874bhfm5ub" path="res://Scenes/Escena_mercado/estantes separados/estante izq 2.png" id="7_so2nd"]
+[ext_resource type="Texture2D" uid="uid://cb58cptyxj0rp" path="res://Scenes/Escena_mercado/estantes separados/estante izq 3.png" id="8_cvbql"]
+[ext_resource type="Texture2D" uid="uid://cogc04yfv7exi" path="res://Scenes/Escena_mercado/estantes separados/carritos izq.png" id="9_515oy"]
+[ext_resource type="Texture2D" uid="uid://cctcrvqk73fcr" path="res://Scenes/Escena_mercado/estantes separados/frutas izq.png" id="10_515oy"]
+[ext_resource type="Texture2D" uid="uid://cffeitr2ootl2" path="res://Scenes/Escena_mercado/estantes separados/barrote izq.png" id="11_2syqt"]
+[ext_resource type="Texture2D" uid="uid://bp41k7o41qxvh" path="res://Scenes/Escena_mercado/estantes separados/Barrote der.png" id="12_lqydg"]
+[ext_resource type="Texture2D" uid="uid://cj3ggvh3r8k7h" path="res://Scenes/Escena_mercado/estantes separados/frutas der.png" id="13_lvp1u"]
+[ext_resource type="Texture2D" uid="uid://cdv5gwsac40dh" path="res://Scenes/Escena_mercado/estantes separados/cajas carton der.png" id="14_nytlb"]
+[ext_resource type="Texture2D" uid="uid://dp7nochlp2hub" path="res://Scenes/Escena_mercado/estantes separados/estante der 3.png" id="15_djsg7"]
+[ext_resource type="Texture2D" uid="uid://cagyki72mtwwa" path="res://Scenes/Escena_mercado/estantes separados/estante der 2.png" id="16_l8r0q"]
+[ext_resource type="Texture2D" uid="uid://cxqhu6a3eytmw" path="res://Scenes/Escena_mercado/estantes separados/estante der 1.png" id="17_q4f38"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3aqs"]
 a = Vector2(94, 150)
@@ -36,16 +48,16 @@ a = Vector2(233, 114)
 b = Vector2(316, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pt4l3"]
-size = Vector2(174, 101)
+size = Vector2(57, 71.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvbql"]
-size = Vector2(154, 106)
+size = Vector2(344, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_515oy"]
-size = Vector2(149, 104)
+size = Vector2(342, 104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2syqt"]
-size = Vector2(168.25, 99.75)
+size = Vector2(50, 54)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_deveg"]
 a = Vector2(10, 597)
@@ -59,50 +71,17 @@ b = Vector2(11, 551)
 a = Vector2(1001, 554)
 b = Vector2(1000, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqydg"]
-size = Vector2(362, 61)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvp1u"]
-size = Vector2(362.5, 67)
+size = Vector2(61, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nytlb"]
-size = Vector2(368, 43)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_djsg7"]
-size = Vector2(364.5, 68)
+size = Vector2(56, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcth4"]
-size = Vector2(379.5, 74)
+size = Vector2(48.75, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8r0q"]
-size = Vector2(379, 49)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_q4f38"]
-a = Vector2(11, 501)
-b = Vector2(388, 501)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_vvdo1"]
-a = Vector2(389, 501)
-b = Vector2(390, 550)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bfjkj"]
-a = Vector2(914, 495)
-b = Vector2(997, 495)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_515oy"]
-a = Vector2(914, 494)
-b = Vector2(914, 552)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4f38"]
-size = Vector2(49.387512, 200.9953)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vvdo1"]
-radius = 12.211853
-height = 69.99243
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfjkj"]
-radius = 12.702576
-height = 77.73901
+size = Vector2(45, 57)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k74v"]
 atlas = ExtResource("3_5xm6w")
@@ -277,6 +256,44 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xk6p8"]
 size = Vector2(17.625, 9.087494)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so2nd"]
+size = Vector2(394, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqydg"]
+size = Vector2(401, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djsg7"]
+size = Vector2(400, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvdo1"]
+size = Vector2(164, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfjkj"]
+size = Vector2(208, 18)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqydg"]
+radius = 11.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp1u"]
+radius = 11.0
+height = 54.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4f38"]
+size = Vector2(203, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncc65"]
+size = Vector2(83, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdqnm"]
+size = Vector2(404, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yp0uw"]
+size = Vector2(406, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pblot"]
+size = Vector2(405, 50)
+
 [node name="Mercado" type="Node2D" unique_id=1691399105]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=963303702]
@@ -315,19 +332,19 @@ shape = SubResource("SegmentShape2D_xk6p8")
 shape = SubResource("SegmentShape2D_so2nd")
 
 [node name="Lacteos" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1499470295]
-position = Vector2(405, 98.5)
+position = Vector2(47, 321.375)
 shape = SubResource("RectangleShape2D_pt4l3")
 
 [node name="Bebidas" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1174511723]
-position = Vector2(582, 98)
+position = Vector2(487, 98)
 shape = SubResource("RectangleShape2D_cvbql")
 
 [node name="Snacks" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=508534667]
-position = Vector2(748.5, 98)
+position = Vector2(829, 98)
 shape = SubResource("RectangleShape2D_515oy")
 
 [node name="Carnes" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=2047044157]
-position = Vector2(916, 100)
+position = Vector2(973, 219)
 shape = SubResource("RectangleShape2D_2syqt")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=152313239]
@@ -339,76 +356,178 @@ shape = SubResource("SegmentShape2D_pt4l3")
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1151340765]
 shape = SubResource("SegmentShape2D_cvbql")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1863567233]
-position = Vector2(300, 217.5)
-shape = SubResource("RectangleShape2D_lqydg")
-
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=509187579]
-position = Vector2(299.75, 325.5)
+position = Vector2(50.5, 211)
 shape = SubResource("RectangleShape2D_lvp1u")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=906977355]
-position = Vector2(296, 427.5)
+position = Vector2(48, 435)
 shape = SubResource("RectangleShape2D_nytlb")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=16362632]
-position = Vector2(723.75, 217)
-shape = SubResource("RectangleShape2D_djsg7")
-
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1679241613]
-position = Vector2(729.25, 329)
+position = Vector2(975.375, 319.5)
 shape = SubResource("RectangleShape2D_kcth4")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=77071707]
-position = Vector2(733.5, 426.5)
+position = Vector2(972.5, 428.5)
 shape = SubResource("RectangleShape2D_l8r0q")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=394519818]
-shape = SubResource("SegmentShape2D_q4f38")
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1492430408]
-shape = SubResource("SegmentShape2D_vvdo1")
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1586845021]
-shape = SubResource("SegmentShape2D_bfjkj")
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1042702815]
-shape = SubResource("SegmentShape2D_515oy")
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1922786320]
-position = Vector2(740.58484, 524.33594)
-rotation = 1.5672386
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_q4f38")
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=754357758]
-position = Vector2(448, 517)
-rotation = -3.138034
-shape = SubResource("CapsuleShape2D_vvdo1")
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="CanvasLayer/StaticBody2D" unique_id=1255416427]
-position = Vector2(571.2642, 518.145)
-rotation = 0.014828963
-shape = SubResource("CapsuleShape2D_bfjkj")
-
-[node name="MeseroCompras" type="Node2D" parent="CanvasLayer" unique_id=540056579]
+[node name="MeseroCompras-estant" type="Node2D" parent="CanvasLayer" unique_id=540056579]
+y_sort_enabled = true
 position = Vector2(492, 544)
 
-[node name="Meserosuper" type="CharacterBody2D" parent="CanvasLayer/MeseroCompras" unique_id=1878352200]
+[node name="Meserosuper" type="CharacterBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1878352200]
 script = ExtResource("2_4hj0r")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/MeseroCompras/Meserosuper" unique_id=1491350723]
-position = Vector2(19, -30.000008)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/MeseroCompras-estant/Meserosuper" unique_id=1491350723]
+position = Vector2(20, -30)
 rotation = 0.011212353
 scale = Vector2(0.23887308, 0.21580866)
 sprite_frames = SubResource("SpriteFrames_x0u4e")
 animation = &"abajo"
 frame_progress = 0.25245234
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras/Meserosuper" unique_id=1317394853]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/Meserosuper" unique_id=1317394853]
 position = Vector2(19, -11)
 rotation = -0.045843
 shape = SubResource("RectangleShape2D_xk6p8")
+
+[node name="estanteizq1" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1734932162]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq1" unique_id=2094601827]
+position = Vector2(-205.99997, -324)
+scale = Vector2(1.0012407, 1.06)
+texture = ExtResource("6_xk6p8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq1" unique_id=884989858]
+y_sort_enabled = true
+position = Vector2(-206, -320)
+shape = SubResource("RectangleShape2D_so2nd")
+
+[node name="estanteizq2" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1570989730]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq2" unique_id=1443189368]
+position = Vector2(-209.125, -215.625)
+scale = Vector2(1.0030266, 1.0753012)
+texture = ExtResource("7_so2nd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq2" unique_id=1452751710]
+position = Vector2(-212.5, -210)
+shape = SubResource("RectangleShape2D_lqydg")
+
+[node name="estanteizq3" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1419675079]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq3" unique_id=2118936599]
+position = Vector2(-215, -105)
+texture = ExtResource("8_cvbql")
+
+[node name="estante3izq" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteizq3" unique_id=1653186176]
+position = Vector2(-213, -98)
+shape = SubResource("RectangleShape2D_djsg7")
+
+[node name="carritosizq" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=876827842]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/carritosizq" unique_id=1603420569]
+position = Vector2(-398, -23)
+texture = ExtResource("9_515oy")
+
+[node name="carritos" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/carritosizq" unique_id=459829777]
+position = Vector2(-396, -22)
+shape = SubResource("RectangleShape2D_vvdo1")
+
+[node name="frutas izq" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1076393123]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/frutas izq" unique_id=52745161]
+position = Vector2(-212, -24)
+texture = ExtResource("10_515oy")
+
+[node name="frutasizq" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/frutas izq" unique_id=966446692]
+position = Vector2(-210, -22)
+shape = SubResource("RectangleShape2D_bfjkj")
+
+[node name="barroteizq" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=453898642]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/barroteizq" unique_id=149477210]
+position = Vector2(-45, -22)
+texture = ExtResource("11_2syqt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/barroteizq" unique_id=1495860586]
+position = Vector2(-44, -8)
+shape = SubResource("CapsuleShape2D_lqydg")
+
+[node name="barroteder" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=974978435]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/barroteder" unique_id=1031840537]
+position = Vector2(79, -21)
+texture = ExtResource("12_lqydg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/barroteder" unique_id=487139291]
+position = Vector2(80, -7)
+shape = SubResource("CapsuleShape2D_lvp1u")
+
+[node name="frutasder" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1015895513]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/frutasder" unique_id=1888520140]
+position = Vector2(250, -21)
+texture = ExtResource("13_lvp1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/frutasder" unique_id=294007432]
+position = Vector2(250, -21)
+shape = SubResource("RectangleShape2D_q4f38")
+
+[node name="cajascarton" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1684177011]
+y_sort_enabled = true
+position = Vector2(0, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/cajascarton" unique_id=470506823]
+y_sort_enabled = true
+position = Vector2(459, -25)
+texture = ExtResource("14_nytlb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/cajascarton" unique_id=381962503]
+position = Vector2(460, -14)
+shape = SubResource("RectangleShape2D_ncc65")
+
+[node name="estanteder3" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=383470071]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteder3" unique_id=1232982187]
+position = Vector2(256, -107)
+texture = ExtResource("15_djsg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteder3" unique_id=723636512]
+position = Vector2(255, -102.5)
+shape = SubResource("RectangleShape2D_mdqnm")
+
+[node name="estanteder2" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=1071550106]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteder2" unique_id=533832525]
+position = Vector2(249, -216)
+texture = ExtResource("16_l8r0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteder2" unique_id=249545349]
+position = Vector2(254, -217)
+shape = SubResource("RectangleShape2D_yp0uw")
+
+[node name="estanteder1" type="StaticBody2D" parent="CanvasLayer/MeseroCompras-estant" unique_id=890365594]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MeseroCompras-estant/estanteder1" unique_id=873892171]
+position = Vector2(246, -331)
+texture = ExtResource("17_q4f38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeseroCompras-estant/estanteder1" unique_id=476021622]
+position = Vector2(253.5, -321)
+shape = SubResource("RectangleShape2D_pblot")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=526751947]
 position = Vector2(7, 86)
