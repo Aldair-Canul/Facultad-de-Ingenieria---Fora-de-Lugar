@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://b0ccdbax2rks0"]
+
+[ext_resource type="Texture2D" uid="uid://clit5oxvnvv3f" path="res://Scenes/escena super/sprite caminando super.png" id="1_tfiqm"]
+[ext_resource type="Script" uid="uid://08xbulk11h1v" path="res://animated_sprite_2d.gd" id="2_6xswb"]
+[ext_resource type="Texture2D" uid="uid://uixoxpr1dl0t" path="res://Scenes/escena super/background pasillo super .png" id="3_sm788"]
+[ext_resource type="Script" uid="uid://ddkbmrsrr5qqr" path="res://Scenes/Escena_mercado/ui_tienda.gd" id="4_sm788"]
+[ext_resource type="Texture2D" uid="uid://bw14hjti0e2hy" path="res://Scenes/Escena_mercado/estantes separados/canasta.png" id="5_yika6"]
+[ext_resource type="AudioStream" uid="uid://cr81osuggbh0a" path="res://sounds/musica compras en estantes.mp3" id="6_yika6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkvba"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(0, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0rjm"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(136, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlkse"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(272, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f5no"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(408, 0, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac6y0"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(408, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oib4g"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(272, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jver"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(136, 222, 136, 222)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxlys"]
+atlas = ExtResource("1_tfiqm")
+region = Rect2(0, 222, 136, 222)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqxmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkvba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0rjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlkse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f5no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac6y0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oib4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jver")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxlys")
+}],
+"loop": true,
+"name": &"caminando super",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=945628659]
+
+[node name="animacion super" type="AnimatedSprite2D" parent="." unique_id=1889104959]
+z_index = 1
+position = Vector2(481, 494.00003)
+scale = Vector2(1.7945772, 2.0523648)
+sprite_frames = SubResource("SpriteFrames_yqxmc")
+animation = &"caminando super"
+autoplay = "caminando super"
+frame = 2
+frame_progress = 0.44793275
+script = ExtResource("2_6xswb")
+
+[node name="back super" type="Sprite2D" parent="." unique_id=402333714]
+position = Vector2(499, 301)
+scale = Vector2(0.6497396, 0.584961)
+texture = ExtResource("3_sm788")
+metadata/_edit_lock_ = true
+
+[node name="UI Tienda" type="CanvasLayer" parent="." unique_id=1769688611]
+script = ExtResource("4_sm788")
+
+[node name="Labeldinero" type="Label" parent="UI Tienda" unique_id=1577288070]
+offset_left = 873.0
+offset_top = 21.0
+offset_right = 971.0
+offset_bottom = 44.0
+text = "Dinero: $500"
+
+[node name="canasta" type="Control" parent="UI Tienda" unique_id=290602436]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 517.0
+offset_right = 146.0
+offset_bottom = 582.0
+
+[node name="BotonCanasta" type="TextureButton" parent="UI Tienda/canasta" unique_id=723185456]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.56700003
+anchor_right = 1.414
+anchor_bottom = 1.3000001
+offset_left = -3.0
+offset_top = -0.97999954
+offset_right = 3.975998
+offset_bottom = -1.0000076
+texture_normal = ExtResource("5_yika6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PanelDesplegable" type="PanelContainer" parent="UI Tienda/canasta" unique_id=705060578]
+visible = false
+layout_mode = 0
+offset_top = -176.0
+offset_right = 199.0
+offset_bottom = -26.0
+
+[node name="ScrollCanasta" type="ScrollContainer" parent="UI Tienda/canasta/PanelDesplegable" unique_id=1597040013]
+custom_minimum_size = Vector2(199, 150)
+layout_mode = 2
+
+[node name="ListaProductos" type="VBoxContainer" parent="UI Tienda/canasta/PanelDesplegable/ScrollCanasta" unique_id=959494856]
+layout_mode = 2
+
+[node name="ScrollTienda" type="ScrollContainer" parent="UI Tienda" unique_id=1303405097]
+custom_minimum_size = Vector2(600, 160)
+offset_left = 194.0
+offset_top = 49.0
+offset_right = 794.0
+offset_bottom = 209.0
+
+[node name="ListadeCompras" type="HBoxContainer" parent="UI Tienda/ScrollTienda" unique_id=219542459]
+layout_mode = 2
+
+[node name="BotonSalir" type="Button" parent="UI Tienda" unique_id=718884746]
+offset_left = 639.0
+offset_top = 531.0
+offset_right = 878.0
+offset_bottom = 570.0
+text = "Boton regresar a los estantes."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=206712554]
+stream = ExtResource("6_yika6")
+autoplay = true
