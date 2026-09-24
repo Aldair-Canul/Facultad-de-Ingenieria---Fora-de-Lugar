@@ -33,7 +33,12 @@ func check_snap():
 		global_position = target_position
 		locked = true
 		
-		# --- AQUÍ AGREGAMOS EL SONIDO ---
-		$"../SonidoClick".play()
+		# Reproducir sonido del click
+		if has_node("../SonidoClick"):
+			$"../SonidoClick".play()
 		
-		print("¡Cama colocada en el centro!")
+		print("¡Mueble colocado en su lugar!")
+		
+		# --- NOTIFICAR A LA ESCENA PRINCIPAL ---
+		if get_parent().has_method("registrar_mueble_colocado"):
+			get_parent().registrar_mueble_colocado()

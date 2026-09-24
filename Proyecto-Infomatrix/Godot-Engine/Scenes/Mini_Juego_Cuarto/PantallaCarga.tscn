@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bstpahvg762cw"]
+
+[ext_resource type="Script" uid="uid://cdakp0hyf0mn0" path="res://Scenes/Mini_Juego_Cuarto/pantalla_carga.gd" id="1_2bxj5"]
+[ext_resource type="Texture2D" uid="uid://q2s4x8xih7u8" path="res://images/Chapter_1/cargav.png" id="2_uau44"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wdmdq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bxj5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8oo7"]
+atlas = ExtResource("2_uau44")
+region = Rect2(0, 0, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p5bh"]
+atlas = ExtResource("2_uau44")
+region = Rect2(106, 0, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt3ba"]
+atlas = ExtResource("2_uau44")
+region = Rect2(212, 0, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo56y"]
+atlas = ExtResource("2_uau44")
+region = Rect2(318, 0, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cilg"]
+atlas = ExtResource("2_uau44")
+region = Rect2(424, 0, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_othro"]
+atlas = ExtResource("2_uau44")
+region = Rect2(0, 156, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lsp3"]
+atlas = ExtResource("2_uau44")
+region = Rect2(106, 156, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otxoj"]
+atlas = ExtResource("2_uau44")
+region = Rect2(212, 156, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k87hs"]
+atlas = ExtResource("2_uau44")
+region = Rect2(318, 156, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y80xw"]
+atlas = ExtResource("2_uau44")
+region = Rect2(424, 156, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a41j6"]
+atlas = ExtResource("2_uau44")
+region = Rect2(0, 312, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcvsg"]
+atlas = ExtResource("2_uau44")
+region = Rect2(106, 312, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygj25"]
+atlas = ExtResource("2_uau44")
+region = Rect2(212, 312, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnu7b"]
+atlas = ExtResource("2_uau44")
+region = Rect2(318, 312, 106, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxgke"]
+atlas = ExtResource("2_uau44")
+region = Rect2(424, 312, 106, 156)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otxoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8oo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p5bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt3ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo56y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cilg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_othro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lsp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otxoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k87hs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y80xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a41j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcvsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygj25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnu7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxgke")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PantallaCarga" type="Control" unique_id=601486460]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2bxj5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=758986932]
+layout_mode = 0
+offset_right = 995.0
+offset_bottom = 599.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1077943600]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 208.0
+offset_right = 968.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxLine_wdmdq")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2bxj5")
+text = "Ahora es momento de acomodar tus cosas, prepárate"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=922528216]
+position = Vector2(459, 399)
+sprite_frames = SubResource("SpriteFrames_otxoj")
+frame_progress = 0.65087384

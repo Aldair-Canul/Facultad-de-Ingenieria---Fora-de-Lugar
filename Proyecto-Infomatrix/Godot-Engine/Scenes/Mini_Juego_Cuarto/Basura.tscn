@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://mc2c1bcpqdyt"]
+
+[ext_resource type="Script" uid="uid://c2gharxd785pu" path="res://Scenes/Mini_Juego_Cuarto/basura.gd" id="1_aer50"]
+[ext_resource type="Texture2D" uid="uid://b5pppbbnoirln" path="res://images/Chapter_1/basura.png" id="2_1fqv0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7aen"]
+radius = 29.0
+height = 104.0
+
+[node name="Basura" type="Area2D" unique_id=323081684]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_aer50")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1408245350]
+texture = ExtResource("2_1fqv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404092169]
+shape = SubResource("CapsuleShape2D_g7aen")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

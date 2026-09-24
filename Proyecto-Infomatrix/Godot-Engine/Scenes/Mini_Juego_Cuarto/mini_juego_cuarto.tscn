@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg7frm5bfe034"]
 
 [ext_resource type="Script" uid="uid://bn13nlnofhhoy" path="res://Scenes/Mini_Juego_Cuarto/mini_juego_cuarto.gd" id="1_5fjy6"]
-[ext_resource type="Texture2D" uid="uid://c67786o1xoqhj" path="res://images/EscenaCuarto/pxArt.png" id="1_gqp8h"]
+[ext_resource type="Texture2D" uid="uid://dtdfmsyuekp1a" path="res://images/Chapter_1/cuarto.jpg" id="2_5fjy6"]
 [ext_resource type="Script" uid="uid://c538iqk3ogbw8" path="res://area_cama.gd" id="2_caaqp"]
 [ext_resource type="Texture2D" uid="uid://ja8jqvxju5hu" path="res://images/EscenaCuarto/cama.png" id="3_jmsbh"]
 [ext_resource type="Script" uid="uid://cmd8fl3wmuobk" path="res://Scenes/Mini_Juego_Cuarto/area_silla.gd" id="4_jmsbh"]
@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cdmiiausc0864" path="res://sounds/sound_correct_min_cuarto.mp3" id="8_2yade"]
 [ext_resource type="AudioStream" uid="uid://hp8t0saefqy7" path="res://sounds/MusicaFondo_Min_Cuarto.mp3" id="9_gcic5"]
 [ext_resource type="Script" uid="uid://cuw34f2e1x4of" path="res://Scenes/Mini_Juego_Cuarto/button.gd" id="10_oc5ku"]
-[ext_resource type="PackedScene" uid="uid://bdk38tfn6t0o3" path="res://Scenes/Mini_Juego_Mesero/mesero.tscn" id="12_xhrvy"]
+[ext_resource type="Texture2D" uid="uid://dhtmuyvyhrrji" path="res://images/Chapter_1/basurero0.png" id="12_xhrvy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcftv"]
 size = Vector2(128, 205)
@@ -26,9 +26,9 @@ size = Vector2(207, 119)
 script = ExtResource("1_5fjy6")
 
 [node name="SpriteCuarto" type="Sprite2D" parent="." unique_id=556703628]
-position = Vector2(505.50003, 300)
-scale = Vector2(0.5861467, 0.6513661)
-texture = ExtResource("1_gqp8h")
+position = Vector2(502.5, 299)
+scale = Vector2(0.7145893, 0.7978724)
+texture = ExtResource("2_5fjy6")
 
 [node name="SiluetaCama" type="Sprite2D" parent="." unique_id=1299704413]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
@@ -109,8 +109,12 @@ offset_bottom = 43.0
 layout_mode = 2
 text = "\"Arrastra los muebles a su lugar\"."
 
-[node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("12_xhrvy")]
-position = Vector2(223, 438)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=868100070]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=596262333]
+position = Vector2(123, 502.875)
+scale = Vector2(0.312, 0.3115)
+texture = ExtResource("12_xhrvy")
 
 [connection signal="input_event" from="AreaCama" to="AreaCama" method="_on_input_event"]
 [connection signal="input_event" from="AreaSilla" to="AreaSilla" method="_on_input_event"]

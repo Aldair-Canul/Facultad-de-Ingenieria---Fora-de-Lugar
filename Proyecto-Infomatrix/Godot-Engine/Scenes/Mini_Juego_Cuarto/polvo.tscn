@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ce33m0a1wxlm5"]
+
+[ext_resource type="Texture2D" uid="uid://d1ky04n82hgmm" path="res://images/Cuarto/plvo.png" id="1_ry0c3"]
+[ext_resource type="Script" uid="uid://cxwr1puxty2vg" path="res://Scenes/Mini_Juego_Cuarto/polvo.gd" id="1_xdifq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdifq"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(0, 0, 189, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pncxs"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(189, 0, 189, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdkg5"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(378, 0, 189, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvqm3"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(0, 220, 189, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioqv5"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(189, 220, 189, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqnse"]
+atlas = ExtResource("1_ry0c3")
+region = Rect2(378, 220, 189, 220)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24o7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdifq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pncxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdkg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvqm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioqv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqnse")
+}],
+"loop": true,
+"name": &"polvo",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qf30"]
+radius = 59.0
+height = 138.0
+
+[node name="Polvo" type="Area2D" unique_id=1679460191 groups=["polvos"]]
+script = ExtResource("1_xdifq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1391337419]
+sprite_frames = SubResource("SpriteFrames_24o7m")
+animation = &"polvo"
+frame = 2
+frame_progress = 0.9131733
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2021255583]
+shape = SubResource("CapsuleShape2D_6qf30")

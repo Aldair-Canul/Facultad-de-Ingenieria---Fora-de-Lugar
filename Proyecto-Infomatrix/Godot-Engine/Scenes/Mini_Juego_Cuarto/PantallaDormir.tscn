@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dbqqvh5igkcfe"]
+
+[ext_resource type="Script" uid="uid://ousiwfnbrc6" path="res://Scenes/Mini_Juego_Cuarto/pantalla_dormir.gd" id="1_2owev"]
+[ext_resource type="Texture2D" uid="uid://doo6gylc4w0dh" path="res://images/Chapter_1/zzz.png" id="2_qbgxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6acb"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(0, 0, 166, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wsha"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(166, 0, 166, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btk21"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(332, 0, 166, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aaqw"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(0, 250, 166, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igled"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(166, 250, 166, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u28n"]
+atlas = ExtResource("2_qbgxo")
+region = Rect2(332, 250, 166, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2m115"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6acb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wsha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btk21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aaqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igled")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u28n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="PantallaDormir" type="Control" unique_id=1077211040]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2owev")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=933396127]
+layout_mode = 0
+offset_right = 1006.0
+offset_bottom = 610.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1608351468]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 210.0
+offset_right = 580.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 36
+text = "Hora de dormir"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=125253850]
+position = Vector2(435, 400)
+sprite_frames = SubResource("SpriteFrames_2m115")
+frame_progress = 0.32938972

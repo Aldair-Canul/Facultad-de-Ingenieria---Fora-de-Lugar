@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bmwiib67udw00"]
+
+[ext_resource type="Script" uid="uid://dvjt88kwg82w7" path="res://Scenes/Mini_Juego_Cuarto/terminal.gd" id="1_p8xkp"]
+[ext_resource type="AudioStream" uid="uid://d27awasdga45q" path="res://sounds/Antes_de_bajar.mp3" id="1_wb17p"]
+
+[node name="Terminal" type="Control" unique_id=1928809179]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p8xkp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=421108360]
+layout_mode = 0
+offset_right = 1001.0
+offset_bottom = 604.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=450816712]
+stream = ExtResource("1_wb17p")
+autoplay = true
