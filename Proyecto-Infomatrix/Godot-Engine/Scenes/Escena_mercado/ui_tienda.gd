@@ -5,9 +5,11 @@ extends CanvasLayer
 @onready var panel_desplegable: PanelContainer = $canasta/PanelDesplegable
 @onready var lista_productos: VBoxContainer = $canasta/PanelDesplegable/ScrollCanasta/ListaProductos
 @onready var contenedor_tienda: Container = $ScrollTienda/ListadeCompras
-@onready var boton_salir: Button = $BotonSalir # <-- 1. REFERENCIA AL BOTÓN AGREGADA
+@onready var boton_salir: Button = $BotonSalir
 
 const RUTA_ASSETS: String = "res://Scenes/escena super/assets objetos compras super/"
+
+const RUTA_ICONO_COMPRAR: String = "res://Scenes/Escena_mercado/estantes separados/boton comprar.png"
 
 var catalogo: Array = [
 	{"nombre": "Papel Triple Hoja", "precio": 45, "imagen": RUTA_ASSETS + "papel_premium_triple_hoja.png"},
@@ -23,7 +25,7 @@ var catalogo: Array = [
 ]
 
 func _ready() -> void:
-	boton_salir.pressed.connect(_on_boton_salir_pressed) # <-- 2. CONEXIÓN DE SEÑAL AGREGADA
+	boton_salir.pressed.connect(_on_boton_salir_pressed)
 	boton_canasta.pressed.connect(_on_boton_canasta_pressed)
 	
 	DatosJugador.inventario_actualizado.connect(actualizar_canasta)
@@ -60,8 +62,16 @@ func generar_tienda_dinamica() -> void:
 		label.text = prod["nombre"] + "\n$" + str(prod["precio"])
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		
+		
 		var btn = Button.new()
-		btn.text = "Comprar"
+		
+		if ResourceLoader.exists(RUTA_ICONO_COMPRAR):
+			btn.icon = load(RUTA_ICONO_COMPRAR)
+			btn.expand_icon = true
+			btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		
+		btn.text = "" 
+		btn.custom_minimum_size = Vector2(48, 32)
 		btn.pressed.connect(_al_hacer_clic_comprar.bind(prod["nombre"], prod["precio"], prod["imagen"]))
 		
 		vbox.add_child(tex)
@@ -74,7 +84,7 @@ func generar_tienda_dinamica() -> void:
 func _al_hacer_clic_comprar(nombre: String, precio: int, imagen: String) -> void:
 	DatosJugador.comprar_producto(nombre, precio, imagen)
 
-# --- CANASTA INTERACTIVA (CON BOTÓN ELIMINAR) ---
+# --- ACTUALIZAR CANASTE ---
 func actualizar_canasta() -> void:
 	for hijo in lista_productos.get_children():
 		hijo.queue_free()
