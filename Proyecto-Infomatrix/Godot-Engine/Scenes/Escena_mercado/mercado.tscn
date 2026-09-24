@@ -20,6 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://cxqhu6a3eytmw" path="res://Scenes/Escena_mercado/estantes separados/estante der 1.png" id="17_q4f38"]
 [ext_resource type="Script" uid="uid://cnnlq4hhc8aet" path="res://Scenes/Escena_mercado/portalproductos.gd" id="19_q4f38"]
 [ext_resource type="Texture2D" uid="uid://bbw0ttr0eb0k8" path="res://Scenes/Escena_mercado/portal/PORTAL ORANGE-Sheet.png" id="20_vvdo1"]
+[ext_resource type="Script" uid="uid://d2ly4446061ju" path="res://Scenes/Escena_mercado/hud.gd" id="21_bfjkj"]
+[ext_resource type="Texture2D" uid="uid://cibqmnjlv17ys" path="res://Scenes/Escena_mercado/estantes separados/billetera.png" id="22_ncc65"]
+[ext_resource type="Texture2D" uid="uid://bw14hjti0e2hy" path="res://Scenes/Escena_mercado/estantes separados/canasta.png" id="23_mdqnm"]
+[ext_resource type="Script" uid="uid://g6a5tcgqxyob" path="res://Scenes/Escena_mercado/panel_guia.gd" id="24_yp0uw"]
+[ext_resource type="FontFile" uid="uid://ccihyy6esa7v3" path="res://Scenes/Escena_mercado/estantes separados/VT323-Regular.ttf" id="25_pblot"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3aqs"]
 a = Vector2(94, 150)
@@ -363,6 +368,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k6la"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Mercado" type="Node2D" unique_id=1691399105]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=963303702]
@@ -625,4 +633,83 @@ animation = &"portal"
 autoplay = "portal"
 frame_progress = 0.11200671
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1871665865]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1871665865]
+script = ExtResource("21_bfjkj")
+
+[node name="ContenedorDinero" type="HBoxContainer" parent="HUD" unique_id=624124639]
+offset_left = 834.0
+offset_top = 3.0
+offset_right = 964.0
+offset_bottom = 43.0
+
+[node name="LabelDinero" type="Label" parent="HUD/ContenedorDinero" unique_id=1898544937]
+layout_mode = 2
+text = "Dinero:$500"
+
+[node name="IconoBilletera" type="TextureRect" parent="HUD/ContenedorDinero" unique_id=301757411]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("22_ncc65")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Canasta" type="Control" parent="HUD" unique_id=543975489]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotonCanasta" type="TextureButton" parent="HUD/Canasta" unique_id=664540687]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 453.0
+offset_right = 185.0
+offset_bottom = 552.0
+texture_normal = ExtResource("23_mdqnm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PanelDesplegable" type="PanelContainer" parent="HUD/Canasta" unique_id=1039429860]
+visible = false
+layout_mode = 0
+offset_right = 179.0
+offset_bottom = 120.0
+
+[node name="ScrollCanasta" type="ScrollContainer" parent="HUD/Canasta/PanelDesplegable" unique_id=1414113438]
+custom_minimum_size = Vector2(179, 120)
+layout_mode = 2
+
+[node name="ListaProductos" type="VBoxContainer" parent="HUD/Canasta/PanelDesplegable/ScrollCanasta" unique_id=1923506106]
+layout_mode = 2
+
+[node name="PanelGuia" type="VBoxContainer" parent="HUD" unique_id=927296922 node_paths=PackedStringArray("boton_desplegar", "contenido_guia")]
+offset_left = 349.0
+offset_top = 5.0
+offset_right = 389.0
+offset_bottom = 45.0
+script = ExtResource("24_yp0uw")
+boton_desplegar = NodePath("BotonDesplegar")
+contenido_guia = NodePath("BotonDesplegar/ContenidoGuia")
+
+[node name="BotonDesplegar" type="Button" parent="HUD/PanelGuia" unique_id=281313594]
+layout_mode = 2
+
+[node name="ContenidoGuia" type="PanelContainer" parent="HUD/PanelGuia/BotonDesplegar" unique_id=1534932875]
+visible = false
+clip_children = 2
+layout_mode = 0
+offset_left = -147.0
+offset_top = 35.0
+offset_right = 554.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1k6la")
+
+[node name="LabelTexto" type="Label" parent="HUD/PanelGuia/BotonDesplegar/ContenidoGuia" unique_id=989045252]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("25_pblot")
+theme_override_font_sizes/font_size = 19
+text = "Objetivo: Dirígete al estante del fondo, acércate al portal y presiona 'A' para abrir la tienda."
+horizontal_alignment = 1
+autowrap_mode = 3

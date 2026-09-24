@@ -29,3 +29,14 @@ func comprar_producto(nombre: String, precio: int, ruta_imagen: String = "") -> 
 	else:
 		print("¡Dinero insuficiente para comprar ", nombre, "!")
 		return false
+#funcion para el reembolso
+func eliminar_producto(indice: int) -> void:
+	if indice >= 0 and indice < canasta.size():
+		var producto = canasta[indice]
+		dinero += producto["precio"] # Devuelve el dinero
+		canasta.remove_at(indice)    # Lo saca de la lista
+		
+		# Avisa a la interfaz para que se redibuje
+		inventario_actualizado.emit()
+		dinero_cambiado.emit(dinero)
+		print("Eliminado: ", producto["nombre"], " | Reembolsado: $", producto["precio"])
