@@ -28,12 +28,17 @@ func _on_input_event(viewport, event, shape_idx):
 		else:
 			dragging = false
 			check_snap()
-
 func check_snap():
 	if global_position.distance_to(target_position) < snap_distance:
 		global_position = target_position
 		locked = true
 		
-		$"../SonidoClick".play()
+		# Reproducir sonido del click
+		if has_node("../SonidoClick"):
+			$"../SonidoClick".play()
 		
-		print("¡Cama colocada en el centro!")
+		print("¡Mueble colocado en su lugar!")
+		
+		# --- NOTIFICAR A LA ESCENA PRINCIPAL ---
+		if get_parent().has_method("registrar_mueble_colocado"):
+			get_parent().registrar_mueble_colocado()

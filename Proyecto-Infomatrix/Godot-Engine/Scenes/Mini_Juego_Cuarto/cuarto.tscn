@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ck88l47wpwj2l"]
+
+[ext_resource type="Texture2D" uid="uid://dtdfmsyuekp1a" path="res://images/Chapter_1/cuarto.jpg" id="1_ow5a2"]
+[ext_resource type="Script" uid="uid://djojl4yy3gw81" path="res://Scenes/Mini_Juego_Cuarto/cuarto.gd" id="1_sd5lt"]
+[ext_resource type="PackedScene" uid="uid://b5jjnmjk43i42" path="res://Scenes/Mini_Juego_Cuarto/player.tscn" id="2_fupl1"]
+[ext_resource type="PackedScene" uid="uid://ce33m0a1wxlm5" path="res://Scenes/Mini_Juego_Cuarto/polvo.tscn" id="3_l4d2n"]
+[ext_resource type="PackedScene" uid="uid://mc2c1bcpqdyt" path="res://Scenes/Mini_Juego_Cuarto/Basura.tscn" id="4_obpc3"]
+[ext_resource type="PackedScene" uid="uid://bdvkn7srs7kfq" path="res://Scenes/Mini_Juego_Cuarto/Basurero.tscn" id="5_3244o"]
+
+[node name="Cuarto" type="Node2D" unique_id=802663153]
+script = ExtResource("1_sd5lt")
+
+[node name="FondoCuarto" type="Sprite2D" parent="." unique_id=1706401451]
+position = Vector2(503.5, 309.5)
+scale = Vector2(0.7060906, 0.8071808)
+texture = ExtResource("1_ow5a2")
+
+[node name="CanvaUI" type="CanvasLayer" parent="." unique_id=966002757]
+
+[node name="PanelTareas" type="VBoxContainer" parent="CanvaUI" unique_id=1210479491]
+offset_right = 1001.0
+offset_bottom = 614.0
+
+[node name="TareaBarrer" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=838115423]
+layout_mode = 2
+text = "Barre el cuarto"
+
+[node name="TareaRecoger" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=1350228948]
+layout_mode = 2
+text = "Recoger la bolsa de basura"
+
+[node name="TareaTirar" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=1731066370]
+layout_mode = 2
+text = "Tirar la basura en el bote"
+
+[node name="Player" parent="CanvaUI/PanelTareas" unique_id=1111025824 instance=ExtResource("2_fupl1")]
+position = Vector2(186, 415)
+
+[node name="Basura" parent="CanvaUI/PanelTareas" unique_id=323081684 instance=ExtResource("4_obpc3")]
+visible = false
+position = Vector2(299, 399)
+
+[node name="Basurero" parent="CanvaUI/PanelTareas" unique_id=131242364 instance=ExtResource("5_3244o")]
+position = Vector2(82, 552)
+
+[node name="Polvo" parent="." unique_id=1679460191 instance=ExtResource("3_l4d2n")]
+position = Vector2(370, 533)
+
+[node name="Polvo2" parent="." unique_id=898118354 instance=ExtResource("3_l4d2n")]
+position = Vector2(718, 419)
+
+[node name="Polvo3" parent="." unique_id=333163640 instance=ExtResource("3_l4d2n")]
+position = Vector2(530, 470)
+
+[node name="Polvo4" parent="." unique_id=598414928 instance=ExtResource("3_l4d2n")]
+position = Vector2(699, 530)
+
+[node name="LimitesCuarto" type="StaticBody2D" parent="." unique_id=1819332797]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=552090782]
+polygon = PackedVector2Array(-22, 18, -42, 605, -16, 616, -17, 616, -29, 606, 268, 416, 265, 353, -38, 519)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=1811865405]
+position = Vector2(-1.5258789e-05, 0.71406555)
+scale = Vector2(0.9999999, 1.007091)
+polygon = PackedVector2Array(14, 13, 272, 355, 273, 391, 801, 392, 803, 331, 298, 328, 274, 353)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=1838387371]
+position = Vector2(5, -36)
+polygon = PackedVector2Array(-5, 17, 0, 608, -1, 692, 1009, 676, 1005, 606, -2, 606)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=885164123]
+polygon = PackedVector2Array(11, 8, 803, 336, 805, 392, 908, 491, 1000, 517, 904, 491, 998, 560, 1021, 564, 1022, 501, 1035, 395, 810, 332)

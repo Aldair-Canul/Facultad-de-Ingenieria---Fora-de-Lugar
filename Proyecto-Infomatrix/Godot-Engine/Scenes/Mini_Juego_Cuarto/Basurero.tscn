@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bdvkn7srs7kfq"]
+
+[ext_resource type="Texture2D" uid="uid://dhtmuyvyhrrji" path="res://images/Chapter_1/basurero0.png" id="1_curs7"]
+[ext_resource type="Script" uid="uid://diwt26s83qwsk" path="res://Scenes/Mini_Juego_Cuarto/basurero.gd" id="1_u3h2h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3h2h"]
+radius = 97.0
+height = 280.0
+
+[node name="Basurero" type="Area2D" unique_id=131242364]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_u3h2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=638905420]
+texture = ExtResource("1_curs7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=601769878]
+position = Vector2(5, 22)
+shape = SubResource("CapsuleShape2D_u3h2h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
