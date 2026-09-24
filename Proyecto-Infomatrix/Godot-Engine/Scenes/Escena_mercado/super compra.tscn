@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://uixoxpr1dl0t" path="res://Scenes/escena super/background pasillo super .png" id="3_sm788"]
 [ext_resource type="Script" uid="uid://ddkbmrsrr5qqr" path="res://Scenes/Escena_mercado/ui_tienda.gd" id="4_sm788"]
 [ext_resource type="Texture2D" uid="uid://bw14hjti0e2hy" path="res://Scenes/Escena_mercado/estantes separados/canasta.png" id="5_yika6"]
+[ext_resource type="Texture2D" uid="uid://du7v4euul0s8" path="res://Scenes/Escena_mercado/estantes separados/boton regresar.png" id="6_p0d4a"]
 [ext_resource type="Texture2D" uid="uid://cibqmnjlv17ys" path="res://Scenes/Escena_mercado/estantes separados/billetera.png" id="6_sdaft"]
 [ext_resource type="AudioStream" uid="uid://cr81osuggbh0a" path="res://sounds/musica compras en estantes.mp3" id="6_yika6"]
+[ext_resource type="FontFile" uid="uid://p7njfuyh3pdw" path="res://Scenes/Juego_Cuarto/poco/poco/Poco.ttf" id="8_o1q25"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkvba"]
 atlas = ExtResource("1_tfiqm")
@@ -142,11 +144,13 @@ offset_bottom = 209.0
 layout_mode = 2
 
 [node name="BotonSalir" type="Button" parent="UI Tienda" unique_id=718884746]
-offset_left = 639.0
-offset_top = 531.0
-offset_right = 878.0
-offset_bottom = 570.0
-text = "Boton regresar a los estantes."
+offset_left = 682.0
+offset_top = 506.0
+offset_right = 2077.0
+offset_bottom = 889.0
+scale = Vector2(0.16000119, 0.16)
+icon = ExtResource("6_p0d4a")
+flat = true
 
 [node name="ContenedorDinero" type="HBoxContainer" parent="UI Tienda" unique_id=1321547245]
 offset_left = 819.0
@@ -163,6 +167,8 @@ stretch_mode = 5
 
 [node name="Labeldinero" type="Label" parent="UI Tienda/ContenedorDinero" unique_id=1577288070]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("8_o1q25")
+theme_override_font_sizes/font_size = 22
 text = "Dinero: $500"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=206712554]

@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bbw0ttr0eb0k8" path="res://Scenes/Escena_mercado/portal/PORTAL ORANGE-Sheet.png" id="20_vvdo1"]
 [ext_resource type="Script" uid="uid://d2ly4446061ju" path="res://Scenes/Escena_mercado/hud.gd" id="21_bfjkj"]
 [ext_resource type="Texture2D" uid="uid://cibqmnjlv17ys" path="res://Scenes/Escena_mercado/estantes separados/billetera.png" id="22_ncc65"]
-[ext_resource type="Texture2D" uid="uid://bw14hjti0e2hy" path="res://Scenes/Escena_mercado/estantes separados/canasta.png" id="23_mdqnm"]
+[ext_resource type="Texture2D" uid="uid://dyu11c34maywj" path="res://Scenes/Escena_mercado/estantes separados/boton canasta.png" id="23_pblot"]
 [ext_resource type="Script" uid="uid://g6a5tcgqxyob" path="res://Scenes/Escena_mercado/panel_guia.gd" id="24_yp0uw"]
 [ext_resource type="FontFile" uid="uid://ccihyy6esa7v3" path="res://Scenes/Escena_mercado/estantes separados/VT323-Regular.ttf" id="25_pblot"]
 
@@ -662,11 +662,11 @@ offset_bottom = 40.0
 [node name="BotonCanasta" type="TextureButton" parent="HUD/Canasta" unique_id=664540687]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 76.0
-offset_top = 453.0
-offset_right = 185.0
-offset_bottom = 552.0
-texture_normal = ExtResource("23_mdqnm")
+offset_left = 24.0
+offset_top = 493.0
+offset_right = 172.0
+offset_bottom = 620.0
+texture_normal = ExtResource("23_pblot")
 ignore_texture_size = true
 stretch_mode = 5
 
