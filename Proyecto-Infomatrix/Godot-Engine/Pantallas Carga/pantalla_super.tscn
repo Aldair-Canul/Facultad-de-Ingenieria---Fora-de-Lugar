@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b8f6xdwfuv3q8"]
+
+[ext_resource type="Script" uid="uid://csecijlqevkm7" path="res://Pantallas Carga/pantalla_super.gd" id="1_klugd"]
+[ext_resource type="Texture2D" uid="uid://bwnvr63r35itv" path="res://images/Pantallas-de-carga/pantalla super nuevo.png" id="2_rrmoq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klugd"]
+bg_color = Color(0.89067507, 0.32326198, 0.2182554, 1)
+
+[node name="PantallaSuper" type="Control" unique_id=251393529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_klugd")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=849818842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rrmoq")
+expand_mode = 1
+
+[node name="BarraProgreso" type="ProgressBar" parent="." unique_id=813653150]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 390.0
+offset_right = 627.0
+offset_bottom = 413.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_klugd")
+show_percentage = false
+
+[node name="Temporizador" type="Timer" parent="." unique_id=2107926624]
+wait_time = 5.0
+one_shot = true
+autostart = true
