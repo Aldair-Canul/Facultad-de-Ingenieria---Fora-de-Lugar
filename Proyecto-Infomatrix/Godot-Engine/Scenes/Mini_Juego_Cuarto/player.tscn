@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d0p758k777hgu" path="res://images/Chapter_1/normal.png" id="2_i8nai"]
 [ext_resource type="Texture2D" uid="uid://8w2ranwn064i" path="res://images/Chapter_1/caminando adelante y atras .png" id="3_geb3c"]
 [ext_resource type="Texture2D" uid="uid://bxwc45sn6eb88" path="res://images/Chapter_1/caminando.png" id="4_3sfjv"]
-[ext_resource type="AudioStream" uid="uid://kteolo8o2me" path="res://sounds/barriendo.mp3" id="6_us0w8"]
+[ext_resource type="AudioStream" uid="uid://drna8k3nqav35" path="res://sounds/barrer2.mp3" id="6_us0w8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i8nai"]
 atlas = ExtResource("1_r0p6k")

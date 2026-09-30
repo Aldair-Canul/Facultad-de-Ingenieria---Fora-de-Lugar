@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ce33m0a1wxlm5" path="res://Scenes/Mini_Juego_Cuarto/polvo.tscn" id="3_l4d2n"]
 [ext_resource type="PackedScene" uid="uid://mc2c1bcpqdyt" path="res://Scenes/Mini_Juego_Cuarto/Basura.tscn" id="4_obpc3"]
 [ext_resource type="PackedScene" uid="uid://bdvkn7srs7kfq" path="res://Scenes/Mini_Juego_Cuarto/Basurero.tscn" id="5_3244o"]
+[ext_resource type="AudioStream" uid="uid://bun86se7oew1d" path="res://sounds/barrer.mp3" id="7_3244o"]
 
 [node name="Cuarto" type="Node2D" unique_id=802663153]
 script = ExtResource("1_sd5lt")
@@ -71,3 +72,8 @@ polygon = PackedVector2Array(-5, 17, 0, 608, -1, 692, 1009, 676, 1005, 606, -2, 
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=885164123]
 polygon = PackedVector2Array(11, 8, 803, 336, 805, 392, 908, 491, 1000, 517, 904, 491, 998, 560, 1021, 564, 1022, 501, 1035, 395, 810, 332)
+
+[node name="MusicaFondo" type="AudioStreamPlayer2D" parent="." unique_id=915924882]
+position = Vector2(5, 0)
+stream = ExtResource("7_3244o")
+autoplay = true
