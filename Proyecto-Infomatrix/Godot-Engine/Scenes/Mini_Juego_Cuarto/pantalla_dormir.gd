@@ -1,19 +1,22 @@
 extends Control
 
-# Asigna la ruta de la siguiente escena en el Inspector
+# Ruta de la escena a la que se cambiará tras los 4 segundos
+# Puedes cambiar la ruta predeterminada o asignarla desde el Inspector
+@onready var barra_progreso: ProgressBar = $ProgressBar
+@onready var temporizador: Timer = $Timer
 @export_file("*.tscn") var siguiente_escena: String = "res://Scenes/Mini_Juego_Cuarto/final_cuarto.tscn"
 @onready var sprite_animado: AnimatedSprite2D = $AnimatedSprite2D
-@onready var label_mensaje: Label = $Label
+
+
 
 func _ready() -> void:
+	barra_progreso.value = 0
+	temporizador.timeout.connect(_al_terminar_tiempo)
 	sprite_animado.play("default")
-	# 1. Crear animación de parpadeo (desvanecer texto de 100% a 20% de opacidad)
-	var tween := create_tween().set_loops()
-	tween.tween_property(label_mensaje, "modulate:a", 0.1, 0.6)
-	tween.tween_property(label_mensaje, "modulate:a", 1.0, 0.6)
-	
-	# 2. Esperar 3 segundos exactos
-	await get_tree().create_timer(3.0).timeout
-	
-	# 3. Cambiar a la siguiente escena
+func _process(_delta: float) -> void:
+	if not temporizador.is_stopped():
+		var avance = (1.0 - (temporizador.time_left / temporizador.wait_time)) * 100.0
+		barra_progreso.value = avance
+
+func _al_terminar_tiempo() -> void:
 	get_tree().change_scene_to_file(siguiente_escena)

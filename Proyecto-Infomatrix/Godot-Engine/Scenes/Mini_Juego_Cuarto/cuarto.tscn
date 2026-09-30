@@ -34,9 +34,6 @@ text = "Recoger la bolsa de basura"
 layout_mode = 2
 text = "Tirar la basura en el bote"
 
-[node name="Player" parent="CanvaUI/PanelTareas" unique_id=1111025824 instance=ExtResource("2_fupl1")]
-position = Vector2(186, 415)
-
 [node name="Basura" parent="CanvaUI/PanelTareas" unique_id=323081684 instance=ExtResource("4_obpc3")]
 visible = false
 position = Vector2(299, 399)
@@ -77,3 +74,6 @@ polygon = PackedVector2Array(11, 8, 803, 336, 805, 392, 908, 491, 1000, 517, 904
 position = Vector2(5, 0)
 stream = ExtResource("7_3244o")
 autoplay = true
+
+[node name="Player" parent="." unique_id=1111025824 instance=ExtResource("2_fupl1")]
+position = Vector2(186, 415)

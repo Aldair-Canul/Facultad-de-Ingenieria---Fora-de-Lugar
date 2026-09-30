@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dbqqvh5igkcfe"]
 
 [ext_resource type="Script" uid="uid://ousiwfnbrc6" path="res://Scenes/Mini_Juego_Cuarto/pantalla_dormir.gd" id="1_2owev"]
+[ext_resource type="Texture2D" uid="uid://cnysv85qh0ilj" path="res://images/Pantallas-de-carga/pantalla-cuarto-dormir.png" id="2_o6acb"]
 [ext_resource type="Texture2D" uid="uid://doo6gylc4w0dh" path="res://images/Chapter_1/zzz.png" id="2_qbgxo"]
+[ext_resource type="Script" uid="uid://cd0kyqaw5m50j" path="res://Scenes/Mini_Juego_Cuarto/timer.gd" id="3_8wsha"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6acb"]
 atlas = ExtResource("2_qbgxo")
@@ -53,27 +55,43 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wsha"]
+bg_color = Color(0.45087886, 0.0026487315, 0.8592511, 1)
+
 [node name="PantallaDormir" type="Control" unique_id=1077211040]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_2owev")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=933396127]
-layout_mode = 0
-offset_right = 1006.0
-offset_bottom = 610.0
-color = Color(0, 0, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2029579988]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o6acb")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=1608351468]
-layout_mode = 0
-offset_left = 313.0
-offset_top = 210.0
-offset_right = 580.0
-offset_bottom = 260.0
-theme_override_font_sizes/font_size = 36
-text = "Hora de dormir"
+[node name="Timer" type="Timer" parent="." unique_id=445106689]
+wait_time = 4.0
+one_shot = true
+autostart = true
+script = ExtResource("3_8wsha")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=125253850]
-position = Vector2(435, 400)
+position = Vector2(238, 478)
 sprite_frames = SubResource("SpriteFrames_2m115")
-frame_progress = 0.32938972
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=284072998]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 429.0
+offset_right = 658.0
+offset_bottom = 468.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_8wsha")
+show_percentage = false
