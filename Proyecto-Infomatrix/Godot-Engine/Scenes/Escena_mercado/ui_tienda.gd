@@ -34,6 +34,7 @@ func _ready() -> void:
 	actualizar_dinero(DatosJugador.dinero)
 	generar_tienda_dinamica()
 	actualizar_canasta()
+	
 
 func _on_boton_canasta_pressed() -> void:
 	panel_desplegable.visible = not panel_desplegable.visible
@@ -83,6 +84,7 @@ func generar_tienda_dinamica() -> void:
 
 func _al_hacer_clic_comprar(nombre: String, precio: int, imagen: String) -> void:
 	DatosJugador.comprar_producto(nombre, precio, imagen)
+	DatosJugador.super_visitado = true #para saber si visito el super y mostrar boton
 
 # --- ACTUALIZAR CANASTE ---
 func actualizar_canasta() -> void:

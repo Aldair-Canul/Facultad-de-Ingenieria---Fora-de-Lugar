@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cqca66uugs8sk"]
+
+[ext_resource type="Script" uid="uid://cchoiwx8xud22" path="res://Scenes/Escena_mercado/contando_dinero.gd" id="1_kubj2"]
+[ext_resource type="VideoStream" uid="uid://cdfls61yyk5j8" path="res://images/Cinematica/contando_monedas_Adon.ogv" id="2_kubj2"]
+
+[node name="ContandoDinero" type="Control" unique_id=817522311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kubj2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1832192477]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_kubj2")
+autoplay = true
+expand = true
