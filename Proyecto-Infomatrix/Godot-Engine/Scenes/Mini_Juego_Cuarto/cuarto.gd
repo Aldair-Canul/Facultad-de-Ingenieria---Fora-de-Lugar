@@ -50,4 +50,4 @@ func _on_basura_depositada() -> void:
 	await get_tree().create_timer(1.0).timeout
 	
 	# Cambiar a la pantalla de carga
-	get_tree().change_scene_to_file("res://Scenes/Mini_Juego_Cuarto/PantallaCarga.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Mini_Juego_Cuarto/mini_juego_cuarto.tscn")
