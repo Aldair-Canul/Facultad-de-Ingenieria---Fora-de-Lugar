@@ -6,6 +6,8 @@
 [node name="IntroCuarto" type="Control" unique_id=208746160]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -1.0
+offset_right = -1.0
 script = ExtResource("1_aowx6")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1389163391]
