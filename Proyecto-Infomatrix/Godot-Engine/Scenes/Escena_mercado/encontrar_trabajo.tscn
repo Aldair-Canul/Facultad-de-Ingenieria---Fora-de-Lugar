@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dicsk2ye331g8"]
+
+[ext_resource type="Script" uid="uid://dfmah1dxo8qt1" path="res://encontrar_trabajo.gd" id="1_puval"]
+[ext_resource type="VideoStream" uid="uid://crtlrqvkvfqfq" path="res://images/Cinematica/animacion-camino-al-restaurante.ogv" id="2_ic3iy"]
+
+[node name="EncontrarTrabajo" type="Control" unique_id=982242074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_puval")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=628886413]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_ic3iy")
+autoplay = true
+expand = true

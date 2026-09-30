@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddy4b4n8t2s58"]
 
+[ext_resource type="Script" uid="uid://nk0u2ggjigyu" path="res://Scenes/Escena_mercado/mercado.gd" id="1_1k6la"]
 [ext_resource type="Texture2D" uid="uid://cl41yefg0j2ip" path="res://images/Mercado_img/super pasillos.png" id="1_deveg"]
 [ext_resource type="Script" uid="uid://dsvqwa77j7itc" path="res://Scenes/Escena_mercado/meserosuper.gd" id="2_4hj0r"]
 [ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="3_5xm6w"]
@@ -372,6 +373,7 @@ animations = [{
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Mercado" type="Node2D" unique_id=1691399105]
+script = ExtResource("1_1k6la")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=963303702]
 layer = -1
@@ -713,3 +715,11 @@ theme_override_font_sizes/font_size = 19
 text = "Objetivo: Dirígete al estante del fondo, acércate al portal y presiona 'A' para abrir la tienda."
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="BotonSiguiente" type="Button" parent="." unique_id=1184260320]
+offset_left = 914.0
+offset_top = 474.0
+offset_right = 994.0
+offset_bottom = 506.0
+text = "Siguiente
+"

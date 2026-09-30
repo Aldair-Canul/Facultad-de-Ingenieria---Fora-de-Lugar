@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c21o2e2uo3nig"]
+
+[ext_resource type="Script" uid="uid://dvj75rdepw3ys" path="res://Scenes/Escena_mercado/control.gd" id="1_0y012"]
+[ext_resource type="VideoStream" uid="uid://1hjfme46c6nb" path="res://images/Cinematica/Video-super-final.ogv" id="1_aifrm"]
+
+[node name="CajaPago" type="Control" unique_id=1085557130]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0y012")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=142527991]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_aifrm")
+autoplay = true
+expand = true
