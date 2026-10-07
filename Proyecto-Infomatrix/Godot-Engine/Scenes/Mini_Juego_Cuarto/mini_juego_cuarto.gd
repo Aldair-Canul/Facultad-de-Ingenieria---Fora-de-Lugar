@@ -36,4 +36,4 @@ func _finalizar_minijuego() -> void:
 	await get_tree().create_timer(0.8).timeout
 	
 	# Cambiar a la escena con la animación del parpadeo
-	get_tree().change_scene_to_file("res://Scenes/Mini_Juego_Cuarto/PantallaDormir.tscn")
+	TransitionLayer.change_scene("res://Scenes/Mini_Juego_Cuarto/PantallaDormir.tscn")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dww810tmste3g"]
+
+[ext_resource type="Script" uid="uid://bbj3r1070y70g" path="res://Pantallas Carga/transition_layer.gd" id="1_xmlfo"]
+
+[node name="TransitionLayer" type="CanvasLayer" unique_id=2052693821]
+script = ExtResource("1_xmlfo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1035498577]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8627451)

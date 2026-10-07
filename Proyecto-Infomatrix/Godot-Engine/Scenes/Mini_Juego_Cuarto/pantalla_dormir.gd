@@ -19,4 +19,4 @@ func _process(_delta: float) -> void:
 		barra_progreso.value = avance
 
 func _al_terminar_tiempo() -> void:
-	get_tree().change_scene_to_file(siguiente_escena)
+	TransitionLayer.change_scene(siguiente_escena)

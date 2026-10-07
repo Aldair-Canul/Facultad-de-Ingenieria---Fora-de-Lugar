@@ -12,15 +12,18 @@
 script = ExtResource("1_sd5lt")
 
 [node name="FondoCuarto" type="Sprite2D" parent="." unique_id=1706401451]
-position = Vector2(503.5, 309.5)
-scale = Vector2(0.7060906, 0.8071808)
+position = Vector2(501.49997, 306)
+scale = Vector2(0.70892346, 0.8164894)
 texture = ExtResource("1_ow5a2")
 
 [node name="CanvaUI" type="CanvasLayer" parent="." unique_id=966002757]
 
 [node name="PanelTareas" type="VBoxContainer" parent="CanvaUI" unique_id=1210479491]
-offset_right = 1001.0
-offset_bottom = 614.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TareaBarrer" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=838115423]
 layout_mode = 2
@@ -39,7 +42,7 @@ visible = false
 position = Vector2(299, 399)
 
 [node name="Basurero" parent="CanvaUI/PanelTareas" unique_id=131242364 instance=ExtResource("5_3244o")]
-position = Vector2(82, 552)
+position = Vector2(123, 522)
 
 [node name="Polvo" parent="." unique_id=1679460191 instance=ExtResource("3_l4d2n")]
 position = Vector2(370, 533)
@@ -64,7 +67,7 @@ scale = Vector2(0.9999999, 1.007091)
 polygon = PackedVector2Array(14, 13, 272, 355, 273, 391, 801, 392, 803, 331, 298, 328, 274, 353)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=1838387371]
-position = Vector2(5, -36)
+position = Vector2(7, -67)
 polygon = PackedVector2Array(-5, 17, 0, 608, -1, 692, 1009, 676, 1005, 606, -2, 606)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=885164123]
@@ -76,4 +79,4 @@ stream = ExtResource("7_3244o")
 autoplay = true
 
 [node name="Player" parent="." unique_id=1111025824 instance=ExtResource("2_fupl1")]
-position = Vector2(186, 415)
+position = Vector2(237.99997, 346)
