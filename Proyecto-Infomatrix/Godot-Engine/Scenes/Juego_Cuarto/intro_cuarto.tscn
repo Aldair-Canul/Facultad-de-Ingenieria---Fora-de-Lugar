@@ -5,13 +5,20 @@
 
 [node name="IntroCuarto" type="Control" unique_id=208746160]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_nlqb0")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1389163391]
-layout_mode = 0
-offset_right = 997.0
-offset_bottom = 604.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 stream = ExtResource("1_t42iw")
 autoplay = true
 expand = true
