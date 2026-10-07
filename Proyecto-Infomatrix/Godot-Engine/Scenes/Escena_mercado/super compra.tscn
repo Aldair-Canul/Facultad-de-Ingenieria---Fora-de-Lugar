@@ -153,10 +153,10 @@ icon = ExtResource("6_p0d4a")
 flat = true
 
 [node name="ContenedorDinero" type="HBoxContainer" parent="UI Tienda" unique_id=1321547245]
-offset_left = 819.0
-offset_top = 6.0
-offset_right = 956.0
-offset_bottom = 46.0
+offset_left = 749.0
+offset_top = 8.0
+offset_right = 901.0
+offset_bottom = 48.0
 
 [node name="IconoBilletera" type="TextureRect" parent="UI Tienda/ContenedorDinero" unique_id=912206831]
 custom_minimum_size = Vector2(35, 35)

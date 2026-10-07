@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bhqn4m4vbrtjo"]
+
+[ext_resource type="Texture2D" uid="uid://c3oe8uuwwm0lo" path="res://Scenes/Escena_mercado/estantes separados/Cajera.png" id="1_62yno"]
+[ext_resource type="Script" uid="uid://djyw2thrwmjq7" path="res://Scenes/Escena_mercado/caja_pagar.gd" id="1_y07r6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y07r6"]
+atlas = ExtResource("1_62yno")
+region = Rect2(0, 0, 362, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyeag"]
+atlas = ExtResource("1_62yno")
+region = Rect2(362, 0, 362, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or0rc"]
+atlas = ExtResource("1_62yno")
+region = Rect2(724, 0, 362, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pii7d"]
+atlas = ExtResource("1_62yno")
+region = Rect2(1086, 0, 362, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ouv"]
+atlas = ExtResource("1_62yno")
+region = Rect2(1448, 0, 362, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtwey"]
+atlas = ExtResource("1_62yno")
+region = Rect2(1810, 0, 362, 724)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pm02u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y07r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyeag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or0rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pii7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ouv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtwey")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eub8"]
+size = Vector2(346, 217)
+
+[node name="CajaPagar" type="Area2D" unique_id=898859148]
+script = ExtResource("1_y07r6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1080045867]
+sprite_frames = SubResource("SpriteFrames_pm02u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752397805]
+position = Vector2(0, 98.5)
+shape = SubResource("RectangleShape2D_0eub8")

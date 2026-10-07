@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var label_dinero: Label = $ContenedorDinero/LabelDinero
-@onready var boton_canasta: TextureButton = $Canasta/BotonCanasta # Cambia a Button si usas un Button normal
+@onready var boton_canasta: TextureButton = $Canasta/BotonCanasta
 @onready var panel_desplegable: PanelContainer = $Canasta/PanelDesplegable
 @onready var lista_productos: VBoxContainer = $Canasta/PanelDesplegable/ScrollCanasta/ListaProductos
 
@@ -51,5 +51,9 @@ func actualizar_canasta() -> void:
 			fila.add_child(img_mini)
 			fila.add_child(label)
 			
-			# Se agrega a la lista sin botón de borrar
 			lista_productos.add_child(fila)
+		
+		# Mostrar el total acumulado que se cobrará en la caja
+		var label_total = Label.new()
+		label_total.text = "-------------------\nTotal a pagar: $" + str(DatosJugador.obtener_total_a_pagar())
+		lista_productos.add_child(label_total)

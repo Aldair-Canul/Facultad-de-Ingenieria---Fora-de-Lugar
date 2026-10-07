@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dr76ysbyccteh" path="res://Scenes/Escena_mercado/estantes separados/estante izq 1.png" id="6_xk6p8"]
 [ext_resource type="Texture2D" uid="uid://cw2874bhfm5ub" path="res://Scenes/Escena_mercado/estantes separados/estante izq 2.png" id="7_so2nd"]
 [ext_resource type="Texture2D" uid="uid://cb58cptyxj0rp" path="res://Scenes/Escena_mercado/estantes separados/estante izq 3.png" id="8_cvbql"]
+[ext_resource type="PackedScene" uid="uid://bhqn4m4vbrtjo" path="res://Scenes/Escena_mercado/caja_pago.tscn" id="9_77o7c"]
 [ext_resource type="Texture2D" uid="uid://cogc04yfv7exi" path="res://Scenes/Escena_mercado/estantes separados/carritos izq.png" id="9_515oy"]
 [ext_resource type="Texture2D" uid="uid://cctcrvqk73fcr" path="res://Scenes/Escena_mercado/estantes separados/frutas izq.png" id="10_515oy"]
 [ext_resource type="Texture2D" uid="uid://cffeitr2ootl2" path="res://Scenes/Escena_mercado/estantes separados/barrote izq.png" id="11_2syqt"]
@@ -490,6 +491,10 @@ texture = ExtResource("6_xk6p8")
 y_sort_enabled = true
 position = Vector2(-206, -320)
 shape = SubResource("RectangleShape2D_so2nd")
+
+[node name="CajaPagar" parent="MeseroCompras-estant/estanteizq1" unique_id=898859148 instance=ExtResource("9_77o7c")]
+position = Vector2(389, -426)
+scale = Vector2(0.25, 0.25)
 
 [node name="estanteizq2" type="StaticBody2D" parent="MeseroCompras-estant" unique_id=1570989730]
 y_sort_enabled = true
