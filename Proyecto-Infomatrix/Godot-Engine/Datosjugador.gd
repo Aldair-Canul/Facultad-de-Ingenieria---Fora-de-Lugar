@@ -4,39 +4,48 @@ extends Node
 signal inventario_actualizado
 signal dinero_cambiado(nuevo_monto)
 
-var super_visitado = false
+var super_visitado: bool = false
+var compra_lista: bool = false # Se activa al salir del supermercado
 
-# iniciamos con $500 
 var dinero: int = 500 
-var canasta: Array = [] # Guardará los productos: [{"nombre": "Leche", "precio": 20}]
+var canasta: Array = [] # Guardará los productos: [{"nombre": "Leche", "precio": 20, "imagen": "..."}]
 
-# --- FUNCIÓN PARA EL MESERO (FUTURO) ---
-func ganar_dinero(monto: int) -> void:
-	dinero += monto
-	dinero_cambiado.emit(dinero)
-	print("¡Propina/Pago recibido! Ganaste: $", monto, " | Total: $", dinero)
+# --- GANAR DINERO (PROPINA / TRABAJO) ---
+#func ganar_dinero(monto: int) -> void:
+#	dinero += monto
+#	dinero_cambiado.emit(dinero)
+#	print("¡Propina/Pago recibido! Ganaste: $", monto, " | Total: $", dinero)
 
-# Funcion para tienda
+# --- CARRITO DE COMPRAS (SIN DESCONTAR DINERO AÚN) ---
+func agregar_al_carrito(nombre: String, precio: int, ruta_imagen: String = "") -> void:
+	canasta.append({"nombre": nombre, "precio": precio, "imagen": ruta_imagen})
+	inventario_actualizado.emit()
+	print("Agregado al carrito: ", nombre, " ($", precio, ")")
 
-func comprar_producto(nombre: String, precio: int, ruta_imagen: String = "") -> bool:
-	if dinero >= precio:
-		dinero -= precio
-		canasta.append({"nombre": nombre, "precio": precio, "imagen": ruta_imagen})
-		inventario_actualizado.emit()
-		dinero_cambiado.emit(dinero)
-		print("Comprado: ", nombre, " | Restante: $", dinero)
-		return true
-	else:
-		print("¡Dinero insuficiente para comprar ", nombre, "!")
-		return false
-#funcion para el reembolso
 func eliminar_producto(indice: int) -> void:
 	if indice >= 0 and indice < canasta.size():
 		var producto = canasta[indice]
-		dinero += producto["precio"] # Devuelve el dinero
-		canasta.remove_at(indice)    # Lo saca de la lista
-		
-		# Avisa a la interfaz para que se redibuje
+		canasta.remove_at(indice)
 		inventario_actualizado.emit()
+		print("Quitado del carrito: ", producto["nombre"])
+
+# --- CÁLCULO Y PAGO EN LA CAJA ---
+func obtener_total_a_pagar() -> int:
+	var total: int = 0
+	for producto in canasta:
+		total += producto.get("precio", 0)
+	return total
+
+func pagar_compra() -> bool:
+	var total = obtener_total_a_pagar()
+	if dinero >= total:
+		dinero -= total
+		canasta.clear()
+		compra_lista = false # Reiniciamos la bandera
 		dinero_cambiado.emit(dinero)
-		print("Eliminado: ", producto["nombre"], " | Reembolsado: $", producto["precio"])
+		inventario_actualizado.emit()
+		print("¡Pago realizado! Dinero restante: $", dinero)
+		return true
+	else:
+		print("¡No tienes suficiente dinero para pagar $", total, "!")
+		return false
