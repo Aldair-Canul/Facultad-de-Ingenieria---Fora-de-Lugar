@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d0ocyjr3oirqc"]
+
+[ext_resource type="Script" uid="uid://bjfa65j6expso" path="res://Scenes/Mini_Juego_Cuarto/llegando_casa.gd" id="1_j7omm"]
+[ext_resource type="VideoStream" uid="uid://dbnttj25jo8vl" path="res://images/Cinematica/Llegando_a_casa.ogv" id="2_nj0mw"]
+
+[node name="LlegandoCasa" type="Control" unique_id=422041329]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j7omm")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=354139489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_nj0mw")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
