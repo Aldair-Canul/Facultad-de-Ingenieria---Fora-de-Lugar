@@ -5,6 +5,12 @@ extends CanvasLayer
 @onready var panel_desplegable: PanelContainer = $Canasta/PanelDesplegable
 @onready var lista_productos: VBoxContainer = $Canasta/PanelDesplegable/ScrollCanasta/ListaProductos
 
+# Nodos de Controles e Información
+@onready var boton_info: TextureButton = $BotonInfo
+@onready var mensaje_inicial: PanelContainer = $MensajeInicial
+@onready var panel_controles: Control = $PanelControles
+@onready var boton_back: TextureButton = $PanelControles/BotonBack
+
 func _ready() -> void:
 	# Conectamos el botón para abrir/cerrar la canasta
 	boton_canasta.pressed.connect(_on_boton_canasta_pressed)
@@ -13,9 +19,47 @@ func _ready() -> void:
 	DatosJugador.dinero_cambiado.connect(actualizar_dinero)
 	DatosJugador.inventario_actualizado.connect(actualizar_canasta)
 	
-	# Cargamos datos
+	# Conectamos botones de la ventana de controles
+	if boton_info:
+		boton_info.pressed.connect(mostrar_controles)
+	if boton_back:
+		boton_back.pressed.connect(ocultar_controles)
+		
+	# Iniciar con el panel de controles oculto
+	if panel_controles:
+		panel_controles.visible = false
+	
+	# Cargamos datos iniciales
 	actualizar_dinero(DatosJugador.dinero)
 	actualizar_canasta()
+	
+	# Muestra el banner temporal de inicio
+	mostrar_mensaje_temporal()
+
+# --- BANNER TEMPORAL DE BIENVENIDA ---
+func mostrar_mensaje_temporal() -> void:
+	if mensaje_inicial:
+		mensaje_inicial.visible = true
+		await get_tree().create_timer(4.5).timeout
+		mensaje_inicial.visible = false
+
+# --- TECLA DE ACCESO RÁPIDO ('I') ---
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_I:
+			if panel_controles.visible:
+				ocultar_controles()
+			else:
+				mostrar_controles()
+
+# --- ABRIR Y CERRAR CONTROLES ---
+func mostrar_controles() -> void:
+	if panel_controles:
+		panel_controles.visible = true
+
+func ocultar_controles() -> void:
+	if panel_controles:
+		panel_controles.visible = false
 
 func _on_boton_canasta_pressed() -> void:
 	panel_desplegable.visible = not panel_desplegable.visible

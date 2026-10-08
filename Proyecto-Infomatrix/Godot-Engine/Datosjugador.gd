@@ -7,7 +7,7 @@ signal dinero_cambiado(nuevo_monto)
 var super_visitado: bool = false
 var compra_lista: bool = false # Se activa al salir del supermercado
 
-var dinero: int = 500 
+var dinero: int = 1650 
 var canasta: Array = [] # Guardará los productos: [{"nombre": "Leche", "precio": 20, "imagen": "..."}]
 
 # --- GANAR DINERO (PROPINA / TRABAJO) ---
