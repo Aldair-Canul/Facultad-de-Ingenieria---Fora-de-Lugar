@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ddy4b4n8t2s58"]
 
 [ext_resource type="Script" uid="uid://nk0u2ggjigyu" path="res://Scenes/Escena_mercado/mercado.gd" id="1_1k6la"]
-[ext_resource type="Texture2D" uid="uid://2f387dh7qra" path="res://images/Mercado_img/super pasillos.png" id="1_deveg"]
+[ext_resource type="Texture2D" uid="uid://cl41yefg0j2ip" path="res://images/Mercado_img/super pasillos.png" id="1_deveg"]
 [ext_resource type="Script" uid="uid://dsvqwa77j7itc" path="res://Scenes/Escena_mercado/meserosuper.gd" id="2_4hj0r"]
 [ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="3_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="4_16kdo"]
-[ext_resource type="AudioStream" uid="uid://c1my7ym0jhlpm" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
+[ext_resource type="AudioStream" uid="uid://dcjb1m2i3bsqs" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://bltn1ftfptvbj" path="res://Scenes/Escena_mercado/mesero_idle nuevo.png" id="5_16kdo"]
 [ext_resource type="Texture2D" uid="uid://dr76ysbyccteh" path="res://Scenes/Escena_mercado/estantes separados/estante izq 1.png" id="6_xk6p8"]
 [ext_resource type="Texture2D" uid="uid://cw2874bhfm5ub" path="res://Scenes/Escena_mercado/estantes separados/estante izq 2.png" id="7_so2nd"]
@@ -27,6 +27,9 @@
 [ext_resource type="Texture2D" uid="uid://dyu11c34maywj" path="res://Scenes/Escena_mercado/estantes separados/boton canasta.png" id="23_pblot"]
 [ext_resource type="Script" uid="uid://g6a5tcgqxyob" path="res://Scenes/Escena_mercado/panel_guia.gd" id="24_yp0uw"]
 [ext_resource type="FontFile" uid="uid://ccihyy6esa7v3" path="res://Scenes/Escena_mercado/estantes separados/VT323-Regular.ttf" id="25_pblot"]
+[ext_resource type="Texture2D" uid="uid://b1fxpjhyhg76p" path="res://images/MenuInicio/controles.png" id="28_hgo2d"]
+[ext_resource type="Texture2D" uid="uid://cn4aquoblkv6a" path="res://Scenes/Escena_mercado/estantes separados/controlmercado.jpeg" id="29_hyjsb"]
+[ext_resource type="Texture2D" uid="uid://c2bbcjhc4ckmi" path="res://images/MenuInicio/salir.png" id="30_gb32r"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3aqs"]
 a = Vector2(94, 150)
@@ -373,6 +376,9 @@ animations = [{
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k6la"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gjyj"]
+bg_color = Color(0.07101021, 0.07101021, 0.07101021, 0.2)
+
 [node name="Mercado" type="Node2D" unique_id=1691399105]
 script = ExtResource("1_1k6la")
 
@@ -691,10 +697,11 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="PanelGuia" type="VBoxContainer" parent="HUD" unique_id=927296922 node_paths=PackedStringArray("boton_desplegar", "contenido_guia")]
-offset_left = 349.0
-offset_top = 5.0
-offset_right = 389.0
-offset_bottom = 45.0
+visible = false
+offset_left = 376.0
+offset_top = -115.0
+offset_right = 416.0
+offset_bottom = -75.0
 script = ExtResource("24_yp0uw")
 boton_desplegar = NodePath("BotonDesplegar")
 contenido_guia = NodePath("BotonDesplegar/ContenidoGuia")
@@ -721,10 +728,97 @@ text = "Objetivo: Dirígete al estante del fondo, acércate al portal y presiona
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="BotonInfo" type="TextureButton" parent="HUD" unique_id=1163607564]
+custom_minimum_size = Vector2(20, 20)
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 111.0
+offset_bottom = 86.0
+texture_normal = ExtResource("28_hgo2d")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MensajeInicial" type="PanelContainer" parent="HUD" unique_id=1815957210]
+offset_left = 101.0
+offset_top = 463.0
+offset_right = 396.0
+offset_bottom = 503.0
+pivot_offset = Vector2(120, 10)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3gjyj")
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/MensajeInicial" unique_id=1127924043]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/MensajeInicial/MarginContainer" unique_id=58633786]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label1" type="Label" parent="HUD/MensajeInicial/MarginContainer/HBoxContainer" unique_id=317362695]
+layout_mode = 2
+text = "Presiona "
+
+[node name="IconoI" type="TextureRect" parent="HUD/MensajeInicial/MarginContainer/HBoxContainer" unique_id=245539019]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("28_hgo2d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="HUD/MensajeInicial/MarginContainer/HBoxContainer" unique_id=43732113]
+layout_mode = 2
+text = " para ver información."
+
+[node name="PanelControles" type="Control" parent="HUD" unique_id=1046187237]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoOscuro" type="ColorRect" parent="HUD/PanelControles" unique_id=1492813169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49019608)
+
+[node name="ImagenHoja" type="TextureRect" parent="HUD/PanelControles" unique_id=1196426752]
+custom_minimum_size = Vector2(750, 480)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_hyjsb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BotonBack" type="TextureButton" parent="HUD/PanelControles" unique_id=1829753501]
+custom_minimum_size = Vector2(110, 50)
+layout_mode = 0
+offset_left = -16.0
+offset_top = 484.0
+offset_right = 137.0
+offset_bottom = 595.0
+texture_normal = ExtResource("30_gb32r")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="BotonSiguiente" type="Button" parent="." unique_id=1184260320]
-offset_left = 914.0
-offset_top = 474.0
-offset_right = 994.0
-offset_bottom = 506.0
+visible = false
+offset_left = 902.0
+offset_top = 608.0
+offset_right = 982.0
+offset_bottom = 640.0
 text = "Siguiente
 "

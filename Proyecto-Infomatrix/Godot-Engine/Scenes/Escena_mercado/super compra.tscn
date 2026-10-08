@@ -120,7 +120,6 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PanelDesplegable" type="PanelContainer" parent="UI Tienda/canasta" unique_id=705060578]
-visible = false
 layout_mode = 0
 offset_top = -176.0
 offset_right = 199.0

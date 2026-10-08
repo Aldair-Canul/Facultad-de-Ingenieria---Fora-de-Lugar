@@ -71,6 +71,7 @@ stream = ExtResource("5_mh5jj")
 autoplay = true
 
 [node name="BtnSegundoNivel" type="Button" parent="." unique_id=737707836]
+visible = false
 layout_mode = 0
 offset_left = 37.0
 offset_top = 24.000004

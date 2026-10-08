@@ -17,9 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://wqpc1t64urc3" path="res://Mesas/Mesa4.png" id="6_pjbue"]
 [ext_resource type="Texture2D" uid="uid://n35idjl12vhv" path="res://Mesas/Mesa5.png" id="7_xgxix"]
 [ext_resource type="PackedScene" uid="uid://d0hoee574lp6b" path="res://Scenes/Mini_Juego_Mesero/perrito.tscn" id="10_1k82d"]
+[ext_resource type="Texture2D" uid="uid://b1fxpjhyhg76p" path="res://images/MenuInicio/controles.png" id="10_150kq"]
 [ext_resource type="AudioStream" uid="uid://caeapws8tysbu" path="res://sounds/level1_music.mp3" id="10_td1ul"]
 [ext_resource type="AudioStream" uid="uid://djuatm4hlg6ce" path="res://sounds/campana.mp3" id="11_uehlc"]
 [ext_resource type="AudioStream" uid="uid://dsmdn21xbgm80" path="res://sounds/cash2.mp3" id="12_07y5a"]
+[ext_resource type="Script" uid="uid://cr0ff3xbir0fl" path="res://Scenes/Mini_Juego_Mesero/canvas_control.gd" id="21_l1aep"]
+[ext_resource type="Texture2D" uid="uid://b1n3gwwihqbmh" path="res://images/MenuInicio/Info.png" id="24_u6wqk"]
+[ext_resource type="Texture2D" uid="uid://c2bbcjhc4ckmi" path="res://images/MenuInicio/salir.png" id="25_u6wqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6bcr"]
 size = Vector2(72.5, 34)
@@ -107,12 +111,12 @@ texture = ExtResource("5_150kq")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LabelDinero" type="Label" parent="CanvasLayer" unique_id=639214298]
-offset_left = 839.0
-offset_top = 25.0
-offset_right = 970.0
-offset_bottom = 48.0
-text = "Foraneocoins: $0"
+[node name="LabelPlatillos" type="Label" parent="CanvasLayer" unique_id=639214298]
+offset_left = 371.0
+offset_top = 35.0
+offset_right = 565.0
+offset_bottom = 58.0
+text = "Platillos entregados: 0 / 5"
 
 [node name="Mesa 1" type="StaticBody2D" parent="." unique_id=76096865]
 y_sort_enabled = true
@@ -313,3 +317,53 @@ position = Vector2(968, 270)
 
 [node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
 position = Vector2(37, 258)
+
+[node name="CanvasControl" type="CanvasLayer" parent="." unique_id=1019616381]
+script = ExtResource("21_l1aep")
+
+[node name="BotonInfo" type="TextureButton" parent="CanvasControl" unique_id=27712025]
+offset_left = 901.0
+offset_top = 15.0
+offset_right = 1242.0
+offset_bottom = 356.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_150kq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PanelControles" type="Control" parent="CanvasControl" unique_id=91522526]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoOscuro" type="ColorRect" parent="CanvasControl/PanelControles" unique_id=1042586959]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="ImagenHoja" type="TextureRect" parent="CanvasControl/PanelControles" unique_id=984164336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_u6wqk")
+
+[node name="BotonBack" type="TextureButton" parent="CanvasControl/PanelControles" unique_id=425020926]
+layout_mode = 0
+offset_left = -41.0
+offset_top = 481.0
+offset_right = 236.0
+offset_bottom = 609.0
+texture_normal = ExtResource("25_u6wqk")
+ignore_texture_size = true
+stretch_mode = 5
