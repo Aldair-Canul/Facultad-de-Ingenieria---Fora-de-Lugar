@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bcwcldaccu2cy"]
+
+[ext_resource type="Script" uid="uid://qrph7cedexps" path="res://Pantallas Carga/pantalla_mesero.gd" id="1_xolre"]
+[ext_resource type="Texture2D" uid="uid://d0324rb37ypyc" path="res://images/Pantallas-de-carga/dia_siguiente.jpeg" id="2_18wtw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_occus"]
+bg_color = Color(0.80295396, 3.3691526e-07, 0.44382918, 1)
+
+[node name="PantallaMesero" type="Control" unique_id=1430503972]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_xolre")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=485908179]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_18wtw")
+expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=818359632]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 321.0
+offset_right = 667.0
+offset_bottom = 348.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_occus")
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="." unique_id=995178162]
+wait_time = 3.0
+one_shot = true
+autostart = true

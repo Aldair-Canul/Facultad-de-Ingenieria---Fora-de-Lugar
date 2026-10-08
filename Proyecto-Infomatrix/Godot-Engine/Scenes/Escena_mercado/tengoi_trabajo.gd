@@ -1,6 +1,6 @@
 extends Control
 
-const ESCENA_SIGUIENTE = "res://Scenes/Mini_Juego_Cuarto/PantallaControlesCuarto.tscn"
+const ESCENA_SIGUIENTE = "res://Pantallas Carga/PantallaMesero.tscn"
 
 func _ready():
 	$VideoStreamPlayer.grab_focus()

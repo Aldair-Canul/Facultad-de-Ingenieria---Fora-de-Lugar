@@ -3,7 +3,7 @@ extends Control
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 
 # Ruta hacia la siguiente escena a la que irá el jugador después del video
-const RUTA_SIGUIENTE_ESCENA: String = "res://Scenes/Menu/MenuInicio.tscn" # Cambia esta ruta por la tuya
+const RUTA_SIGUIENTE_ESCENA: String =  "res://Scenes/Escena_mercado/tengoi_trabajo.tscn"
 
 func _ready() -> void:
 	# Conectamos la señal que avisa cuando el video termina
@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _al_terminar_video() -> void:
 	# Cambia a la siguiente escena automáticamente
-	get_tree().change_scene_to_file(RUTA_SIGUIENTE_ESCENA)
+	TransitionLayer.change_scene(RUTA_SIGUIENTE_ESCENA)
 
 # Opcional: Permitir al jugador saltar el video si presiona Enter/Espacio/Esc
 func _unhandled_input(event: InputEvent) -> void:

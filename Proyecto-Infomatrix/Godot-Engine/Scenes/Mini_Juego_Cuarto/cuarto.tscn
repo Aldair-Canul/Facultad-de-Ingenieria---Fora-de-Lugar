@@ -27,14 +27,17 @@ grow_vertical = 2
 
 [node name="TareaBarrer" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=838115423]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Barre el cuarto"
 
 [node name="TareaRecoger" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=1350228948]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Recoger la bolsa de basura"
 
 [node name="TareaTirar" type="CheckBox" parent="CanvaUI/PanelTareas" unique_id=1731066370]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Tirar la basura en el bote"
 
 [node name="Basura" parent="CanvaUI/PanelTareas" unique_id=323081684 instance=ExtResource("4_obpc3")]

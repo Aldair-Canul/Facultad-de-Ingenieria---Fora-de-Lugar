@@ -41,12 +41,15 @@ func _unhandled_input(_event: InputEvent) -> void:
 				procesando_pago = true
 				print("¡Pago realizado! El dinero se ha descontado.")
 				
-				# Espera el tiempo especificado (ej. 2 segundos) mostrando el dinero actualizado en el Mercado
+				# Espera el tiempo especificado (ej. 2 segundos)
 				await get_tree().create_timer(tiempo_espera).timeout
 				
 				print("Cargando cinemática...")
-				var error = get_tree().change_scene_to_file(ruta_cinematica)
-				if error != OK:
-					print("Error al cargar la cinemática. Verifica la ruta en el Inspector de CajaPago.")
+				
+				# --- CAMBIO AQUÍ: Usamos la función personalizada de TransitionLayer ---
+				if has_node("/root/TransitionLayer"):
+					TransitionLayer.change_scene(ruta_cinematica)
+				else:
+					get_tree().change_scene_to_file(ruta_cinematica)
 			else:
 				print("Cajera: 'No tienes suficiente dinero para pagar esta compra.'")
