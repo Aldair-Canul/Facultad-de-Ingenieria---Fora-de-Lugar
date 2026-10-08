@@ -1,10 +1,10 @@
 extends Control
 
-@onready var barra_progreso: ProgressBar = $BarraProgreso # o TextureProgressBar si usaste esa
-@onready var temporizador: Timer = $Temporizador
+@onready var barra_progreso: ProgressBar = $ProgressBar # o TextureProgressBar si usaste esa
+@onready var temporizador: Timer = $Timer
 
 
-const RUTA_MERCADO: String = "res://Scenes/Escena_mercado/mercado.tscn"
+const ESCENA_SIGUIENTE: String = "res://Scenes/Mini_Juego_Mesero/nodo_calle.tscn"
 
 func _ready() -> void:
 	barra_progreso.value = 0
@@ -16,4 +16,4 @@ func _process(_delta: float) -> void:
 		barra_progreso.value = avance
 
 func _al_terminar_tiempo() -> void:
-	TransitionLayer.change_scene(RUTA_MERCADO)
+	TransitionLayer.change_scene(ESCENA_SIGUIENTE)

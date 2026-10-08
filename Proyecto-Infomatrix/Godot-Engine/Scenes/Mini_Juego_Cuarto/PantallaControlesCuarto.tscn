@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c3vnntnhw5swg"]
+
+[ext_resource type="Texture2D" uid="uid://bifyyd0msvoj7" path="res://images/Pantallas-de-carga/controles_cuarto.jpeg" id="1_14s8a"]
+[ext_resource type="Script" uid="uid://dsmmf47psn12q" path="res://Scenes/Mini_Juego_Cuarto/pantalla_controles_cuarto.gd" id="1_gyp50"]
+[ext_resource type="Texture2D" uid="uid://w8spbsjra1ux" path="res://Scenes/Menu/sig nivel .png" id="2_t37yp"]
+
+[node name="PantallaControlesCuarto" type="Control" unique_id=263107566]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gyp50")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1763713097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.84313726)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=321389489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_14s8a")
+expand_mode = 1
+
+[node name="BtnSiguiente" type="Button" parent="." unique_id=1083276284]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 751.0
+offset_bottom = 386.0
+scale = Vector2(0.26, 0.26)
+pivot_offset = Vector2(2, 0)
+icon = ExtResource("2_t37yp")
+flat = true
+
+[connection signal="pressed" from="BtnSiguiente" to="." method="_on_btn_siguiente_pressed"]

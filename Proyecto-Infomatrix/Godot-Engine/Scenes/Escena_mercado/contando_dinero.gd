@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _al_terminar_video() -> void:
 	# Cambia a la siguiente escena automáticamente
-	get_tree().change_scene_to_file(RUTA_SIGUIENTE_ESCENA)
+	TransitionLayer.change_scene(RUTA_SIGUIENTE_ESCENA)
 
 # Opcional: Permitir al jugador saltar el video si presiona Enter/Espacio/Esc
 func _unhandled_input(event: InputEvent) -> void:

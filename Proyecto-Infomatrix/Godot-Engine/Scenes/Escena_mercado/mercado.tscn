@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ddy4b4n8t2s58"]
 
 [ext_resource type="Script" uid="uid://nk0u2ggjigyu" path="res://Scenes/Escena_mercado/mercado.gd" id="1_1k6la"]
-[ext_resource type="Texture2D" uid="uid://cl41yefg0j2ip" path="res://images/Mercado_img/super pasillos.png" id="1_deveg"]
+[ext_resource type="Texture2D" uid="uid://2f387dh7qra" path="res://images/Mercado_img/super pasillos.png" id="1_deveg"]
 [ext_resource type="Script" uid="uid://dsvqwa77j7itc" path="res://Scenes/Escena_mercado/meserosuper.gd" id="2_4hj0r"]
 [ext_resource type="Texture2D" uid="uid://bbqhyju54gwf7" path="res://Scenes/escena super/caminando cestita a y ab.png" id="3_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://ckqptuglj6ea" path="res://Scenes/escena super/caminando cestita left.png" id="4_16kdo"]
-[ext_resource type="AudioStream" uid="uid://dcjb1m2i3bsqs" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
+[ext_resource type="AudioStream" uid="uid://c1my7ym0jhlpm" path="res://sounds/Musica Mercado.mp3" id="5_5xm6w"]
 [ext_resource type="Texture2D" uid="uid://bltn1ftfptvbj" path="res://Scenes/Escena_mercado/mesero_idle nuevo.png" id="5_16kdo"]
 [ext_resource type="Texture2D" uid="uid://dr76ysbyccteh" path="res://Scenes/Escena_mercado/estantes separados/estante izq 1.png" id="6_xk6p8"]
 [ext_resource type="Texture2D" uid="uid://cw2874bhfm5ub" path="res://Scenes/Escena_mercado/estantes separados/estante izq 2.png" id="7_so2nd"]

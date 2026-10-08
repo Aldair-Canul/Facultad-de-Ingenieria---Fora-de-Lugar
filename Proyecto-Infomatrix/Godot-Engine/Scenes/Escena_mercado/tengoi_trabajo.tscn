@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://chrie4ns3gm1h"]
+
+[ext_resource type="Script" uid="uid://bei8gye3rv50i" path="res://Scenes/Escena_mercado/tengoi_trabajo.gd" id="1_mnf5h"]
+[ext_resource type="VideoStream" uid="uid://cj43gdtv5xuwa" path="res://images/Cinematica/animacion-ya-le-dieron-trabajo.ogv" id="2_nf2ya"]
+
+[node name="tengoi_trabajo" type="Control" unique_id=622841981]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnf5h")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=336851587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_nf2ya")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
