@@ -24,6 +24,7 @@ TransitionLayer="*uid://dww810tmste3g"
 
 window/size/viewport_width=1000
 window/size/viewport_height=600
+window/stretch/mode="canvas_items"
 
 [input]
 
