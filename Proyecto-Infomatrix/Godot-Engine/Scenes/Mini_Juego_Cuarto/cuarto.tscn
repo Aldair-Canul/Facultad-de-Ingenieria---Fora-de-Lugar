@@ -83,3 +83,4 @@ autoplay = true
 
 [node name="Player" parent="." unique_id=1111025824 instance=ExtResource("2_fupl1")]
 position = Vector2(237.99997, 346)
+scale = Vector2(1.5, 1.5)
