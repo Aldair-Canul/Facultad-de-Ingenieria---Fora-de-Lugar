@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5jjnmjk43i42"]
 
 [ext_resource type="Script" uid="uid://bt2cbv831nowy" path="res://Scenes/Mini_Juego_Cuarto/player.gd" id="1_i8nai"]
-[ext_resource type="Texture2D" uid="uid://bic12mwpp73fq" path="res://images/EscenaCuarto/barrerNV.png" id="2_6y1ym"]
+[ext_resource type="Texture2D" uid="uid://d2fuonhy72tne" path="res://images/EscenaCuarto/barrerF.png" id="2_6y1ym"]
 [ext_resource type="Texture2D" uid="uid://be0lt3tu274wg" path="res://images/EscenaCuarto/caminar_frente.png" id="3_6y1ym"]
 [ext_resource type="Texture2D" uid="uid://dwgl4c5cmbwfe" path="res://images/EscenaCuarto/caminar_espalda.png" id="4_p11fq"]
 [ext_resource type="Texture2D" uid="uid://0hwdeyyc751y" path="res://images/EscenaCuarto/caminar_lado.png" id="5_upwuk"]
@@ -183,7 +183,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"barrer",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -291,7 +291,7 @@ script = ExtResource("1_i8nai")
 position = Vector2(1.1764706, 8.82353)
 sprite_frames = SubResource("SpriteFrames_6ph4v")
 animation = &"barrer"
-frame_progress = 0.28965253
+frame_progress = 0.82676744
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657129038]
 position = Vector2(1, 59)
