@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c71gvtfp14xlp"]
+
+[ext_resource type="Script" uid="uid://dfk36qeqjppjl" path="res://Scenes/cinematicas_nuevas/pensando_cosas_gg.gd" id="1_ag5m8"]
+[ext_resource type="VideoStream" uid="uid://dvwtxvsvd3de0" path="res://images/Cinematica/en-el-bus-.ogv" id="1_hb1d5"]
+
+[node name="Control" type="Control" unique_id=1427679320]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ag5m8")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=374964047]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_hb1d5")
+autoplay = true
+expand = true
