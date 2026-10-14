@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3oe8uuwwm0lo" path="res://Scenes/Escena_mercado/estantes separados/Cajera.png" id="1_62yno"]
 [ext_resource type="Script" uid="uid://djyw2thrwmjq7" path="res://Scenes/Escena_mercado/caja_pagar.gd" id="1_y07r6"]
+[ext_resource type="AudioStream" uid="uid://bd158oxqrdsvo" path="res://Scenes/escena super/sonidopago.mp3" id="3_yyeag"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y07r6"]
 atlas = ExtResource("1_62yno")
@@ -65,3 +66,6 @@ sprite_frames = SubResource("SpriteFrames_pm02u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752397805]
 position = Vector2(0, 98.5)
 shape = SubResource("RectangleShape2D_0eub8")
+
+[node name="SonidoPago" type="AudioStreamPlayer" parent="." unique_id=798178377]
+stream = ExtResource("3_yyeag")

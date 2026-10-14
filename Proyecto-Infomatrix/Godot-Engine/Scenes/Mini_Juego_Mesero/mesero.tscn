@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cqhmnywah7v1" path="res://Scenes/Mini_Juego_Mesero/mesero.gd" id="1_8cs32"]
 [ext_resource type="Texture2D" uid="uid://dg57lucn3sqln" path="res://images/MeseroSprites/Drc1.png" id="1_txikj"]
-[ext_resource type="Texture2D" uid="uid://dmpy8us8furxp" path="res://images/MeseroSprites/caminando hacia delante clear.png" id="2_1vcip"]
+[ext_resource type="Texture2D" uid="uid://d020guba2ys8r" path="res://images/MeseroSprites/mesero_frente (1).png" id="2_1vcip"]
 [ext_resource type="Texture2D" uid="uid://ct824rsqviwpb" path="res://images/MeseroSprites/Drc2.png" id="2_8cs32"]
-[ext_resource type="Texture2D" uid="uid://c1wbrtr5rj453" path="res://images/MeseroSprites/camina haci atras clear.png" id="3_26bxt"]
+[ext_resource type="Texture2D" uid="uid://die2be823f1t1" path="res://images/MeseroSprites/mesero_espalda (1).png" id="3_26bxt"]
 [ext_resource type="Texture2D" uid="uid://5n18x64uvdo2" path="res://images/MeseroSprites/Drc3.png" id="3_l6fyh"]
 [ext_resource type="Texture2D" uid="uid://b12u4nfcdrtdb" path="res://images/MeseroSprites/Drc4.png" id="4_pcpgv"]
 [ext_resource type="Texture2D" uid="uid://bcoxji45ifbud" path="res://images/MeseroSprites/Izq1.png" id="5_sxo5p"]
@@ -16,39 +16,63 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8fdr0"]
 atlas = ExtResource("2_1vcip")
-region = Rect2(0, 0, 273, 360)
+region = Rect2(0, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwsgh"]
 atlas = ExtResource("2_1vcip")
-region = Rect2(273, 0, 273, 360)
+region = Rect2(192, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_adyf1"]
 atlas = ExtResource("2_1vcip")
-region = Rect2(546, 0, 273, 360)
+region = Rect2(384, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wweek"]
 atlas = ExtResource("2_1vcip")
-region = Rect2(819, 0, 273, 360)
+region = Rect2(576, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abb51"]
 atlas = ExtResource("2_1vcip")
-region = Rect2(1092, 0, 273, 360)
+region = Rect2(768, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5lkp0"]
-atlas = ExtResource("3_26bxt")
-region = Rect2(0, 0, 275, 356)
+atlas = ExtResource("2_1vcip")
+region = Rect2(960, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8h2yj"]
-atlas = ExtResource("3_26bxt")
-region = Rect2(275, 0, 275, 356)
+atlas = ExtResource("2_1vcip")
+region = Rect2(1152, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ttqa"]
-atlas = ExtResource("3_26bxt")
-region = Rect2(550, 0, 275, 356)
+atlas = ExtResource("2_1vcip")
+region = Rect2(1344, 0, 192, 352)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yuk5p"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(1536, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w8ws"]
+atlas = ExtResource("2_1vcip")
+region = Rect2(1728, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovylr"]
 atlas = ExtResource("3_26bxt")
-region = Rect2(825, 0, 275, 356)
+region = Rect2(0, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cev85"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(192, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yui3r"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(384, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1meh"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(1152, 0, 192, 352)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daofx"]
+atlas = ExtResource("3_26bxt")
+region = Rect2(1344, 0, 192, 352)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34le8"]
 animations = [{
@@ -67,12 +91,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_abb51")
-}],
-"loop": true,
-"name": &"Abajo",
-"speed": 5.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5lkp0")
 }, {
@@ -84,10 +103,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yuk5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w8ws")
+}],
+"loop": true,
+"name": &"Abajo",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovylr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cev85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yui3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1meh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daofx")
 }],
 "loop": true,
 "name": &"Arriba",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -136,25 +178,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cs32"]
-size = Vector2(69.166664, 138.33333)
+size = Vector2(128.66667, 199.16666)
 
 [node name="Mesero" type="CharacterBody2D" unique_id=614565725]
 y_sort_enabled = true
-scale = Vector2(0.3, 0.3)
+scale = Vector2(1.5, 1.5)
 motion_mode = 1
 script = ExtResource("1_8cs32")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1117248730]
-position = Vector2(43.333332, -100)
+position = Vector2(-6.666668, -106.66666)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_34le8")
-animation = &"Abajo"
+animation = &"Quieto"
+frame_progress = 0.28551784
 
 [node name="PlatoCargado" type="Sprite2D" parent="." unique_id=1503995587]
 z_index = 1
 scale = Vector2(0.3, 0.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580692053]
-position = Vector2(-6.666667, -66.666664)
+position = Vector2(-6.3333373, -97.083336)
 shape = SubResource("RectangleShape2D_8cs32")
 
 [node name="TextoPlatoCargado" type="Label" parent="." unique_id=542940780]

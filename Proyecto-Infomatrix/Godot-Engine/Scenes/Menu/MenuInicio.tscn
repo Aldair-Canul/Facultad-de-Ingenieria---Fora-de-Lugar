@@ -33,21 +33,22 @@ expand_mode = 1
 
 [node name="BtnIniciar" type="Button" parent="." unique_id=1839748038]
 layout_mode = 0
-offset_left = 398.00003
-offset_top = 327.00003
-offset_right = 1194.0
-offset_bottom = 723.0
+offset_left = 305.0
+offset_top = 396.00003
+offset_right = 1101.0
+offset_bottom = 792.0
 scale = Vector2(0.19999759, 0.2000006)
 icon = ExtResource("2_44sq5")
 flat = true
 script = ExtResource("2_fte28")
 
 [node name="BtnInfo" type="Button" parent="." unique_id=351774535]
+visible = false
 layout_mode = 0
-offset_left = 374.00003
-offset_top = 403.0
-offset_right = 1088.0
-offset_bottom = 764.0
+offset_left = 804.00006
+offset_top = 5.9999847
+offset_right = 1518.0
+offset_bottom = 367.0
 scale = Vector2(0.27999878, 0.24000064)
 icon = ExtResource("4_67uyp")
 flat = true
@@ -55,10 +56,10 @@ script = ExtResource("3_mh5jj")
 
 [node name="BtnSalir" type="Button" parent="." unique_id=1676098805]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 491.0
-offset_right = 1099.0
-offset_bottom = 893.0
+offset_left = 537.0
+offset_top = 403.0
+offset_right = 1231.0
+offset_bottom = 805.0
 scale = Vector2(0.19999996, 0.18480492)
 text = "
 "

@@ -22,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://djuatm4hlg6ce" path="res://sounds/campana.mp3" id="11_uehlc"]
 [ext_resource type="AudioStream" uid="uid://dsmdn21xbgm80" path="res://sounds/cash2.mp3" id="12_07y5a"]
 [ext_resource type="Script" uid="uid://cr0ff3xbir0fl" path="res://Scenes/Mini_Juego_Mesero/canvas_control.gd" id="21_l1aep"]
-[ext_resource type="Texture2D" uid="uid://b1n3gwwihqbmh" path="res://images/MenuInicio/Info.png" id="24_u6wqk"]
+[ext_resource type="Texture2D" uid="uid://daniud5pqjdxj" path="res://images/Pantallas-de-carga/controles mesero.png" id="23_l1aep"]
 [ext_resource type="Texture2D" uid="uid://c2bbcjhc4ckmi" path="res://images/MenuInicio/salir.png" id="25_u6wqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6bcr"]
@@ -317,6 +317,7 @@ position = Vector2(968, 270)
 
 [node name="Mesero" parent="." unique_id=614565725 instance=ExtResource("2_ye407")]
 position = Vector2(37, 258)
+scale = Vector2(0.3, 0.3)
 
 [node name="CanvasControl" type="CanvasLayer" parent="." unique_id=1019616381]
 script = ExtResource("21_l1aep")
@@ -332,7 +333,6 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="PanelControles" type="Control" parent="CanvasControl" unique_id=91522526]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -356,7 +356,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_u6wqk")
+texture = ExtResource("23_l1aep")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="BotonBack" type="TextureButton" parent="CanvasControl/PanelControles" unique_id=425020926]
 layout_mode = 0

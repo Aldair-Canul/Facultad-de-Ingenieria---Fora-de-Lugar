@@ -500,7 +500,7 @@ shape = SubResource("RectangleShape2D_so2nd")
 
 [node name="CajaPagar" parent="MeseroCompras-estant/estanteizq1" unique_id=898859148 instance=ExtResource("9_77o7c")]
 position = Vector2(389, -426)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.22, 0.22)
 
 [node name="estanteizq2" type="StaticBody2D" parent="MeseroCompras-estant" unique_id=1570989730]
 y_sort_enabled = true
@@ -628,6 +628,7 @@ shape = SubResource("RectangleShape2D_pblot")
 
 [node name="Portalproductos" type="Area2D" parent="." unique_id=1503424788]
 z_index = 1
+y_sort_enabled = true
 position = Vector2(-5, 44)
 script = ExtResource("19_q4f38")
 
@@ -638,9 +639,11 @@ shape = SubResource("RectangleShape2D_1k6la")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portalproductos" unique_id=874784456]
 process_priority = -1
+z_index = -1
+z_as_relative = false
 y_sort_enabled = true
-position = Vector2(146.00003, 229)
-scale = Vector2(1.40625, 1.234375)
+position = Vector2(146, 228)
+scale = Vector2(1.40625, 1.2421877)
 sprite_frames = SubResource("SpriteFrames_powvu")
 animation = &"portal"
 autoplay = "portal"
@@ -650,9 +653,9 @@ frame_progress = 0.11200671
 script = ExtResource("21_bfjkj")
 
 [node name="ContenedorDinero" type="HBoxContainer" parent="HUD" unique_id=624124639]
-offset_left = 834.0
+offset_left = 736.0
 offset_top = 3.0
-offset_right = 964.0
+offset_right = 866.0
 offset_bottom = 43.0
 
 [node name="LabelDinero" type="Label" parent="HUD/ContenedorDinero" unique_id=1898544937]
@@ -730,10 +733,10 @@ autowrap_mode = 3
 
 [node name="BotonInfo" type="TextureButton" parent="HUD" unique_id=1163607564]
 custom_minimum_size = Vector2(20, 20)
-offset_left = 15.0
-offset_top = 8.0
-offset_right = 111.0
-offset_bottom = 86.0
+offset_left = 914.0
+offset_top = 7.0
+offset_right = 1000.0
+offset_bottom = 75.0
 texture_normal = ExtResource("28_hgo2d")
 ignore_texture_size = true
 stretch_mode = 5
