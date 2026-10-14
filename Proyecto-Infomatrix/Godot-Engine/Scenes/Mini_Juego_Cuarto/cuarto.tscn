@@ -40,13 +40,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Tirar la basura en el bote"
 
-[node name="Basura" parent="CanvaUI/PanelTareas" unique_id=323081684 instance=ExtResource("4_obpc3")]
-visible = false
-position = Vector2(299, 399)
-
-[node name="Basurero" parent="CanvaUI/PanelTareas" unique_id=131242364 instance=ExtResource("5_3244o")]
-position = Vector2(123, 522)
-
 [node name="Polvo" parent="." unique_id=1679460191 instance=ExtResource("3_l4d2n")]
 position = Vector2(370, 533)
 
@@ -80,6 +73,13 @@ polygon = PackedVector2Array(11, 8, 803, 336, 805, 392, 908, 491, 1000, 517, 904
 position = Vector2(5, 0)
 stream = ExtResource("7_3244o")
 autoplay = true
+
+[node name="Basura" parent="." unique_id=323081684 instance=ExtResource("4_obpc3")]
+visible = false
+position = Vector2(299, 399)
+
+[node name="Basurero" parent="." unique_id=131242364 instance=ExtResource("5_3244o")]
+position = Vector2(123, 522)
 
 [node name="Player" parent="." unique_id=1111025824 instance=ExtResource("2_fupl1")]
 position = Vector2(237.99997, 346)

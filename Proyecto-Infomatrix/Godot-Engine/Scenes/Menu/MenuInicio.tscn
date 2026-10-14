@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://daetm82nraojq" path="res://Scenes/Menu/iniciar.png" id="2_44sq5"]
 [ext_resource type="Script" uid="uid://bpv38qmuypbcc" path="res://Scenes/Menu/btn_iniciar.gd" id="2_fte28"]
 [ext_resource type="Script" uid="uid://c53578s2ykjph" path="res://Scenes/Menu/btn_info.gd" id="3_mh5jj"]
-[ext_resource type="Texture2D" uid="uid://tt0obkpjijm8" path="res://Scenes/Menu/controles.png" id="4_67uyp"]
+[ext_resource type="Texture2D" uid="uid://dgfkb8mrjy6bl" path="res://images/MenuInicio/boton de creditos .png" id="4_bhb3g"]
 [ext_resource type="Script" uid="uid://bfcqaw4iyl1y1" path="res://Scenes/Menu/btn_salir.gd" id="4_fte28"]
 [ext_resource type="AudioStream" uid="uid://rffvjmfd53va" path="res://sounds/menu_music.mp3" id="5_mh5jj"]
 [ext_resource type="Script" uid="uid://5wab8crhc1xg" path="res://Scenes/Menu/btn_segundo_nivel.gd" id="6_1c3wx"]
@@ -33,33 +33,33 @@ expand_mode = 1
 
 [node name="BtnIniciar" type="Button" parent="." unique_id=1839748038]
 layout_mode = 0
-offset_left = 305.0
-offset_top = 396.00003
-offset_right = 1101.0
-offset_bottom = 792.0
-scale = Vector2(0.19999759, 0.2000006)
+offset_left = 379.0
+offset_top = 369.00003
+offset_right = 1113.0
+offset_bottom = 765.0
+scale = Vector2(0.2399976, 0.20000058)
 icon = ExtResource("2_44sq5")
 flat = true
 script = ExtResource("2_fte28")
 
 [node name="BtnInfo" type="Button" parent="." unique_id=351774535]
-visible = false
 layout_mode = 0
-offset_left = 804.00006
-offset_top = 5.9999847
-offset_right = 1518.0
-offset_bottom = 367.0
-scale = Vector2(0.27999878, 0.24000064)
-icon = ExtResource("4_67uyp")
+offset_left = 385.0
+offset_top = 446.0
+offset_right = 2167.0
+offset_bottom = 1341.0
+scale = Vector2(0.10000001, 0.11999512)
+icon = ExtResource("4_bhb3g")
 flat = true
 script = ExtResource("3_mh5jj")
 
 [node name="BtnSalir" type="Button" parent="." unique_id=1676098805]
+visible = false
 layout_mode = 0
-offset_left = 537.0
-offset_top = 403.0
-offset_right = 1231.0
-offset_bottom = 805.0
+offset_left = 17.0
+offset_top = 31.99997
+offset_right = 711.0
+offset_bottom = 433.99997
 scale = Vector2(0.19999996, 0.18480492)
 text = "
 "

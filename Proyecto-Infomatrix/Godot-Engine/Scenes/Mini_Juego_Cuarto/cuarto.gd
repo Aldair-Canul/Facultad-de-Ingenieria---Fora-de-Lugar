@@ -4,8 +4,8 @@ extends Node2D
 @onready var check_recoger: CheckBox = $CanvaUI/PanelTareas/TareaRecoger
 @onready var check_tirar: CheckBox = $CanvaUI/PanelTareas/TareaTirar
 
-@onready var basura_node: Area2D = $CanvaUI/PanelTareas/Basura
-@onready var basurero_node: Area2D = $CanvaUI/PanelTareas/Basurero
+@onready var basura_node: Area2D = $Basura
+@onready var basurero_node: Area2D = $Basurero
 
 var fase_actual: int = 1
 
@@ -19,7 +19,7 @@ func _ready() -> void:
 	# Conectar señales
 	basura_node.basura_recogida.connect(_on_basura_recogida)
 	basurero_node.basura_depositada.connect(_on_basura_depositada)
-
+ 
 func _process(_delta: float) -> void:
 	# FASE 1: Revisar si terminó de barrer
 	if fase_actual == 1:

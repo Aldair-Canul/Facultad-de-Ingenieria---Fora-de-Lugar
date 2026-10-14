@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://metnjw4th7tj"]
 
-[ext_resource type="Texture2D" uid="uid://b1n3gwwihqbmh" path="res://images/MenuInicio/Info.png" id="1_1pq3o"]
+[ext_resource type="Texture2D" uid="uid://clyv37qju1n68" path="res://images/MenuInicio/creditos grafitti.png" id="1_sjrlv"]
 [ext_resource type="Script" uid="uid://b6wf0t5cec82f" path="res://Scenes/Menu/BtnBack.gd" id="2_6trfo"]
 [ext_resource type="Texture2D" uid="uid://tdwls1nyopcq" path="res://Scenes/Menu/regresar.png" id="2_sjrlv"]
 
@@ -17,11 +17,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -2.0
-offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_1pq3o")
+texture = ExtResource("1_sjrlv")
+expand_mode = 1
 
 [node name="BtnBack" type="Button" parent="." unique_id=1859778256]
 layout_mode = 0
