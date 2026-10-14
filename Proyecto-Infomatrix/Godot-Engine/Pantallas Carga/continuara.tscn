@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dy5grox1yr882"]
+
+[ext_resource type="Script" uid="uid://1rn10t51x2yn" path="res://Pantallas Carga/continuara.gd" id="1_tuujo"]
+[ext_resource type="Texture2D" uid="uid://bt33hntqjkkrc" path="res://images/Pantallas-de-carga/Days Later at the Bus Stop.png" id="2_rjgvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i7u6"]
+bg_color = Color(0.17381713, 0.23593268, 1, 1)
+
+[node name="Continuara" type="Control" unique_id=1392706242]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tuujo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2133778542]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rjgvr")
+expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1465993767]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 311.0
+offset_right = 621.0
+offset_bottom = 325.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0i7u6")
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="." unique_id=1585629770]
+wait_time = 3.0
+one_shot = true
+autostart = true

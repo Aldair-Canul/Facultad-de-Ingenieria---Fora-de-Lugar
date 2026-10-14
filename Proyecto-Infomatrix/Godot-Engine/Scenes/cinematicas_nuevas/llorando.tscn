@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ct3dimut7grsq"]
+
+[ext_resource type="VideoStream" uid="uid://csq4a3hunapfv" path="res://images/Cinematica/sentado pensando.ogv" id="1_lum5f"]
+[ext_resource type="Script" uid="uid://bfdjy826kb1ud" path="res://Scenes/cinematicas_nuevas/llorando.gd" id="1_ss22k"]
+
+[node name="Llorando" type="Control" unique_id=581729401]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ss22k")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1479088682]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_lum5f")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

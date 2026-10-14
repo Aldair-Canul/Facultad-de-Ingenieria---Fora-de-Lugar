@@ -1,6 +1,6 @@
 extends Control
 
-const ESCENA_SIGUIENTE = ""
+const ESCENA_SIGUIENTE = "res://Scenes/cinematicas_nuevas/llorando.tscn"
 
 func _ready():
 	$VideoStreamPlayer.grab_focus()

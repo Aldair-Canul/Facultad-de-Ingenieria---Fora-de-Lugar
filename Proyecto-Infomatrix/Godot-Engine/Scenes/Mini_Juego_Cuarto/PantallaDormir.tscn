@@ -2,58 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ousiwfnbrc6" path="res://Scenes/Mini_Juego_Cuarto/pantalla_dormir.gd" id="1_2owev"]
 [ext_resource type="Texture2D" uid="uid://cnysv85qh0ilj" path="res://images/Pantallas-de-carga/pantalla-cuarto-dormir.png" id="2_o6acb"]
-[ext_resource type="Texture2D" uid="uid://doo6gylc4w0dh" path="res://images/Chapter_1/zzz.png" id="2_qbgxo"]
 [ext_resource type="Script" uid="uid://cd0kyqaw5m50j" path="res://Scenes/Mini_Juego_Cuarto/timer.gd" id="3_8wsha"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o6acb"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(0, 0, 166, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8wsha"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(166, 0, 166, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_btk21"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(332, 0, 166, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1aaqw"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(0, 250, 166, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_igled"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(166, 250, 166, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1u28n"]
-atlas = ExtResource("2_qbgxo")
-region = Rect2(332, 250, 166, 250)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2m115"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o6acb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8wsha")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_btk21")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1aaqw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igled")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1u28n")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wsha"]
 bg_color = Color(0.45087886, 0.0026487315, 0.8592511, 1)
@@ -82,10 +31,6 @@ wait_time = 4.0
 one_shot = true
 autostart = true
 script = ExtResource("3_8wsha")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=125253850]
-position = Vector2(238, 478)
-sprite_frames = SubResource("SpriteFrames_2m115")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=284072998]
 layout_mode = 0
