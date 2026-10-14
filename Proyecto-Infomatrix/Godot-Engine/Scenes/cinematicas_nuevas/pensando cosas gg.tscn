@@ -22,3 +22,5 @@ grow_vertical = 2
 stream = ExtResource("1_hb1d5")
 autoplay = true
 expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
