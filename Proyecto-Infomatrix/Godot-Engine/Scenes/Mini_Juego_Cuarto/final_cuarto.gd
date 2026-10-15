@@ -5,9 +5,5 @@ const ESCENA_SIGUIENTE = "res://Scenes/Mini_Juego_Cuarto/before-super-intro.tscn
 func _ready():
 	$VideoStreamPlayer.grab_focus()
 
-func _on_video_stream_player_finished():
+func _on_video_stream_player_finished() -> void:
 	TransitionLayer.change_scene(ESCENA_SIGUIENTE)
-
-func _input(event):
-	if event is InputEventKey and event.is_pressed():
-		TransitionLayer.change_scene(ESCENA_SIGUIENTE)

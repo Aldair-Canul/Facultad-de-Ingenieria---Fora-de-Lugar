@@ -11,8 +11,3 @@ func _ready() -> void:
 func _al_terminar_video() -> void:
 	# Cambia a la siguiente escena automáticamente
 	TransitionLayer.change_scene(RUTA_SIGUIENTE_ESCENA)
-
-# Opcional: Permitir al jugador saltar el video si presiona Enter/Espacio/Esc
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel"):
-		_al_terminar_video()

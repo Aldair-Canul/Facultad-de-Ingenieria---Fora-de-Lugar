@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dicsk2ye331g8"]
 
-[ext_resource type="Script" uid="uid://dfmah1dxo8qt1" path="res://encontrar_trabajo.gd" id="1_puval"]
+[ext_resource type="Script" uid="uid://dfmah1dxo8qt1" path="res://Scenes/Escena_mercado/encontrar_trabajo.gd" id="1_puval"]
 [ext_resource type="VideoStream" uid="uid://crtlrqvkvfqfq" path="res://images/Cinematica/animacion-camino-al-restaurante.ogv" id="2_ic3iy"]
 
 [node name="EncontrarTrabajo" type="Control" unique_id=982242074]
