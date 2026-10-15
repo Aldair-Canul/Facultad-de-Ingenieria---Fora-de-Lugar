@@ -28,7 +28,7 @@
 [ext_resource type="Script" uid="uid://g6a5tcgqxyob" path="res://Scenes/Escena_mercado/panel_guia.gd" id="24_yp0uw"]
 [ext_resource type="FontFile" uid="uid://ccihyy6esa7v3" path="res://Scenes/Escena_mercado/estantes separados/VT323-Regular.ttf" id="25_pblot"]
 [ext_resource type="Texture2D" uid="uid://b1fxpjhyhg76p" path="res://images/MenuInicio/controles.png" id="28_hgo2d"]
-[ext_resource type="Texture2D" uid="uid://cn4aquoblkv6a" path="res://Scenes/Escena_mercado/estantes separados/controlmercado.jpeg" id="29_hyjsb"]
+[ext_resource type="Texture2D" uid="uid://ddn5sv7bjcrsa" path="res://Scenes/Escena_mercado/estantes separados/controlsuper3.png" id="29_hgo2d"]
 [ext_resource type="Texture2D" uid="uid://c2bbcjhc4ckmi" path="res://images/MenuInicio/salir.png" id="30_gb32r"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3aqs"]
@@ -660,7 +660,7 @@ offset_bottom = 43.0
 
 [node name="LabelDinero" type="Label" parent="HUD/ContenedorDinero" unique_id=1898544937]
 layout_mode = 2
-text = "Dinero:$500"
+text = "Dinero:$600"
 
 [node name="IconoBilletera" type="TextureRect" parent="HUD/ContenedorDinero" unique_id=301757411]
 custom_minimum_size = Vector2(32, 32)
@@ -689,7 +689,7 @@ stretch_mode = 5
 [node name="PanelDesplegable" type="PanelContainer" parent="HUD/Canasta" unique_id=1039429860]
 visible = false
 layout_mode = 0
-offset_right = 179.0
+offset_right = 274.0
 offset_bottom = 120.0
 
 [node name="ScrollCanasta" type="ScrollContainer" parent="HUD/Canasta/PanelDesplegable" unique_id=1414113438]
@@ -802,7 +802,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("29_hyjsb")
+texture = ExtResource("29_hgo2d")
 expand_mode = 1
 stretch_mode = 5
 
