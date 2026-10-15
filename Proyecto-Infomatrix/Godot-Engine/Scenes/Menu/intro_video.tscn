@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5d7fxxmm3f7n"]
 
-[ext_resource type="Script" uid="uid://3wds5sp6raj5" path="res://intro_video.gd" id="1_vo18i"]
+[ext_resource type="Script" uid="uid://3wds5sp6raj5" path="res://Scenes/Menu/intro_video.gd" id="1_vo18i"]
 [ext_resource type="VideoStream" uid="uid://be4poe13xjg5e" path="res://images/MenuInicio/video-combi-intro.ogv" id="2_kneg4"]
 
 [node name="IntroVideo" type="Control" unique_id=378710073]

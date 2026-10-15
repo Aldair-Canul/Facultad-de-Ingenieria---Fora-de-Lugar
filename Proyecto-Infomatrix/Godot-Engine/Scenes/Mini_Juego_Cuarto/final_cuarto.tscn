@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n30k34gdgmif"]
 
-[ext_resource type="Script" uid="uid://c33055gejqdss" path="res://Scenes/Juego_Cuarto/final_cuarto.gd" id="1_efwed"]
+[ext_resource type="Script" uid="uid://1xs168bc5swn" path="res://Scenes/Mini_Juego_Cuarto/final_cuarto.gd" id="1_efwed"]
 [ext_resource type="VideoStream" uid="uid://664fdnqggmmv" path="res://images/Cinematica/final-del-cuarto.ogv" id="2_8if68"]
 
 [node name="final_cuarto" type="Control" unique_id=197666059]
