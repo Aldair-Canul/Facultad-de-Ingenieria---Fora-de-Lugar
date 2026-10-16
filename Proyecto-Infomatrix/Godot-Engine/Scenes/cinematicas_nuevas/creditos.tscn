@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ctko1oobq1vw6"]
 
 [ext_resource type="Script" uid="uid://cdlu0yjjyypil" path="res://Scenes/cinematicas_nuevas/creditos.gd" id="1_t5iov"]
-[ext_resource type="VideoStream" uid="uid://t5ripy22u772" path="res://images/Cinematica/creditos.ogv" id="2_6d10g"]
 
 [node name="Creditos" type="Control" unique_id=1995605460]
 layout_mode = 3
@@ -19,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_6d10g")
 autoplay = true
 expand = true
 

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cep1y3snjsa0h"]
 
 [ext_resource type="Script" uid="uid://xu86bf8jhxhd" path="res://Scenes/Mini_Juego_Cuarto/intro_cuarto.gd" id="1_aowx6"]
-[ext_resource type="VideoStream" uid="uid://cyo5argrc8h3v" path="res://images/Cinematica/Cuarto-vacío-_gwr_video_mvp.ogv" id="2_dpupw"]
 
 [node name="IntroCuarto" type="Control" unique_id=208746160]
 layout_mode = 3
@@ -21,7 +20,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_dpupw")
 autoplay = true
 expand = true
 
