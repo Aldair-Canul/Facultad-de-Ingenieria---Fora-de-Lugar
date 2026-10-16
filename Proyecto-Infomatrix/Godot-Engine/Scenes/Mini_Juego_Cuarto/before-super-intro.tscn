@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://fj16tiwaiypw"]
 
 [ext_resource type="Script" uid="uid://b34qpi7l7aiwj" path="res://Scenes/Mini_Juego_Cuarto/before_super_intro.gd" id="1_0mkx2"]
-[ext_resource type="VideoStream" uid="uid://k4600y2r3d5g" path="res://images/Cinematica/ir-al-super.ogv" id="2_lsrwl"]
 
 [node name="BeforeSuperIntro" type="Control" unique_id=1868555644]
 layout_mode = 3
@@ -19,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_lsrwl")
 autoplay = true
 expand = true
 
