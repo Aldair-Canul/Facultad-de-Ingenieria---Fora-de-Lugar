@@ -29,7 +29,7 @@
 size = Vector2(72.5, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paxka"]
-size = Vector2(90.75, 40.25)
+size = Vector2(90.75, 49.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgxix"]
 size = Vector2(93.5, 52.75)
@@ -38,13 +38,13 @@ size = Vector2(93.5, 52.75)
 size = Vector2(93, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3el1p"]
-size = Vector2(90, 44)
+size = Vector2(97, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upph7"]
-size = Vector2(85, 50)
+size = Vector2(85, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ma3n6"]
-size = Vector2(96, 47)
+size = Vector2(96, 56.5)
 
 [node name="NodoCalle" type="Node2D" unique_id=871072840]
 y_sort_enabled = true
@@ -134,7 +134,7 @@ shape = SubResource("RectangleShape2D_o6bcr")
 [node name="ZonaEntrega" type="Area2D" parent="Mesa 1" unique_id=149960705]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 1/ZonaEntrega" unique_id=359905172]
-position = Vector2(117.625, 291.875)
+position = Vector2(117.625, 296.375)
 shape = SubResource("RectangleShape2D_paxka")
 
 [node name="TextoNumero" type="Label" parent="Mesa 1" unique_id=219756721]
@@ -215,7 +215,7 @@ shape = SubResource("RectangleShape2D_o6bcr")
 [node name="ZonaEntrega" type="Area2D" parent="Mesa 4" unique_id=1594034402]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 4/ZonaEntrega" unique_id=2035665664]
-position = Vector2(841, 498)
+position = Vector2(843.5, 497.5)
 shape = SubResource("RectangleShape2D_3el1p")
 
 [node name="TextoNumero" type="Label" parent="Mesa 4" unique_id=1195407916]
@@ -242,7 +242,7 @@ shape = SubResource("RectangleShape2D_o6bcr")
 [node name="ZonaEntrega" type="Area2D" parent="Mesa 5" unique_id=1986165499]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 5/ZonaEntrega" unique_id=1746272110]
-position = Vector2(516, 479)
+position = Vector2(516, 480.5)
 shape = SubResource("RectangleShape2D_upph7")
 
 [node name="TextoNumero" type="Label" parent="Mesa 5" unique_id=1572888501]
@@ -269,7 +269,7 @@ shape = SubResource("RectangleShape2D_o6bcr")
 [node name="ZonaEntrega" type="Area2D" parent="Mesa 6" unique_id=1472242664]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa 6/ZonaEntrega" unique_id=1108229807]
-position = Vector2(118, 476)
+position = Vector2(118, 480.75)
 shape = SubResource("RectangleShape2D_ma3n6")
 
 [node name="TextoNumero" type="Label" parent="Mesa 6" unique_id=128823816]
@@ -333,6 +333,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="PanelControles" type="Control" parent="CanvasControl" unique_id=91522526]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

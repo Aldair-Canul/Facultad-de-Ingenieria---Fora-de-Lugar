@@ -178,7 +178,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cs32"]
-size = Vector2(128.66667, 199.16666)
+size = Vector2(128.66667, 173.83334)
 
 [node name="Mesero" type="CharacterBody2D" unique_id=614565725]
 y_sort_enabled = true
@@ -198,7 +198,7 @@ z_index = 1
 scale = Vector2(0.3, 0.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580692053]
-position = Vector2(-6.3333373, -97.083336)
+position = Vector2(-6.3333373, -84.41667)
 shape = SubResource("RectangleShape2D_8cs32")
 
 [node name="TextoPlatoCargado" type="Label" parent="." unique_id=542940780]

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DatosJugador="*uid://blsx27v6t25dt"
 TransitionLayer="*uid://dww810tmste3g"
+TransicionPixel="*uid://dagv1m5dl8eo8"
 
 [display]
 

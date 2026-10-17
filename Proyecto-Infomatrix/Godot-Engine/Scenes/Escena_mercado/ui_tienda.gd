@@ -205,4 +205,4 @@ func _al_eliminar_producto(indice: int) -> void:
 func _on_boton_salir_pressed() -> void:
 	DatosJugador.super_visitado = true
 	DatosJugador.verificar_estado_compra()
-	get_tree().change_scene_to_file("res://Scenes/Escena_mercado/mercado.tscn")
+	TransicionPixel.change_scene("res://Scenes/Escena_mercado/mercado.tscn")
