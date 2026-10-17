@@ -1,6 +1,7 @@
 extends Area2D
 
 var jugador_dentro: bool = false
+var cambiando_escena: bool = false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -17,10 +18,10 @@ func _on_body_exited(body: Node2D) -> void:
 		print("--> [PORTAL] Jugador se alejó del portal.")
 
 func _unhandled_input(_event: InputEvent) -> void:
-	# Acepta tanto la acción 'Interactuar' como 'ui_accept' (Enter/Espacio)
-	if Input.is_action_just_pressed("Interactuar") or Input.is_action_just_pressed("ui_accept"):
+	if (Input.is_action_just_pressed("Interactuar") or Input.is_action_just_pressed("ui_accept")) and not cambiando_escena:
 		if jugador_dentro:
-			print("Cambiando a la escena del Supermercado...")
-			var error = get_tree().change_scene_to_file("res://Scenes/Escena_mercado/super compra.tscn")
-			if error != OK:
-				print("Error al cargar la escena. Revisa la ruta de 'super compra.tscn'")
+			cambiando_escena = true
+			print("Cambiando a la escena del Supermercado con efecto pixelado...")
+			
+			# Llama a la transición de píxeles registrada en Autoload
+			TransicionPixel.change_scene("res://Scenes/Escena_mercado/super compra.tscn")
