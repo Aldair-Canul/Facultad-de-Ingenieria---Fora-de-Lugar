@@ -41,24 +41,31 @@ theme_override_font_sizes/font_size = 24
 text = "Tirar la basura en el bote"
 
 [node name="Polvo" parent="." unique_id=1679460191 instance=ExtResource("3_l4d2n")]
-position = Vector2(370, 533)
+position = Vector2(456, 513)
 
 [node name="Polvo2" parent="." unique_id=898118354 instance=ExtResource("3_l4d2n")]
-position = Vector2(718, 419)
+position = Vector2(737, 375)
+
+[node name="Polvo5" parent="." unique_id=167606745 instance=ExtResource("3_l4d2n")]
+position = Vector2(430, 383)
 
 [node name="Polvo3" parent="." unique_id=333163640 instance=ExtResource("3_l4d2n")]
-position = Vector2(530, 470)
+position = Vector2(608, 392)
 
 [node name="Polvo4" parent="." unique_id=598414928 instance=ExtResource("3_l4d2n")]
-position = Vector2(699, 530)
+position = Vector2(608, 521)
+
+[node name="Polvo6" parent="." unique_id=115631586 instance=ExtResource("3_l4d2n")]
+position = Vector2(782, 502)
 
 [node name="LimitesCuarto" type="StaticBody2D" parent="." unique_id=1819332797]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=552090782]
-polygon = PackedVector2Array(-22, 18, -42, 605, -16, 616, -17, 616, -29, 606, 268, 416, 265, 353, -38, 519)
+position = Vector2(13, -43)
+polygon = PackedVector2Array(-22, 18, -42, 605, -16, 616, -17, 616, -29, 606, 291, 398, 265, 353, -38, 519)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LimitesCuarto" unique_id=1811865405]
-position = Vector2(-1.5258789e-05, 0.71406555)
+position = Vector2(-3, -37)
 scale = Vector2(0.9999999, 1.007091)
 polygon = PackedVector2Array(14, 13, 272, 355, 273, 391, 801, 392, 803, 331, 298, 328, 274, 353)
 
@@ -82,5 +89,5 @@ position = Vector2(299, 399)
 position = Vector2(123, 522)
 
 [node name="Player" parent="." unique_id=1111025824 instance=ExtResource("2_fupl1")]
-position = Vector2(237.99997, 346)
+position = Vector2(193, 407.00003)
 scale = Vector2(1.5, 1.5)

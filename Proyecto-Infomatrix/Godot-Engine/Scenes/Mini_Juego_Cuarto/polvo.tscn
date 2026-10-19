@@ -54,8 +54,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qf30"]
-radius = 59.0
-height = 138.0
+radius = 67.0
+height = 170.0
 
 [node name="Polvo" type="Area2D" unique_id=1679460191 groups=["polvos"]]
 script = ExtResource("1_xdifq")
@@ -67,4 +67,5 @@ frame = 2
 frame_progress = 0.9131733
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2021255583]
+position = Vector2(-2, -2)
 shape = SubResource("CapsuleShape2D_6qf30")
