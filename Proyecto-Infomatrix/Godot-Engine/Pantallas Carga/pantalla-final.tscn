@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://co53lakg8peml"]
+
+[ext_resource type="Texture2D" uid="uid://6yueka12x7qn" path="res://images/Pantallas-de-carga/pantalla_final.jpeg" id="1_dt1ok"]
+[ext_resource type="Script" uid="uid://cu3ap4ogb46s8" path="res://Pantallas Carga/pantalla_final.gd" id="1_owi8c"]
+[ext_resource type="Texture2D" uid="uid://cbom7nm80q0do" path="res://Scenes/Menu/salir.png" id="2_owi8c"]
+
+[node name="PantallaFinal" type="Control" unique_id=583450027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_owi8c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=817907602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dt1ok")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1347350989]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 440.0
+offset_right = 785.0
+offset_bottom = 842.0
+scale = Vector2(0.29954913, 0.244004)
+icon = ExtResource("2_owi8c")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

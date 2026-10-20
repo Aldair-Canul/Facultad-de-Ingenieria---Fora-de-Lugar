@@ -1,9 +1,32 @@
 extends Control
 
 const ESCENA_SIGUIENTE = "res://Pantallas Carga/PantallaMesero.tscn"
+const RUTA_VIDEO = "res://images/OGV/animacion-ya-le-dieron-trabajo.ogv"
 
-func _ready():
-	$VideoStreamPlayer.grab_focus()
+@onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 
-func _on_video_stream_player_finished():
-	TransitionLayer.change_scene(ESCENA_SIGUIENTE)
+func _ready() -> void:
+	# 1. Asegurar que el paquete de cinemáticas esté cargado
+	if FileAccess.file_exists("res://cinematicas.pck"):
+		ProjectSettings.load_resource_pack("res://cinematicas.pck")
+	
+	# 2. Esperar 1 fotograma para registrar las rutas en la exportación web
+	await get_tree().process_frame
+
+	# 3. Cargar y reproducir el video dinámicamente
+	if ResourceLoader.exists(RUTA_VIDEO):
+		video_player.stream = load(RUTA_VIDEO)
+		video_player.play()
+		video_player.grab_focus()
+	else:
+		push_error("No se encontró el video en la ruta: " + RUTA_VIDEO)
+		_cambiar_escena()
+
+func _on_video_stream_player_finished() -> void:
+	_cambiar_escena()
+
+func _cambiar_escena() -> void:
+	if has_node("/root/TransitionLayer"):
+		TransitionLayer.change_scene(ESCENA_SIGUIENTE)
+	else:
+		get_tree().change_scene_to_file(ESCENA_SIGUIENTE)

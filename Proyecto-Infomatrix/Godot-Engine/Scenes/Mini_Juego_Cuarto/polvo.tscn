@@ -54,8 +54,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qf30"]
-radius = 67.0
-height = 170.0
+radius = 92.0
+height = 196.0
 
 [node name="Polvo" type="Area2D" unique_id=1679460191 groups=["polvos"]]
 script = ExtResource("1_xdifq")

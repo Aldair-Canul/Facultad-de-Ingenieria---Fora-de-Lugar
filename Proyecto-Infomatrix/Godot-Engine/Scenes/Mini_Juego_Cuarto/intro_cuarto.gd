@@ -1,7 +1,7 @@
 extends Control
 
 const ESCENA_SIGUIENTE = "res://Scenes/Mini_Juego_Cuarto/PantallaControlesCuarto.tscn"
-const RUTA_VIDEO = "res://images/Cinematica/Cuarto-vacío-_gwr_video_mvp.ogv"
+const RUTA_VIDEO = "res://images/OGV/Cuarto-vacío-_gwr_video_mvp.ogv"
 
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 

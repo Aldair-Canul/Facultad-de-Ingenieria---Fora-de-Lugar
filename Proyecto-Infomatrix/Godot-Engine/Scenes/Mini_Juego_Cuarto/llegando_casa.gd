@@ -1,7 +1,7 @@
 extends Control
 
 const ESCENA_SIGUIENTE = "res://Scenes/Mini_Juego_Cuarto/intro_cuarto.tscn"
-const RUTA_VIDEO = "res://images/Cinematica/Llegando_a_casa.ogv"
+const RUTA_VIDEO = "res://images/OGV/Llegando_a_casa.ogv"
 
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 

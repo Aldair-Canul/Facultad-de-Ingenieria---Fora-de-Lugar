@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b38ciolv7mawr"]
 
 [ext_resource type="Script" uid="uid://dvi3e5ebqg85s" path="res://Pantallas Carga/final_juego.gd" id="1_emhhf"]
-[ext_resource type="VideoStream" uid="uid://bk3yhutxrkkln" path="res://images/Cinematica/aanimacion-de-la-escuela.ogv" id="2_emhhf"]
 
 [node name="FinalJuego" type="Control" unique_id=877596686]
 layout_mode = 3
@@ -20,7 +19,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_emhhf")
 autoplay = true
 expand = true
 
