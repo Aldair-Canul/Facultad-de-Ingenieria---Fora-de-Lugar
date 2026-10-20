@@ -63,7 +63,52 @@ func generar_tienda_dinamica() -> void:
 	if has_node("ScrollTienda"):
 		var scroll = $ScrollTienda as ScrollContainer
 		scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_ALWAYS
 		scroll.custom_minimum_size.y = 205
+		
+		
+		var estilo = StyleBoxFlat.new()
+		estilo.bg_color = Color("#241812d9") 
+		estilo.corner_radius_top_left = 6
+		estilo.corner_radius_top_right = 6
+		estilo.corner_radius_bottom_left = 6
+		estilo.corner_radius_bottom_right = 6
+		
+		scroll.add_theme_stylebox_override("panel", estilo)
+
+		
+		var h_bar = scroll.get_h_scroll_bar()
+		
+		h_bar.custom_minimum_size.y = 22
+		
+		var textura_flechas = _crear_textura_grabber_pixelart()
+		
+		var estilo_grabber = StyleBoxTexture.new()
+		estilo_grabber.texture = textura_flechas
+		
+		
+		estilo_grabber.texture_margin_left = 18
+		estilo_grabber.texture_margin_right = 18
+		estilo_grabber.texture_margin_top = 3
+		estilo_grabber.texture_margin_bottom = 3
+		
+		
+		estilo_grabber.expand_margin_top = -2
+		estilo_grabber.expand_margin_bottom = -2
+		
+		h_bar.add_theme_stylebox_override("grabber", estilo_grabber)
+		h_bar.add_theme_stylebox_override("grabber_highlight", estilo_grabber)
+		h_bar.add_theme_stylebox_override("grabber_pressed", estilo_grabber)
+		
+		
+		var estilo_carril = StyleBoxFlat.new()
+		estilo_carril.bg_color = Color("#14100e")
+		estilo_carril.corner_radius_top_left = 4
+		estilo_carril.corner_radius_top_right = 4
+		estilo_carril.corner_radius_bottom_left = 4
+		estilo_carril.corner_radius_bottom_right = 4
+		
+		h_bar.add_theme_stylebox_override("scroll", estilo_carril)
 
 	for hijo in contenedor_tienda.get_children():
 		hijo.queue_free()
@@ -117,6 +162,55 @@ func generar_tienda_dinamica() -> void:
 		margin.add_child(vbox)
 		tarjeta.add_child(margin)
 		contenedor_tienda.add_child(tarjeta)
+
+
+func _crear_textura_grabber_pixelart() -> ImageTexture:
+	var ancho = 52
+	var alto = 18
+	var img = Image.create(ancho, alto, false, Image.FORMAT_RGBA8)
+	
+	var color_fondo = Color("#e58e26")       
+	var color_borde = Color("#a05e17")       
+	var color_simbolo = Color("#14100e")     
+	var color_transparente = Color(0, 0, 0, 0)
+	
+	img.fill(color_fondo)
+	
+
+	img.set_pixel(0, 0, color_transparente)
+	img.set_pixel(0, alto - 1, color_transparente)
+	img.set_pixel(ancho - 1, 0, color_transparente)
+	img.set_pixel(ancho - 1, alto - 1, color_transparente)
+	
+
+	for x in range(1, ancho - 1):
+		img.set_pixel(x, 0, color_borde)
+		img.set_pixel(x, alto - 1, color_borde)
+	for y in range(1, alto - 1):
+		img.set_pixel(0, y, color_borde)
+		img.set_pixel(ancho - 1, y, color_borde)
+		
+
+	var puntos_izq = [
+		Vector2i(12, 4), Vector2i(11, 5), Vector2i(10, 6), Vector2i(9, 7),
+		Vector2i(8, 8), Vector2i(8, 9), Vector2i(9, 10), Vector2i(10, 11),
+		Vector2i(11, 12), Vector2i(12, 13)
+	]
+	for p in puntos_izq:
+		img.set_pixel(p.x, p.y, color_simbolo)
+		img.set_pixel(p.x + 1, p.y, color_simbolo) # Grosor extra
+		
+
+	var puntos_der = [
+		Vector2i(39, 4), Vector2i(40, 5), Vector2i(41, 6), Vector2i(42, 7),
+		Vector2i(43, 8), Vector2i(43, 9), Vector2i(42, 10), Vector2i(41, 11),
+		Vector2i(40, 12), Vector2i(39, 13)
+	]
+	for p in puntos_der:
+		img.set_pixel(p.x, p.y, color_simbolo)
+		img.set_pixel(p.x - 1, p.y, color_simbolo) # Grosor extra
+		
+	return ImageTexture.create_from_image(img)
 
 func _al_hacer_clic_comprar(nombre: String, precio: int, imagen: String) -> void:
 	if not nombre in DatosJugador.lista_requerida:
