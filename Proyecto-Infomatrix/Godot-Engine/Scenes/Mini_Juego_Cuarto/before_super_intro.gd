@@ -1,7 +1,7 @@
 extends Control
 
 const ESCENA_SIGUIENTE = "res://Pantallas Carga/pantalla_super.tscn"
-const RUTA_VIDEO = "res://images/Cinematica/ir-al-super.ogv"
+const RUTA_VIDEO = "res://images/OGV/ir-al-super.ogv"
 
 @onready var video_player: VideoStreamPlayer = $VideoStreamPlayer
 

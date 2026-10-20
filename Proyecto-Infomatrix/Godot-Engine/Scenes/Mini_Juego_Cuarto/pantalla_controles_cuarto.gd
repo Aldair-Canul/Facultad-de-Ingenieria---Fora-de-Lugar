@@ -6,7 +6,7 @@ extends Control
 @onready var boton_continuar: Button = $BtnSiguiente 
 
 func _ready() -> void:
-	# No necesitas .connect() aquí porque la señal ya está vinculada desde el editor
+	
 	pass
 
 func _on_btn_siguiente_pressed() -> void:

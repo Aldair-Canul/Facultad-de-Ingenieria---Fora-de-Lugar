@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3vnntnhw5swg"]
 
-[ext_resource type="Texture2D" uid="uid://bifyyd0msvoj7" path="res://images/Pantallas-de-carga/controles_cuarto.jpeg" id="1_14s8a"]
 [ext_resource type="Script" uid="uid://dsmmf47psn12q" path="res://Scenes/Mini_Juego_Cuarto/pantalla_controles_cuarto.gd" id="1_gyp50"]
+[ext_resource type="Texture2D" uid="uid://b5q0cl72s8w3n" path="res://images/Pantallas-de-carga/control_cuarto.jpg" id="2_gyp50"]
 [ext_resource type="Texture2D" uid="uid://w8spbsjra1ux" path="res://Scenes/Menu/sig nivel .png" id="2_t37yp"]
 
 [node name="PantallaControlesCuarto" type="Control" unique_id=263107566]
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_14s8a")
+texture = ExtResource("2_gyp50")
 expand_mode = 1
 
 [node name="BtnSiguiente" type="Button" parent="." unique_id=1083276284]
